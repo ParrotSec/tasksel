@@ -1,0 +1,7 @@
+Task: parrot-interface-full
+Section: user
+Parent: tools
+Relevance: 8
+Test-default-desktop: 6 extra packages for parrot interface
+Key:
+  parrot-interface-full

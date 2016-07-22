@@ -1,0 +1,7 @@
+Task: parrot-pico
+Section: user
+Parent: tools
+Relevance: 8
+Test-default-desktop: 5 parrot-pico
+Key:
+  parrot-pico

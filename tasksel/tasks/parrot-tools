@@ -1,0 +1,7 @@
+Task: parrot-tools
+Section: user
+Parent: tools
+Relevance: 8
+Test-default-desktop: 1 standard tools
+Key:
+  parrot-tools

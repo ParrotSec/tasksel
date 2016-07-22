@@ -1,0 +1,7 @@
+Task: cinnamon-desktop
+Parent: desktop
+Test-default-desktop: 3 cinnamon
+Relevance: 8
+Section: user
+Key:
+  task-cinnamon-desktop

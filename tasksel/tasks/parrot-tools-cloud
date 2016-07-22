@@ -1,0 +1,7 @@
+Task: parrot-tools-cloud
+Section: user
+Parent: tools
+Relevance: 8
+Test-default-desktop: 3 parrot cloud
+Key:
+  parrot-tools-cloud

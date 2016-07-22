@@ -1,0 +1,7 @@
+Task: xfce-desktop
+Relevance: 2
+Parent: desktop
+Test-default-desktop: 3 xfce
+Section: user
+Key:
+  task-xfce-desktop

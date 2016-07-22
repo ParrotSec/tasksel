@@ -1,0 +1,7 @@
+Task: mate-desktop
+Section: user
+Parent: desktop
+Relevance: 8
+Test-default-desktop: 3 mate
+Key:
+  task-mate-desktop

@@ -1,0 +1,41 @@
+# Dutch
+# Translation file for tasksel to Dutch
+# Copyright (C) 2013 Free Software Foundation, Inc.
+msgid ""
+msgstr ""
+"Project-Id-Version: Taksel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-21 11:36-0400\n"
+"PO-Revision-Date: 2013-03-09 08:53+0100\n"
+"Last-Translator: Thijs Kinkhorst <thijs@debian.org>\n"
+"Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../tasksel.pl:394
+msgid ""
+"Usage:\n"
+"tasksel install <task>...\n"
+"tasksel remove <task>...\n"
+"tasksel [options]\n"
+"\t-t, --test          test mode; don't really do anything\n"
+"\t    --new-install   automatically install some tasks\n"
+"\t    --list-tasks    list tasks that would be displayed and exit\n"
+"\t    --task-packages list available packages in a task\n"
+"\t    --task-desc     returns the description of a task\n"
+msgstr ""
+"Gebruik:\n"
+"tasksel install <taak>...\n"
+"tasksel remove <taak>...\n"
+"tasksel [opties]\n"
+"\t-t, --test          test-modus, enkel simuleren, niet echt uitvoeren\n"
+"\t    --new-install   automatische installatie van een aantal taken\n"
+"\t    --list-tasks    toon een lijst van taken en sluit daarna af\n"
+"\t    --task-packages toon de beschikbare pakketten van een taak\n"
+"\t    --task-desc     toon de beschrijving van een taak\n"
+
+#: ../tasksel.pl:635
+msgid "apt-get failed"
+msgstr "apt-get is mislukt"
