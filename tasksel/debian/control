@@ -1,8 +1,7 @@
 Source: tasksel
 Section: tasks
 Priority: optional
-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Uploaders: Otavio Salvador <otavio@debian.org>, Christian Perrier <bubulle@debian.org>
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
 Standards-Version: 3.9.5
 Build-Depends: po-debconf, debhelper (>= 9), gettext, dpkg-dev (>= 1.9.0)
 Vcs-Git: git://git.debian.org/git/tasksel/tasksel.git
@@ -252,7 +251,8 @@ Description: Cinnamon
  expect to have available on the desktop.
 Depends: ${misc:Depends}, 
 	task-desktop,
-	cinnamon-desktop-environment
+	cinnamon-desktop-environment,
+	parrot-interface-common
 
 Package: task-mate-desktop
 Architecture: all
@@ -288,7 +288,7 @@ Recommends:
 	gnome-orca,
 # libreoffice accessibility needs the GTK frontend
 	libreoffice-gtk3,
-	parrot-interface-common
+	parrot-interface, parrot-mate, parrot-interface-common
 
 Package: task-laptop
 Architecture: all

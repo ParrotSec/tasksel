@@ -1,0 +1,922 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 25 Sep 2016 21:09:20 +0200
+Source: tasksel
+Binary: tasksel tasksel-data task-desktop task-gnome-desktop task-kde-desktop task-lxde-desktop task-xfce-desktop task-cinnamon-desktop task-mate-desktop task-laptop task-web-server task-print-server task-ssh-server task-albanian-desktop task-amharic task-amharic-desktop task-amharic-kde-desktop task-arabic task-arabic-desktop task-arabic-kde-desktop task-asturian task-asturian-desktop task-basque task-basque-desktop task-basque-kde-desktop task-belarusian task-belarusian-desktop task-belarusian-kde-desktop task-bengali task-bengali-desktop task-bengali-kde-desktop task-bosnian task-bosnian-desktop task-bosnian-kde-desktop task-brazilian-portuguese task-brazilian-portuguese-desktop task-brazilian-portuguese-kde-desktop task-british-desktop task-british-kde-desktop task-bulgarian task-bulgarian-desktop task-bulgarian-kde-desktop task-catalan task-catalan-desktop task-catalan-kde-desktop task-chinese-s task-chinese-s-desktop task-chinese-s-kde-desktop task-chinese-t
+ task-chinese-t-desktop task-chinese-t-kde-desktop task-croatian task-croatian-desktop task-croatian-kde-desktop task-czech task-czech-desktop task-czech-kde-desktop task-danish task-danish-desktop task-danish-kde-desktop task-dutch task-dutch-desktop task-dutch-kde-desktop task-dzongkha-desktop task-dzongkha-kde-desktop task-english task-esperanto task-esperanto-desktop task-esperanto-kde-desktop task-estonian task-estonian-desktop task-estonian-kde-desktop task-finnish task-finnish-desktop task-finnish-kde-desktop task-french task-french-desktop task-french-kde-desktop task-galician task-galician-desktop task-galician-kde-desktop task-georgian-desktop task-german task-german-desktop task-german-kde-desktop task-greek task-greek-desktop task-greek-kde-desktop task-gujarati task-gujarati-desktop task-gujarati-kde-desktop task-hebrew task-hebrew-desktop task-hebrew-gnome-desktop task-hebrew-kde-desktop task-hindi task-hindi-desktop task-hindi-kde-desktop
+ task-hungarian task-hungarian-desktop task-hungarian-kde-desktop task-icelandic task-icelandic-desktop task-icelandic-kde-desktop task-indonesian-desktop task-indonesian-kde-desktop task-irish task-irish-desktop task-irish-kde-desktop task-italian task-italian-desktop task-italian-kde-desktop task-japanese task-japanese-desktop task-japanese-gnome-desktop task-japanese-kde-desktop task-kannada-desktop task-kannada-kde-desktop task-kazakh task-kazakh-desktop task-kazakh-kde-desktop task-khmer task-khmer-desktop task-khmer-kde-desktop task-korean task-korean-desktop task-korean-gnome-desktop task-korean-kde-desktop task-kurdish task-kurdish-desktop task-kurdish-kde-desktop task-latvian task-latvian-desktop task-latvian-kde-desktop task-lithuanian task-lithuanian-desktop task-lithuanian-kde-desktop task-macedonian task-macedonian-desktop task-macedonian-kde-desktop task-malayalam task-malayalam-desktop task-malayalam-gnome-desktop task-malayalam-kde-desktop
+ task-marathi task-marathi-desktop task-nepali-desktop task-nepali-kde-desktop task-northern-sami task-northern-sami-desktop task-norwegian task-norwegian-desktop task-norwegian-kde-desktop task-persian task-persian-desktop task-persian-kde-desktop task-polish task-polish-desktop task-polish-kde-desktop task-portuguese task-portuguese-desktop task-portuguese-kde-desktop task-punjabi task-punjabi-desktop task-punjabi-kde-desktop task-romanian task-romanian-desktop task-romanian-kde-desktop task-russian task-russian-desktop task-russian-kde-desktop task-serbian task-serbian-desktop task-serbian-kde-desktop task-sinhala-desktop task-sinhala-kde-desktop task-slovak task-slovak-desktop task-slovak-kde-desktop task-slovenian task-slovenian-desktop task-slovenian-kde-desktop task-south-african-english-desktop task-spanish task-spanish-desktop task-spanish-kde-desktop task-swedish task-swedish-desktop task-swedish-kde-desktop task-tagalog task-tamil task-tamil-desktop
+ task-tamil-gnome-desktop task-telugu task-telugu-desktop task-telugu-gnome-desktop task-telugu-kde-desktop task-thai task-thai-desktop task-thai-gnome-desktop task-thai-kde-desktop task-turkish task-turkish-desktop task-turkish-kde-desktop task-ukrainian task-ukrainian-desktop task-ukrainian-kde-desktop task-uyghur-desktop task-uyghur-kde-desktop task-vietnamese-desktop task-vietnamese-kde-desktop task-welsh task-welsh-desktop task-xhosa-desktop task-xhosa-kde-desktop task-cyrillic task-cyrillic-desktop
+ task-cyrillic-kde-desktop
+Architecture: source all
+Version: 3.36+parrot0
+Distribution: testing
+Urgency: medium
+Maintainer: Anton Zinoviev <zinoviev@debian.org>
+Changed-By: Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>
+Description:
+ task-albanian-desktop - Albanian desktop
+ task-amharic - Amharic environment
+ task-amharic-desktop - Amharic desktop
+ task-amharic-kde-desktop - Amharic KDE desktop
+ task-arabic - Arabic environment
+ task-arabic-desktop - Arabic desktop
+ task-arabic-kde-desktop - Arabic KDE desktop
+ task-asturian - Asturian environment
+ task-asturian-desktop - Asturian desktop
+ task-basque - Basque environment
+ task-basque-desktop - Basque desktop
+ task-basque-kde-desktop - Basque KDE desktop
+ task-belarusian - Belarusian environment
+ task-belarusian-desktop - Belarusian desktop
+ task-belarusian-kde-desktop - Belarusian KDE desktop
+ task-bengali - Bengali environment
+ task-bengali-desktop - Bengali desktop
+ task-bengali-kde-desktop - Bengali KDE desktop
+ task-bosnian - Bosnian environment
+ task-bosnian-desktop - Bosnian desktop
+ task-bosnian-kde-desktop - Bosnian KDE desktop
+ task-brazilian-portuguese - Brazilian Portuguese environment
+ task-brazilian-portuguese-desktop - Brazilian Portuguese desktop
+ task-brazilian-portuguese-kde-desktop - Brazilian Portuguese KDE desktop
+ task-british-desktop - British English desktop
+ task-british-kde-desktop - British KDE desktop
+ task-bulgarian - Bulgarian environment
+ task-bulgarian-desktop - Bulgarian desktop
+ task-bulgarian-kde-desktop - Bulgarian KDE desktop
+ task-catalan - Catalan environment
+ task-catalan-desktop - Catalan desktop
+ task-catalan-kde-desktop - Catalan KDE desktop
+ task-chinese-s - Simplified Chinese environment
+ task-chinese-s-desktop - Simplified Chinese desktop
+ task-chinese-s-kde-desktop - Simplified Chinese KDE desktop
+ task-chinese-t - Traditional Chinese environment
+ task-chinese-t-desktop - Traditional Chinese desktop
+ task-chinese-t-kde-desktop - Traditional Chinese KDE desktop
+ task-cinnamon-desktop - Cinnamon
+ task-croatian - Croatian environment
+ task-croatian-desktop - Croatian desktop
+ task-croatian-kde-desktop - Croatian KDE desktop
+ task-cyrillic - Cyrillic environment
+ task-cyrillic-desktop - Cyrillic desktop
+ task-cyrillic-kde-desktop - Cyrillic KDE desktop
+ task-czech - Czech environment
+ task-czech-desktop - Czech desktop
+ task-czech-kde-desktop - Czech KDE desktop
+ task-danish - Danish environment
+ task-danish-desktop - Danish desktop
+ task-danish-kde-desktop - Danish KDE desktop
+ task-desktop - Debian desktop environment
+ task-dutch - Dutch environment
+ task-dutch-desktop - Dutch desktop
+ task-dutch-kde-desktop - Dutch KDE desktop
+ task-dzongkha-desktop - Dzongkha desktop
+ task-dzongkha-kde-desktop - Dzongkha KDE desktop
+ task-english - General English environment
+ task-esperanto - Esperanto environment
+ task-esperanto-desktop - Esperanto desktop
+ task-esperanto-kde-desktop - Esperanto KDE desktop
+ task-estonian - Estonian environment
+ task-estonian-desktop - Estonian desktop
+ task-estonian-kde-desktop - Estonian KDE desktop
+ task-finnish - Finnish environment
+ task-finnish-desktop - Finnish desktop
+ task-finnish-kde-desktop - Finnish KDE desktop
+ task-french - French environment
+ task-french-desktop - French desktop
+ task-french-kde-desktop - French KDE desktop
+ task-galician - Galician environment
+ task-galician-desktop - Galician desktop
+ task-galician-kde-desktop - Galician KDE desktop
+ task-georgian-desktop - Georgian desktop
+ task-german - German environment
+ task-german-desktop - German desktop
+ task-german-kde-desktop - German KDE desktop
+ task-gnome-desktop - GNOME
+ task-greek - Greek environment
+ task-greek-desktop - Greek desktop
+ task-greek-kde-desktop - Greek KDE desktop
+ task-gujarati - Gujarati environment
+ task-gujarati-desktop - Gujarati desktop
+ task-gujarati-kde-desktop - Gujarati KDE desktop
+ task-hebrew - Hebrew environment
+ task-hebrew-desktop - Hebrew desktop
+ task-hebrew-gnome-desktop - Hebrew GNOME desktop
+ task-hebrew-kde-desktop - Hebrew KDE desktop
+ task-hindi - Hindi environment
+ task-hindi-desktop - Hindi desktop
+ task-hindi-kde-desktop - Hindi KDE desktop
+ task-hungarian - Hungarian environment
+ task-hungarian-desktop - Hungarian desktop
+ task-hungarian-kde-desktop - Hungarian KDE desktop
+ task-icelandic - Icelandic environment
+ task-icelandic-desktop - Icelandic desktop
+ task-icelandic-kde-desktop - Icelandic KDE desktop
+ task-indonesian-desktop - Indonesian desktop
+ task-indonesian-kde-desktop - Indonesian KDE desktop
+ task-irish - Irish environment
+ task-irish-desktop - Irish desktop
+ task-irish-kde-desktop - Irish KDE desktop
+ task-italian - Italian environment
+ task-italian-desktop - Italian desktop
+ task-italian-kde-desktop - Italian KDE desktop
+ task-japanese - Japanese environment
+ task-japanese-desktop - Japanese desktop
+ task-japanese-gnome-desktop - Japanese GNOME desktop
+ task-japanese-kde-desktop - Japanese KDE desktop
+ task-kannada-desktop - Kannada desktop
+ task-kannada-kde-desktop - Kannada KDE desktop
+ task-kazakh - Kazakh environment
+ task-kazakh-desktop - Kazakh desktop
+ task-kazakh-kde-desktop - Kazakh KDE desktop
+ task-kde-desktop - KDE
+ task-khmer - Khmer environment
+ task-khmer-desktop - Khmer desktop
+ task-khmer-kde-desktop - Khmer KDE desktop
+ task-korean - Korean environment
+ task-korean-desktop - Korean desktop
+ task-korean-gnome-desktop - Korean GNOME desktop
+ task-korean-kde-desktop - Korean KDE desktop
+ task-kurdish - Kurdish environment
+ task-kurdish-desktop - Kurdish desktop
+ task-kurdish-kde-desktop - Kurdish KDE desktop
+ task-laptop - laptop
+ task-latvian - Latvian environment
+ task-latvian-desktop - Latvian desktop
+ task-latvian-kde-desktop - Latvian KDE desktop
+ task-lithuanian - Lithuanian environment
+ task-lithuanian-desktop - Lithuanian desktop
+ task-lithuanian-kde-desktop - Lithuanian KDE desktop
+ task-lxde-desktop - LXDE
+ task-macedonian - Macedonian environment
+ task-macedonian-desktop - Macedonian desktop
+ task-macedonian-kde-desktop - Macedonian KDE desktop
+ task-malayalam - Malayalam environment
+ task-malayalam-desktop - Malayalam desktop
+ task-malayalam-gnome-desktop - Malayalam GNOME desktop
+ task-malayalam-kde-desktop - Malayalam KDE desktop
+ task-marathi - Marathi environment
+ task-marathi-desktop - Marathi desktop
+ task-mate-desktop - MATE
+ task-nepali-desktop - Nepali desktop
+ task-nepali-kde-desktop - Nepali KDE desktop
+ task-northern-sami - Northern Sami environment
+ task-northern-sami-desktop - Northern Sami desktop
+ task-norwegian - Norwegian (Bokmaal and Nynorsk) environment
+ task-norwegian-desktop - Norwegian (Bokmaal and Nynorsk) desktop
+ task-norwegian-kde-desktop - Norwegian KDE desktop
+ task-persian - Persian environment
+ task-persian-desktop - Persian desktop
+ task-persian-kde-desktop - Persian KDE desktop
+ task-polish - Polish environment
+ task-polish-desktop - Polish desktop
+ task-polish-kde-desktop - Polish KDE desktop
+ task-portuguese - Portuguese environment
+ task-portuguese-desktop - Portuguese desktop
+ task-portuguese-kde-desktop - Portuguese KDE desktop
+ task-print-server - print server
+ task-punjabi - Punjabi environment
+ task-punjabi-desktop - Punjabi desktop
+ task-punjabi-kde-desktop - Punjabi KDE desktop
+ task-romanian - Romanian environment
+ task-romanian-desktop - Romanian desktop
+ task-romanian-kde-desktop - Romanian KDE desktop
+ task-russian - Russian environment
+ task-russian-desktop - Russian desktop
+ task-russian-kde-desktop - Russian KDE desktop
+ task-serbian - Serbian environment
+ task-serbian-desktop - Serbian desktop
+ task-serbian-kde-desktop - Serbian KDE desktop
+ task-sinhala-desktop - Sinhala desktop
+ task-sinhala-kde-desktop - Sinhala KDE desktop
+ task-slovak - Slovak environment
+ task-slovak-desktop - Slovak desktop
+ task-slovak-kde-desktop - Slovak KDE desktop
+ task-slovenian - Slovenian environment
+ task-slovenian-desktop - Slovenian desktop
+ task-slovenian-kde-desktop - Slovenian KDE desktop
+ task-south-african-english-desktop - South African English desktop
+ task-spanish - Spanish environment
+ task-spanish-desktop - Spanish desktop
+ task-spanish-kde-desktop - Spanish KDE desktop
+ task-ssh-server - SSH server
+ task-swedish - Swedish environment
+ task-swedish-desktop - Swedish desktop
+ task-swedish-kde-desktop - Swedish KDE desktop
+ task-tagalog - Tagalog environment
+ task-tamil - Tamil environment
+ task-tamil-desktop - Tamil desktop
+ task-tamil-gnome-desktop - Tamil GNOME desktop
+ task-telugu - Telugu environment
+ task-telugu-desktop - Telugu desktop
+ task-telugu-gnome-desktop - Telugu GNOME desktop environment
+ task-telugu-kde-desktop - Telugu KDE desktop environment
+ task-thai  - Thai environment
+ task-thai-desktop - Thai desktop
+ task-thai-gnome-desktop - Thai GNOME desktop
+ task-thai-kde-desktop - Thai KDE desktop
+ task-turkish - Turkish environment
+ task-turkish-desktop - Turkish desktop
+ task-turkish-kde-desktop - Turkish KDE desktop
+ task-ukrainian - Ukrainian environment
+ task-ukrainian-desktop - Ukrainian desktop
+ task-ukrainian-kde-desktop - Ukrainian KDE desktop
+ task-uyghur-desktop - Uyghur desktop
+ task-uyghur-kde-desktop - Uyghur KDE desktop
+ task-vietnamese-desktop - Vietnamese desktop
+ task-vietnamese-kde-desktop - Vietnamese KDE desktop
+ task-web-server - web server
+ task-welsh - Welsh environment
+ task-welsh-desktop - Welsh desktop
+ task-xfce-desktop - Xfce
+ task-xhosa-desktop - Xhosa desktop
+ task-xhosa-kde-desktop - Xhosa KDE desktop
+ tasksel    - tool for selecting tasks for installation on Debian systems
+ tasksel-data - official tasks used for installation of Debian systems
+Changes:
+ tasksel (3.36+parrot0) testing; urgency=medium
+ .
+   * Update version to replace new debian release
+Checksums-Sha1:
+ cd3deaa40263624e14d37b7ae362c8953f1dad7a 16911 tasksel_3.36+parrot0.dsc
+ 2c31bc8f9748a019a69205e199364d5457fa45ce 789103 tasksel_3.36+parrot0.tar.gz
+ db08d18585469849a88411ef11bbef4039d56326 808 task-albanian-desktop_3.36+parrot0_all.deb
+ b5aa8bbad399c82c61435bd6a6a2d7a8dd629c0d 838 task-amharic-desktop_3.36+parrot0_all.deb
+ 63d1f6c9a8351321de348d2f1afee80cfe998e40 826 task-amharic-kde-desktop_3.36+parrot0_all.deb
+ 73e20799b867d485abbe8a10d1fd8337bfc3fc4e 834 task-amharic_3.36+parrot0_all.deb
+ 7fdc81ed1e2f29cd6e2fc340bffc634c7005825a 840 task-arabic-desktop_3.36+parrot0_all.deb
+ 3335a273dc521c8cd11ea7437685dab20beaa6dc 804 task-arabic-kde-desktop_3.36+parrot0_all.deb
+ 4d9aded8e58fd27499a4e9223d661fb63e360658 854 task-arabic_3.36+parrot0_all.deb
+ 2e44b89357a436e5778937ad28f492b80348ea5e 822 task-asturian-desktop_3.36+parrot0_all.deb
+ 75a67f8a71df42ae7508bf2aff35a8bb3427d376 806 task-asturian_3.36+parrot0_all.deb
+ 76e3264b9473b543acf5d6b2e319cc0098ca4a40 830 task-basque-desktop_3.36+parrot0_all.deb
+ 103ea169b0e938c57c1f8befc5ac23001df6b7e9 810 task-basque-kde-desktop_3.36+parrot0_all.deb
+ af1296f9490f7307b12899d90b3a8bf8874e84dc 818 task-basque_3.36+parrot0_all.deb
+ c243a134aed2361037a4cdaa832e3735a151383a 832 task-belarusian-desktop_3.36+parrot0_all.deb
+ 6956ed9cbd7cac7f987cd1549112e9c4c88fc81b 796 task-belarusian-kde-desktop_3.36+parrot0_all.deb
+ 71963dc967a2fdb86627653d50ed9cc2e1f33696 808 task-belarusian_3.36+parrot0_all.deb
+ 642ba9418f3de95e648b7c018bfd6544c863d344 842 task-bengali-desktop_3.36+parrot0_all.deb
+ a70f35d0244522fdf35df4bc0d7396de93fd9002 786 task-bengali-kde-desktop_3.36+parrot0_all.deb
+ 8aa9ef6dbe09cb3b492875b58f521aab23c53c9e 836 task-bengali_3.36+parrot0_all.deb
+ aa080d61de47587c4bb3e57d9fbc84ff16b83ca1 820 task-bosnian-desktop_3.36+parrot0_all.deb
+ 6af5a828e667cd994c30e45fa17c42097f8bb841 806 task-bosnian-kde-desktop_3.36+parrot0_all.deb
+ 6168a9c650aab50bde3928368a96bf395ce21267 826 task-bosnian_3.36+parrot0_all.deb
+ 89785ac581bd2ca2d83685a4761d72d362299369 844 task-brazilian-portuguese-desktop_3.36+parrot0_all.deb
+ 121eb88d45d9f6bcea0285ab0b731719873f91c3 832 task-brazilian-portuguese-kde-desktop_3.36+parrot0_all.deb
+ 45bbe0ce1dbcfee710dc69fd539aef8bfaca323e 874 task-brazilian-portuguese_3.36+parrot0_all.deb
+ 02205d6bda5ff5afdfed5ee318effa7c60c847c9 826 task-british-desktop_3.36+parrot0_all.deb
+ 65408865b8f2ad934f0cc69e2283cdf31417b616 806 task-british-kde-desktop_3.36+parrot0_all.deb
+ e07e191df25361a0d801f06918396e2246b4b064 834 task-bulgarian-desktop_3.36+parrot0_all.deb
+ f7339a1b54df77145eeed17d2c0f29116efce1f1 812 task-bulgarian-kde-desktop_3.36+parrot0_all.deb
+ 80efc34ee823944ff479e6d48801f9ce3271aa88 826 task-bulgarian_3.36+parrot0_all.deb
+ 5f6eeec3e9c7d248935f8c10fb42cfa0ceeb3235 818 task-catalan-desktop_3.36+parrot0_all.deb
+ 68b8911b0ffde91df9b8ece01a12c6eacafc025e 806 task-catalan-kde-desktop_3.36+parrot0_all.deb
+ 38aa1eaff8f1473ec6b064b2a6346c0ef1c604d0 824 task-catalan_3.36+parrot0_all.deb
+ 8bcbce636ab64d482ba1d9e60b9fa6c3bdf3bec6 930 task-chinese-s-desktop_3.36+parrot0_all.deb
+ bcf8c406d06f2d6aeefe5675411984d7d7503a56 846 task-chinese-s-kde-desktop_3.36+parrot0_all.deb
+ f3e9167b2c096de196160e70652c9013d2ee3d3d 890 task-chinese-s_3.36+parrot0_all.deb
+ 3aae17008618df7e810bc43589a95bdf67a136c2 916 task-chinese-t-desktop_3.36+parrot0_all.deb
+ 24039aa65070ddeb3f73c8f60c3fc71c18146464 832 task-chinese-t-kde-desktop_3.36+parrot0_all.deb
+ 08f8997d324f5b5769deeec8bc5754955404c32f 858 task-chinese-t_3.36+parrot0_all.deb
+ d3815c3d409fa4972cd68d2e1671ff88522a61fc 882 task-cinnamon-desktop_3.36+parrot0_all.deb
+ dfc2d527b0a552e5ff7aac3ed0614df801227a36 824 task-croatian-desktop_3.36+parrot0_all.deb
+ 5ef48e17fb78405a355fc8913b3ced500497607b 810 task-croatian-kde-desktop_3.36+parrot0_all.deb
+ d79f61e21d7fcb011ffb4c929c340495fe83ccb2 824 task-croatian_3.36+parrot0_all.deb
+ 5a6ecc6e054b663f85b7186f5f30cc6109c7719c 846 task-cyrillic-desktop_3.36+parrot0_all.deb
+ 157cbb8eb2cbbb49e6828255390a1f41f4358f7b 796 task-cyrillic-kde-desktop_3.36+parrot0_all.deb
+ 9a94e7501beb00df5ca3a75c90323c2ac94c4c6f 858 task-cyrillic_3.36+parrot0_all.deb
+ 645decb99a5ad3ff8afb2da3801a64985d00183b 834 task-czech-desktop_3.36+parrot0_all.deb
+ ee8b17a3d9963642979e744b84fcbc3021928614 806 task-czech-kde-desktop_3.36+parrot0_all.deb
+ 649e2bf35159c3eaf9b84e3953e44c33cb9e2452 830 task-czech_3.36+parrot0_all.deb
+ 7550a408ef64ffe53dd9a197b75b9b841b052f98 832 task-danish-desktop_3.36+parrot0_all.deb
+ c9b955f8b747f46fdcd85e3046f4771169637939 804 task-danish-kde-desktop_3.36+parrot0_all.deb
+ 12d3e94264bfcc71639c409fafb74385f5bdfda1 836 task-danish_3.36+parrot0_all.deb
+ ffb17ce51170f5b0081a94c1b05abf9c238ce8cb 898 task-desktop_3.36+parrot0_all.deb
+ d200040afe4975125e181ccd3c7a579440f7c128 828 task-dutch-desktop_3.36+parrot0_all.deb
+ e2dffc8d6634fb86da902490559b4f66e512264a 804 task-dutch-kde-desktop_3.36+parrot0_all.deb
+ aeb6b714600a1715d7d3af4ffff5f0998ae9d292 840 task-dutch_3.36+parrot0_all.deb
+ 923fbf8b513a0f006f8bebbcd22e12eb238cd27d 822 task-dzongkha-desktop_3.36+parrot0_all.deb
+ 8fcf65c29791b13dfd65ea6ed5d61bae664482fe 796 task-dzongkha-kde-desktop_3.36+parrot0_all.deb
+ 5a9b1cf39e51ce6dc75b9c1ac11c0b0f8bcf3268 852 task-english_3.36+parrot0_all.deb
+ 18b287f5b2f1c13e402b6f9f5c220176d7182eea 826 task-esperanto-desktop_3.36+parrot0_all.deb
+ 0e2785e9db6692ba0db062624b447cfdf43bfd8e 810 task-esperanto-kde-desktop_3.36+parrot0_all.deb
+ 8d38f8abb2c48d2ace3af73a8b229609a27962d4 822 task-esperanto_3.36+parrot0_all.deb
+ af2eaa803f99dbf39227fa6036674e078f35bbea 824 task-estonian-desktop_3.36+parrot0_all.deb
+ 6a6ad668fc7761a7dedab3f3c2b5e23bae6ceebe 810 task-estonian-kde-desktop_3.36+parrot0_all.deb
+ df5e40aabc7ba920ac667a67c0b6150fb65b0c5a 816 task-estonian_3.36+parrot0_all.deb
+ 6969aa9ee72f6ba646be1df9e436fedd0de8e597 840 task-finnish-desktop_3.36+parrot0_all.deb
+ 6a58d6ce7848eb21402b3ff0f6d39813b150e5ef 806 task-finnish-kde-desktop_3.36+parrot0_all.deb
+ ca268fd54a42e3022aa47185be45497a7d083e66 836 task-finnish_3.36+parrot0_all.deb
+ 7395e0840f705258c98ce613e93cbfa30141183c 836 task-french-desktop_3.36+parrot0_all.deb
+ 7e51d53cd73ed010f6731b3cacc0826216a59f4c 806 task-french-kde-desktop_3.36+parrot0_all.deb
+ f83310b9e9548392ed2839999c856618bdb9b0a0 874 task-french_3.36+parrot0_all.deb
+ 5816b86c4ece1412cf777d44a49886a5d23a7af2 836 task-galician-desktop_3.36+parrot0_all.deb
+ 4e8107e842d71a2d178422788f8f525673b4508c 808 task-galician-kde-desktop_3.36+parrot0_all.deb
+ 36d4f8f52d28b18a31eec069fcd9c47c0e0b6b93 836 task-galician_3.36+parrot0_all.deb
+ 1ba7ba03f520c43715186c13a5f03a1ad037e1e9 818 task-georgian-desktop_3.36+parrot0_all.deb
+ f3873be4cb3c9bb3af82659cb939d4f23db7b3b8 852 task-german-desktop_3.36+parrot0_all.deb
+ 5ad35faf6b4e1f03c104c15f3f0b917dc91c01f6 804 task-german-kde-desktop_3.36+parrot0_all.deb
+ e85d28084de10591479950072b8dda5849d59512 850 task-german_3.36+parrot0_all.deb
+ 09dc2ec336d34c1bc9085dd03b8152f7f140d6f3 972 task-gnome-desktop_3.36+parrot0_all.deb
+ 3732cbcc7f79a225607f1194c4d1651332b81b4f 844 task-greek-desktop_3.36+parrot0_all.deb
+ 89943fee051b7accf95d86b0a169e4c7fcd440f6 810 task-greek-kde-desktop_3.36+parrot0_all.deb
+ ae26108452860341c811ca311db82e74fc230ee9 808 task-greek_3.36+parrot0_all.deb
+ 91365dd7894848a02ff312306b51fb84c35961e3 838 task-gujarati-desktop_3.36+parrot0_all.deb
+ b9892dfa11d13361d7bdcef322a029593376295c 812 task-gujarati-kde-desktop_3.36+parrot0_all.deb
+ efc6f500c609cc1f8f1e0a5d8019370270365247 822 task-gujarati_3.36+parrot0_all.deb
+ af9fd216f93b4b333519ed0aee10465ac47acb52 832 task-hebrew-desktop_3.36+parrot0_all.deb
+ b68ac76da7e87bc829b93d9dc5e57ce33354a297 814 task-hebrew-gnome-desktop_3.36+parrot0_all.deb
+ 227f4acb0c867ae8ab91617d873fe4b465fd3c0a 806 task-hebrew-kde-desktop_3.36+parrot0_all.deb
+ 6ae729266c6e538216951db02be8ca7ad037074b 852 task-hebrew_3.36+parrot0_all.deb
+ 9bd64a64c83f18dc9df91639625fb3d84c93c988 838 task-hindi-desktop_3.36+parrot0_all.deb
+ 5fce4165c6397f5ccaf5c3cd214cab70d51d3031 806 task-hindi-kde-desktop_3.36+parrot0_all.deb
+ 216174fa84a374ea69d06c81a285e552483de45e 834 task-hindi_3.36+parrot0_all.deb
+ 981a38a3609ef4f18d3d3b0e24256f10d2931e6d 888 task-hungarian-desktop_3.36+parrot0_all.deb
+ e5c815a960dbd9c58206c4d758236dfb53a81296 812 task-hungarian-kde-desktop_3.36+parrot0_all.deb
+ edb46cd4adaf78429242b3174596ba325159f90c 858 task-hungarian_3.36+parrot0_all.deb
+ 62d8cad23dbeb77435a40f4784eedb218220161f 824 task-icelandic-desktop_3.36+parrot0_all.deb
+ d5cbca61f90247f612c0f2eb355256a0198b5c54 810 task-icelandic-kde-desktop_3.36+parrot0_all.deb
+ e56ce4536a75ac0886bd8138c8e413948812719a 822 task-icelandic_3.36+parrot0_all.deb
+ b017e1199151473a2e27a77cbf13bb5c426d5411 824 task-indonesian-desktop_3.36+parrot0_all.deb
+ 64fb0fe8a84ab00db07aed324aac1714ef5c1e70 812 task-indonesian-kde-desktop_3.36+parrot0_all.deb
+ 6e20c551b3af67e54a4f3705e948f27521fb54fa 828 task-irish-desktop_3.36+parrot0_all.deb
+ dfd9620f23ad51fc008021d5f88b0423cb865284 804 task-irish-kde-desktop_3.36+parrot0_all.deb
+ 7d5077ad0925283d6519aa5f4641e76055d072ca 816 task-irish_3.36+parrot0_all.deb
+ a9cf1a4fcfc71589e720d02d3e1771ce08a6074d 834 task-italian-desktop_3.36+parrot0_all.deb
+ b0376c6156882a3fb2a0be580ecef1e418760efe 804 task-italian-kde-desktop_3.36+parrot0_all.deb
+ 77704fad05809e1088eb16723381bc63cad2e1fb 872 task-italian_3.36+parrot0_all.deb
+ 738fdd512a5b5659fbbd264472757683f7dd3d6d 868 task-japanese-desktop_3.36+parrot0_all.deb
+ 09b6c8f57c08abe98913f707ae93144f80ad5209 830 task-japanese-gnome-desktop_3.36+parrot0_all.deb
+ f2157a62d0dca3494fdac965db4375adcdfd3284 822 task-japanese-kde-desktop_3.36+parrot0_all.deb
+ 2fcd9d1677ec5c76b402ad2ee33c297414f14ab5 828 task-japanese_3.36+parrot0_all.deb
+ a652f0ea3a3c2c3a944c2d3b2aaf7a72965c4a9c 840 task-kannada-desktop_3.36+parrot0_all.deb
+ 0220bf73a9bcab6bc0ab0daca2313ad0bac1fb28 820 task-kannada-kde-desktop_3.36+parrot0_all.deb
+ a85015b17b2321f991e26a6e621c641397fa1588 798 task-kazakh-desktop_3.36+parrot0_all.deb
+ b866a26912fdea7d8df3ce8c4e139bc990788677 806 task-kazakh-kde-desktop_3.36+parrot0_all.deb
+ 5e7fab59149567126d36893ba3f7662a1915ef8b 804 task-kazakh_3.36+parrot0_all.deb
+ 24c5fd1b0a4f21205d30caf26d159290cf11a23e 1012 task-kde-desktop_3.36+parrot0_all.deb
+ 8a2bddff697257d0e1eea2baa579b536ffbfb48c 830 task-khmer-desktop_3.36+parrot0_all.deb
+ 03c39b991aa512c3f604d0bc767422e2efb148fa 806 task-khmer-kde-desktop_3.36+parrot0_all.deb
+ 3a72fabcf28a7ac97add5f8cbee8bd5169ba66be 816 task-khmer_3.36+parrot0_all.deb
+ e971c0da6496fe5f5bc22c80b985f1df4f46f10f 870 task-korean-desktop_3.36+parrot0_all.deb
+ 490d1352a13a911c9fe96a2df9f4b71663788d58 816 task-korean-gnome-desktop_3.36+parrot0_all.deb
+ a4d4c5eee0e0f56ccb9b2b4e15f96d2acfa17ae7 814 task-korean-kde-desktop_3.36+parrot0_all.deb
+ c1733763a142a52199cb6e144d46d6cf08c7b651 808 task-korean_3.36+parrot0_all.deb
+ 859b0dec793f024fff25a6d1b9f862e8806cae4d 828 task-kurdish-desktop_3.36+parrot0_all.deb
+ 37a5d73c1de8f5e977910b5afdcefa482044ae46 786 task-kurdish-kde-desktop_3.36+parrot0_all.deb
+ ba519e575e591f12bcbef74d1e14d796042858e1 808 task-kurdish_3.36+parrot0_all.deb
+ 0d623295276933b121a38fdc5a45bf2693d8fff6 834 task-laptop_3.36+parrot0_all.deb
+ 9596d5282836546112e86b6609bf3e78c46f2cb2 820 task-latvian-desktop_3.36+parrot0_all.deb
+ 4a20dceca25677b8d753dbfc37c152add5b5ad08 806 task-latvian-kde-desktop_3.36+parrot0_all.deb
+ 5e7139c0dfe10c657fd9d48b1feca7f4ee7cf66b 816 task-latvian_3.36+parrot0_all.deb
+ 884e83546a40c34aaf182b54dc80a41dff2abc43 838 task-lithuanian-desktop_3.36+parrot0_all.deb
+ 90f2431920ffe361ebc3777f100397375af6f3cf 812 task-lithuanian-kde-desktop_3.36+parrot0_all.deb
+ 38491951e42c328bd6bc89b414acfbc7461919c9 830 task-lithuanian_3.36+parrot0_all.deb
+ 09895e0b04b379fde779fe94b98f7abe0de8e742 988 task-lxde-desktop_3.36+parrot0_all.deb
+ 7b8a899f28abcc932c93c0e02b55bf43e177ed4c 836 task-macedonian-desktop_3.36+parrot0_all.deb
+ 75c040d3dbd1fb4bfde70c43b534a3dc887a9fe2 812 task-macedonian-kde-desktop_3.36+parrot0_all.deb
+ f23565188497a4515e2a1f68f7b680e8b756429d 808 task-macedonian_3.36+parrot0_all.deb
+ 6d4d5c41dfd316929279ee02ac60d35ea36345ca 868 task-malayalam-desktop_3.36+parrot0_all.deb
+ d3c9fd0195e344f10fd6d64cd8a137c127a89a4d 834 task-malayalam-gnome-desktop_3.36+parrot0_all.deb
+ 59db31700c6d1a14cf40aee612922c0f911db0e1 834 task-malayalam-kde-desktop_3.36+parrot0_all.deb
+ 22c8eb1d5a1ece0fc43c1c5dcef14730fa015a96 824 task-malayalam_3.36+parrot0_all.deb
+ ecdb6b3b60532334a17ba48f1fafc4c231839b96 832 task-marathi-desktop_3.36+parrot0_all.deb
+ 1291ce7cda673301bb22e5619920e3159a7625b3 834 task-marathi_3.36+parrot0_all.deb
+ a050478f149ea76e4fd092cab297a0420c0046c2 984 task-mate-desktop_3.36+parrot0_all.deb
+ 9761fba164b57bf05e3b6202af3e7c2716c91eff 830 task-nepali-desktop_3.36+parrot0_all.deb
+ 71caaff644ee0de64b446a6718048099ba3b2618 784 task-nepali-kde-desktop_3.36+parrot0_all.deb
+ cc932de587d2cdd38ad0b9019b94837544bdc009 790 task-northern-sami-desktop_3.36+parrot0_all.deb
+ 1185f15f33bfaca7b06d4d8632f217edf98e9f31 836 task-northern-sami_3.36+parrot0_all.deb
+ caa1b9352897cf1ca448e577bf149ef2449f939e 854 task-norwegian-desktop_3.36+parrot0_all.deb
+ de8390ac1fc8a2da8f9d3765622a331083e9e8cf 820 task-norwegian-kde-desktop_3.36+parrot0_all.deb
+ 225385bf42222906da4c0b86e477e556934456cf 852 task-norwegian_3.36+parrot0_all.deb
+ 39590f82fa1a29fc1f3f60c182b6ff655f3acf37 828 task-persian-desktop_3.36+parrot0_all.deb
+ 1c27f8708cf99e887c3e2cbded289f6cad15cf90 806 task-persian-kde-desktop_3.36+parrot0_all.deb
+ 86edbb8df7b07f080c465f29761dacc392336087 834 task-persian_3.36+parrot0_all.deb
+ e2020799a2b6807ffac660174a7fbda531840338 834 task-polish-desktop_3.36+parrot0_all.deb
+ 274538a75d8a722376829d2f9514889446cbb5db 804 task-polish-kde-desktop_3.36+parrot0_all.deb
+ d736986d059af8e94dd2047e7a49e3d698359746 866 task-polish_3.36+parrot0_all.deb
+ 783636161a88adf49fee7215072ebccb57c94213 838 task-portuguese-desktop_3.36+parrot0_all.deb
+ b05a4ec46e8726872308ff84f8763904aa678065 810 task-portuguese-kde-desktop_3.36+parrot0_all.deb
+ e8456f120448d72a2736b5f2982ae2ac85406be3 832 task-portuguese_3.36+parrot0_all.deb
+ 56040961ae950cc75eab971085cea720f4aef1e6 848 task-print-server_3.36+parrot0_all.deb
+ 7997d0b3e7bd3c4ec851fdf324ed68976ed8baae 834 task-punjabi-desktop_3.36+parrot0_all.deb
+ c04714c468338a4604f8b71e90b336555564f466 806 task-punjabi-kde-desktop_3.36+parrot0_all.deb
+ fdf731ba41c3f34d950dbff7606e6f0875225317 836 task-punjabi_3.36+parrot0_all.deb
+ e37dbcea015b1c79c4331ee1050e68193246fd28 842 task-romanian-desktop_3.36+parrot0_all.deb
+ d11c1c37951c42903da032f93fd54e6789ed8d45 806 task-romanian-kde-desktop_3.36+parrot0_all.deb
+ bced4a79f8a82764dec26be0770cb8c7d79e2aab 844 task-romanian_3.36+parrot0_all.deb
+ 100c253a1bf6133205eecdbca7ed8a0d123a43d8 826 task-russian-desktop_3.36+parrot0_all.deb
+ 80b5467f35cc2d69f233fa6c0e97e6b9fc935376 806 task-russian-kde-desktop_3.36+parrot0_all.deb
+ 4e48e18cc9cf8f8864313ddf1edda21a1585654c 828 task-russian_3.36+parrot0_all.deb
+ f5a7a3ad9f3b72de93f6b1676e23355d2dfbdcd0 816 task-serbian-desktop_3.36+parrot0_all.deb
+ a4dcc864adf84be015204b33ac661bb0a073a449 806 task-serbian-kde-desktop_3.36+parrot0_all.deb
+ 381d648415bc5e3cc4f650eb9948e813d7e1c4e4 808 task-serbian_3.36+parrot0_all.deb
+ a980638d696a1122e3ee0316eff31065472438aa 830 task-sinhala-desktop_3.36+parrot0_all.deb
+ 75c12804073e40785be9177526b437ec5806586c 806 task-sinhala-kde-desktop_3.36+parrot0_all.deb
+ e78d86a2408f42c05f775e70dcf5d21e641e820e 836 task-slovak-desktop_3.36+parrot0_all.deb
+ c54f2864dc0891da6ef28af9698d07242718ed79 802 task-slovak-kde-desktop_3.36+parrot0_all.deb
+ 30ad01ee8ef33049c678852a9409e6d2f93e565c 816 task-slovak_3.36+parrot0_all.deb
+ d93ff011fe714192d79be721dbc89882bba36004 834 task-slovenian-desktop_3.36+parrot0_all.deb
+ 472d8f376363a0c1f02b6e2e68840ba3f4f1f32d 810 task-slovenian-kde-desktop_3.36+parrot0_all.deb
+ b5aa83f93a4a089019e7ffb034e74b163c36e9f5 822 task-slovenian_3.36+parrot0_all.deb
+ eb7b92bbd79dbea3802dab444f6da9807bc65da8 848 task-south-african-english-desktop_3.36+parrot0_all.deb
+ 02acf8ef0b9e419084003ef4a5c73facac36923f 856 task-spanish-desktop_3.36+parrot0_all.deb
+ a88c8621c6718fea8fda63a4416ce253aebb3de5 806 task-spanish-kde-desktop_3.36+parrot0_all.deb
+ 34ab49903b86a3ff0fa1e7efa783932164a5812b 872 task-spanish_3.36+parrot0_all.deb
+ 5b3aa760978de369965fc7723a99d8e6b38e701d 820 task-ssh-server_3.36+parrot0_all.deb
+ 804c649ee93c67ec958ddd634eb4baf60742b8b9 826 task-swedish-desktop_3.36+parrot0_all.deb
+ 48616d07a0b1ad7c85eae44d84a3e9bcdc46a23e 806 task-swedish-kde-desktop_3.36+parrot0_all.deb
+ 7a1a371e5bae1c1937fc527f66939bc46de8005a 826 task-swedish_3.36+parrot0_all.deb
+ 71e16c2fbab994142c47327833a408516b6de1a6 816 task-tagalog_3.36+parrot0_all.deb
+ 57339999e1657feee339b38f30a3ad2dcd93dc20 828 task-tamil-desktop_3.36+parrot0_all.deb
+ 6097acfbfafe2766746d77af49f063a6535ce803 806 task-tamil-gnome-desktop_3.36+parrot0_all.deb
+ 91822b12bac580afef72f29980032b8476d26ea4 834 task-tamil_3.36+parrot0_all.deb
+ 43f470e6f62bdb8ce026eaaf196f1f4fb0fe7ff0 850 task-telugu-desktop_3.36+parrot0_all.deb
+ 326c43cf90c8bc85b3fe119ff7608ff8d47f0919 834 task-telugu-gnome-desktop_3.36+parrot0_all.deb
+ b18e389a0deba255e0a796ba36b6d984931c23d8 826 task-telugu-kde-desktop_3.36+parrot0_all.deb
+ 486d94aba1d55189748e6c105dfeccaa749ad1ea 830 task-telugu_3.36+parrot0_all.deb
+ fecd03db268e3970dac7974d15768a5f3e8665f2 830 task-thai-desktop_3.36+parrot0_all.deb
+ 3961d5ef3c1bf7a157595628a3c9fef0d3b2a6c5 814 task-thai-gnome-desktop_3.36+parrot0_all.deb
+ 1805f0ab6b4308e6c59e00caf54d4d3e8143da2e 808 task-thai-kde-desktop_3.36+parrot0_all.deb
+ 02d8b4a8269181c1a5cace305fd10f82609db3cd 808 task-thai_3.36+parrot0_all.deb
+ 31488e1fd39183a3ec46612d9fd639a8cdbc4961 804 task-turkish-desktop_3.36+parrot0_all.deb
+ 8160b47f3bfde604f7a4a8afbe806fb72fcd3b4b 806 task-turkish-kde-desktop_3.36+parrot0_all.deb
+ d8aa0a18fb748b73c51ab782090538bb9a15e236 832 task-turkish_3.36+parrot0_all.deb
+ fafb6b4f31430fae6ab94443bdcf20b9f0b4c65d 832 task-ukrainian-desktop_3.36+parrot0_all.deb
+ 526b87b2f55f787fe787b5076b214896c5240063 810 task-ukrainian-kde-desktop_3.36+parrot0_all.deb
+ 5513ee24705d5f490b82a339905ac30084b9feee 834 task-ukrainian_3.36+parrot0_all.deb
+ a82c731dc42a4272e2c88aa16eec3d1ee018dbd0 814 task-uyghur-desktop_3.36+parrot0_all.deb
+ 3827a8781f1bc996e61edea0cb0542b04617885d 806 task-uyghur-kde-desktop_3.36+parrot0_all.deb
+ b9d86549e3cb491d2dd2b276512f7bc7ce8ba001 830 task-vietnamese-desktop_3.36+parrot0_all.deb
+ 9fa4bf38f0cb4be430803f9b26cdafad6048b983 812 task-vietnamese-kde-desktop_3.36+parrot0_all.deb
+ e35434c6299e968c38d0e1f76bc66b0662539504 816 task-web-server_3.36+parrot0_all.deb
+ 9e9991003e79da396c2595e3e0afc99506d332a4 818 task-welsh-desktop_3.36+parrot0_all.deb
+ c00ec842cb3443bb5bdd68bd42609768cd484ba8 818 task-welsh_3.36+parrot0_all.deb
+ 1c2214b02608b23caa0b6bed4decc61974417585 1070 task-xfce-desktop_3.36+parrot0_all.deb
+ fbbca7217978ad61e38d4d1a7556b5917576d7bc 800 task-xhosa-desktop_3.36+parrot0_all.deb
+ acfbc327291092c4c0bbe0ff8e820a41469b908e 786 task-xhosa-kde-desktop_3.36+parrot0_all.deb
+ 1b83439e3a3c7267d83609137613f857bdbf4b48 18552 tasksel-data_3.36+parrot0_all.deb
+ 84a85263d2b345d2a81e7519a9ed960ea5ebcbfd 94158 tasksel_3.36+parrot0_all.deb
+Checksums-Sha256:
+ 83ab72e790123466a0d4e42a9a842d0942e0719efc0b9141dc4a3ca9c59ad021 16911 tasksel_3.36+parrot0.dsc
+ 308ee68b2b3b3a203ad2cc5b7b1d4302c9a65e90bc2daaee515e57270700d10d 789103 tasksel_3.36+parrot0.tar.gz
+ cb72e1577229c5ac898dd4fa4a48ffca8af770e12a6904b88fc107f2a92444c3 808 task-albanian-desktop_3.36+parrot0_all.deb
+ 1d6b44e5340025db9d31ea6fb38c80d48fb6b18d4380b5054f5e24d77cb1f82d 838 task-amharic-desktop_3.36+parrot0_all.deb
+ de42ccb1a79022ed5eab9d51b6111b6abd466cfabd6d52310e58ee2e8bcfb6eb 826 task-amharic-kde-desktop_3.36+parrot0_all.deb
+ ebe73b804ae7ce007cd81d6add2cbd57d8996fc33d650568a62723ffb115407e 834 task-amharic_3.36+parrot0_all.deb
+ 6a1876998c17b7899202a2b44dc0e4b01074a1b737b5937ebda60047229e2b1e 840 task-arabic-desktop_3.36+parrot0_all.deb
+ 2ef8aeec7aa702506631656ecbb0a187fd6b57e2e7d8df3eb7f77aaea27b6796 804 task-arabic-kde-desktop_3.36+parrot0_all.deb
+ 4c86d4116a2afa75d31ae1719a20a8c34aaaabc1830cd14ec00300f41a9e6a5a 854 task-arabic_3.36+parrot0_all.deb
+ a06a1ee72be6a14f22c175b21636b14e1f43339b4f3f9ebd8078796315d8fcab 822 task-asturian-desktop_3.36+parrot0_all.deb
+ 190702dadc5cf0bb15e7bea4c5d5c5932d32e7cbe4934f2d37c25da4396436e1 806 task-asturian_3.36+parrot0_all.deb
+ 48c6b8ae2adb9d55c30771814a17b4ac83d946e11dba1f9aa3de87ff047ce209 830 task-basque-desktop_3.36+parrot0_all.deb
+ 7016abcbc6ff7a42516e63c2371faa577587788a9b517131c7c5db08058f9436 810 task-basque-kde-desktop_3.36+parrot0_all.deb
+ 6600335f132d789e7ff5fa844df5fc8dff701b07fa073508f538134a92dfc671 818 task-basque_3.36+parrot0_all.deb
+ 773df04748267f645e5b1c3a730855019ba3b58e08ab7b61070ade515cbf57a6 832 task-belarusian-desktop_3.36+parrot0_all.deb
+ 1382d1b9731fecc8b58559ac5c3b8d291ffbbffb9ed56a04da3def3c78e9a7ba 796 task-belarusian-kde-desktop_3.36+parrot0_all.deb
+ 0b5ddbdd1e9f71b1c8afdc17072f5dffdfa2f95c5442b9d87e8a498eb1e4845f 808 task-belarusian_3.36+parrot0_all.deb
+ a9d34925d6aea9f2ad9c5a2bb353ae09a3c09c07c8a5b33ddac625a39ee22d06 842 task-bengali-desktop_3.36+parrot0_all.deb
+ d9ee1dc62f43efd00a828524dd14b2dfeabf58d3c6cc9c110d8b5594a73b5346 786 task-bengali-kde-desktop_3.36+parrot0_all.deb
+ eca958a6cde18f729620a53ad4f1c1eedfb988e74d9681aa147b02bd28612b1d 836 task-bengali_3.36+parrot0_all.deb
+ 5143b97196ab2af91c690714162f4edcc65384ab6255bcef3849e6f972fe1c48 820 task-bosnian-desktop_3.36+parrot0_all.deb
+ 10f991aeefe58ed9316a175dc4359a2c119f633442d0c672bf35846f13539d64 806 task-bosnian-kde-desktop_3.36+parrot0_all.deb
+ 303c6a29a4b3044d46a317c724dfe6c541273a9122c917014c95e7434603de1c 826 task-bosnian_3.36+parrot0_all.deb
+ 4604beafb51f098c3e093291b03af86d4266540da123709abf641afb68554bd1 844 task-brazilian-portuguese-desktop_3.36+parrot0_all.deb
+ 4b24be56527aa9526a061a3452d58feea739a6e2d0a7dd67e912a69d689c14c0 832 task-brazilian-portuguese-kde-desktop_3.36+parrot0_all.deb
+ 6bb50444728b16800a957bc06bbcbeaed8e068558bf0c4d03e0e254d6ec77cf1 874 task-brazilian-portuguese_3.36+parrot0_all.deb
+ eda9721ccd1dfad5fa1f72dabdeb1e4da8d0f0bb48b319d3672873f835270a3b 826 task-british-desktop_3.36+parrot0_all.deb
+ 294d4df50be4ac61e60cb5e8cd7c7cd80c649bd880f8155c59c20038668fa2a1 806 task-british-kde-desktop_3.36+parrot0_all.deb
+ 5511c25a24a508e5f380d101f7090885b811279ff95e22c5b81c29b26c08a48b 834 task-bulgarian-desktop_3.36+parrot0_all.deb
+ a4592ef9ae378bad4f33297e987989f1c59a841992acad74051c5252e59c40f0 812 task-bulgarian-kde-desktop_3.36+parrot0_all.deb
+ e5c6f3c08a84e9cd7d2bef4476e1adde48d84a2d9fb38e141bd0ed89c882483d 826 task-bulgarian_3.36+parrot0_all.deb
+ 790c23c699c76f777978be5ae88001273c923b4cd572fe4d4addc5f433bc1ac0 818 task-catalan-desktop_3.36+parrot0_all.deb
+ 2207a647368cb8bdeb2864d23754c58acbc21e601634db126fe3a3195008b717 806 task-catalan-kde-desktop_3.36+parrot0_all.deb
+ f4fd95992dd4b068d228998c9e07d3bf35b2259626c674385614a4b378b764bd 824 task-catalan_3.36+parrot0_all.deb
+ 1a041b8d2b892895359e2d8a4021dfb18aaca4c9b4964b1ec23e52c49c8cf312 930 task-chinese-s-desktop_3.36+parrot0_all.deb
+ ad35a6afe74228c3b6f107420dded98c3a6b122d27f8d64ebbcc1668632ab785 846 task-chinese-s-kde-desktop_3.36+parrot0_all.deb
+ 85cb008def5b8fc651adf50bec002ea58456eafe719d3fed999aad8ac0b58e25 890 task-chinese-s_3.36+parrot0_all.deb
+ 9877b69fb91cfad10954d048bfb778656de1a99dc0e58003670582428a303eb6 916 task-chinese-t-desktop_3.36+parrot0_all.deb
+ cd82e4db0032d7f2a9c2d8a8692772505100d8772c49585e1d45d04ca8b1df35 832 task-chinese-t-kde-desktop_3.36+parrot0_all.deb
+ 8b60db3a9234f8bfceab3256316ca6349997b3d331cad3c9bdd8969da1c0afe5 858 task-chinese-t_3.36+parrot0_all.deb
+ 8470f0e79a382c4f59ef34ac273910996dc8b16cd4abd58c322b5e23be1c5a88 882 task-cinnamon-desktop_3.36+parrot0_all.deb
+ c494d69e8f20891476797ccaff9f2034a261ac9f142f2bc67b4b3bd4bf5c8644 824 task-croatian-desktop_3.36+parrot0_all.deb
+ 326d32d5c7dcf938c3659158632de9fc033d563c6f81cb243248702b3fcd55b6 810 task-croatian-kde-desktop_3.36+parrot0_all.deb
+ ad2b7fe9ec6fb7da5e9d62ed8559b5981685535467100e29b25057c5656559df 824 task-croatian_3.36+parrot0_all.deb
+ 5b44f4e7519d4d5d0009061dd7ebfcbcc5c08daa08e43a6e4911532c6a40ffa4 846 task-cyrillic-desktop_3.36+parrot0_all.deb
+ 620d39d53023624a2433fd830f9a030537dcc2f720bac50c70008eb5c669f5e1 796 task-cyrillic-kde-desktop_3.36+parrot0_all.deb
+ 51dcbc33d16f66a9921630533273c249d6a08b37a55de3564356706eadd592a8 858 task-cyrillic_3.36+parrot0_all.deb
+ 55e8a66684cf11e3d3b112a5ef5cd22191f3532f0725d19b8199f40489d5faeb 834 task-czech-desktop_3.36+parrot0_all.deb
+ d014aa467cf9971c172f93d54dbc9c3be504f3d5ca4ac1569158f01e29985a61 806 task-czech-kde-desktop_3.36+parrot0_all.deb
+ e31a4d87847db935827688dbaec810697856ed470cdebecf4310f429870f7f34 830 task-czech_3.36+parrot0_all.deb
+ 73a11ce666ef00f1cca4d1d1b5efe37b2f97d2148355af24b0e9d65000bb166c 832 task-danish-desktop_3.36+parrot0_all.deb
+ df6847d7365540b71b2a431b60da07044267521b80b89731b626d80a8c50c3cb 804 task-danish-kde-desktop_3.36+parrot0_all.deb
+ 06a4a89a6b86a421e301c5904aca05ee68d9b9e9ca7e56563c45a71c0cdd5e5e 836 task-danish_3.36+parrot0_all.deb
+ 61827b4d31d0f9da54b8d0bbd9823669d07e9c2733e6d7eb7d10aff3f7fc86c1 898 task-desktop_3.36+parrot0_all.deb
+ a4a96277ad13c7f7944ee9296c048db9cbddef9bee405670aa2e009d52d8d1e8 828 task-dutch-desktop_3.36+parrot0_all.deb
+ 69c02c36e289a18582b422d503ac3983fcae18ecc3466754fffc6318955ccfbd 804 task-dutch-kde-desktop_3.36+parrot0_all.deb
+ 70547ede9e82196c9a4c2b68490f2992d3cc921934e116f1ebcd17eff2c1c591 840 task-dutch_3.36+parrot0_all.deb
+ 3e2bb717af827ef4d3042a34f018ecb3dc2fb2418e22a2cfc2257980041ca7f5 822 task-dzongkha-desktop_3.36+parrot0_all.deb
+ 1385bd6992f685bbac172f1f116354597e3843f1c59d4831b31da6167dcbd151 796 task-dzongkha-kde-desktop_3.36+parrot0_all.deb
+ 7a2561a7ab87ab397cd68e0a07e863214e5f32756c4f7187f9ad60c1c5b1601d 852 task-english_3.36+parrot0_all.deb
+ e420022bdb03281bb35af429e940b499d3b447731201751466f317ed9a8ff715 826 task-esperanto-desktop_3.36+parrot0_all.deb
+ 0a0e706dee92298224a30716913c2d7dfe1ed3f361b8a95297c1015646ce1137 810 task-esperanto-kde-desktop_3.36+parrot0_all.deb
+ 09ff2499bf416d25b2f676b62c2b2273acb87e20119981c49acb9c594402ec62 822 task-esperanto_3.36+parrot0_all.deb
+ 8a24f0082089fe0e34dddf13396adbb28638c1529413a074e1041d90acdbdb01 824 task-estonian-desktop_3.36+parrot0_all.deb
+ b94dc6165a3d12c299a97c9b6b507c82e70fb3404ba55f3f88bd1bb06970f7d4 810 task-estonian-kde-desktop_3.36+parrot0_all.deb
+ 40bcec2b838dfd01f5449c37501dca83026f33b717578eb60e0e72a8789e1820 816 task-estonian_3.36+parrot0_all.deb
+ b6d49e435919f8776a2ba4a277570f488d2eee63c2554776dd0b11f5c8a4534d 840 task-finnish-desktop_3.36+parrot0_all.deb
+ 4e43fe99dfc46390d70b4211fc50c48ac6c6f79f28808120c7e3a339bcc130c9 806 task-finnish-kde-desktop_3.36+parrot0_all.deb
+ 3b7f47cd90ad240f731723ce5412218347256694355c03b7e89c8f82f4b39db9 836 task-finnish_3.36+parrot0_all.deb
+ 70d4aaf2883501ecc9021a789e30412c1965c59582c456815103131ae7bd113a 836 task-french-desktop_3.36+parrot0_all.deb
+ 8f82a396ba28aaf63963b2d1d303cea37b898fc4a06157099b154944dd95f4e0 806 task-french-kde-desktop_3.36+parrot0_all.deb
+ fdd91e593d83c2c1c3cdf7a47d7b9327fff67ea317d15a2b05a4fe3ce2ccbd79 874 task-french_3.36+parrot0_all.deb
+ 9ca2b8d3727d9c3c0be7cd333bacb7274766c70a56d910eb23842196280457de 836 task-galician-desktop_3.36+parrot0_all.deb
+ 084f9e6b5c16465c701463878c24ce9e10c9f627db9e9bb3351ce949e4bd39bc 808 task-galician-kde-desktop_3.36+parrot0_all.deb
+ eac09f9bc66874c9774f57d70ecd840d93b53b3a772a65037ca2b642cf4c77f6 836 task-galician_3.36+parrot0_all.deb
+ 5c8609e421b968ff819e6f86029b6a988c269a0916261d1ddea80f5615d25114 818 task-georgian-desktop_3.36+parrot0_all.deb
+ d264d869124fb930b50debd4efca5dd30dca246823ccf6318edfc0a9e310effb 852 task-german-desktop_3.36+parrot0_all.deb
+ 37e0707381131661bf6be556d0046f2115b7c313abe5df7e2c78644ba1e672ac 804 task-german-kde-desktop_3.36+parrot0_all.deb
+ 5284523efdceec9732f0f13f2c5b1eb32329740bfcb5f36df24ee860afcbfaff 850 task-german_3.36+parrot0_all.deb
+ 2fbce3b9046e4e4d1e3f8837673bfe0f8fbebcc0a4a27be1009d4533d0505fd6 972 task-gnome-desktop_3.36+parrot0_all.deb
+ 9a20a2ce7f432169917ba0bccab9808fc01d0a957481f7e98601a2033978a7ff 844 task-greek-desktop_3.36+parrot0_all.deb
+ 3b79021d8e6543064903e9d238239d51b240dcca17c1380a72c28a3e21ad35db 810 task-greek-kde-desktop_3.36+parrot0_all.deb
+ 4cc2c4a9577ebf5fa3f3da85b31812b338008e04abf05967b3af3340a1fbfa61 808 task-greek_3.36+parrot0_all.deb
+ 409b2c820273711c78ac4bf0a2f1f30c64748e0d378c890c6050db60f521298a 838 task-gujarati-desktop_3.36+parrot0_all.deb
+ a01f597f48dc610acce281294ca06aba8e1af574f40fa35502c387dfebec9703 812 task-gujarati-kde-desktop_3.36+parrot0_all.deb
+ df895deee2036b3ad6d26dc27a0be76f6dc7b5a4fa7cb219701097e7c6dbf0ff 822 task-gujarati_3.36+parrot0_all.deb
+ b53310aaceea52e2a3fa2cdebd19f3808b36c81d51875c8a9c2f28090f521c07 832 task-hebrew-desktop_3.36+parrot0_all.deb
+ 9f0a9a783b9b723c17ab8b44c4cbcc7279f99831ebd68db7a0cc6cec7e16cf2b 814 task-hebrew-gnome-desktop_3.36+parrot0_all.deb
+ df3d52407240052c143e0c7840efdddc77ca186832696429debe93f5dff31076 806 task-hebrew-kde-desktop_3.36+parrot0_all.deb
+ e30a89c36c2e938382cf1491b2aa549996f8117edefe7362af126573282b5a57 852 task-hebrew_3.36+parrot0_all.deb
+ 4e79b24aeefc526c32e07aabb79be791db6065e13e060f665b0f2f4d87c37629 838 task-hindi-desktop_3.36+parrot0_all.deb
+ a90a80c53481bafb9cb071738e19234b3323fdfdcff39594fe2229b4867dd9b7 806 task-hindi-kde-desktop_3.36+parrot0_all.deb
+ 22c0e96d5e36e05843f7ec1fadaa320d2674ccf4ccba837cc7ae266ff6db72eb 834 task-hindi_3.36+parrot0_all.deb
+ bdeec702a8126b8e24a616de8ffe72e62fb83e5bf8c6aa5df1d26b9b389f19f1 888 task-hungarian-desktop_3.36+parrot0_all.deb
+ 3749ef612432e80b80090f1172adc88d7b859712c18f62502db8442b7b52be62 812 task-hungarian-kde-desktop_3.36+parrot0_all.deb
+ 9ac18f767e4c7a2f43df53e65177b91ba6d4003c99092275e7e46d4c4bc71a69 858 task-hungarian_3.36+parrot0_all.deb
+ 89a70972e545ec987118b6580c110aa382548eecfd9502f490d4c01747d6b78c 824 task-icelandic-desktop_3.36+parrot0_all.deb
+ 1021a87fb3a2d0f6bd0e7c70f39f9b871d2c2e239f7433eb0819d1892d0e706b 810 task-icelandic-kde-desktop_3.36+parrot0_all.deb
+ ca805946ffcc2aee60f514e6cd9489fdf8fd9fdc4a52893c651ef4c2d8980b6b 822 task-icelandic_3.36+parrot0_all.deb
+ 11007f2ccce4cb860d68140931f43422e3d9b6e31612f3082c209a8592771157 824 task-indonesian-desktop_3.36+parrot0_all.deb
+ 9ae0a3ac32e7e9eeb3d43ec9ec91ce92c223cb74229d78d0af68d5f2e7ca0c9b 812 task-indonesian-kde-desktop_3.36+parrot0_all.deb
+ 320fd2166c35760e0d01494092c9f98adf1460cdc776112a516828850aa6f155 828 task-irish-desktop_3.36+parrot0_all.deb
+ 31f5520fab55c908a4426ed500ad921138789a02d134579c5b785a9c6e0aefed 804 task-irish-kde-desktop_3.36+parrot0_all.deb
+ d9cf5376347627ecdea476f4e89d304f1bca0c745eccccc54fcf92c92953930d 816 task-irish_3.36+parrot0_all.deb
+ 384ba527b3298a66a447f7733db19e7713a55b9cdcd3ca32d6d12176e14c4b38 834 task-italian-desktop_3.36+parrot0_all.deb
+ 656b5b4b11d956c9c153a1f3031754058d07caf7c400cd97e2bdc7ba10c567dd 804 task-italian-kde-desktop_3.36+parrot0_all.deb
+ 8c8acf84c84c8587bbf5d667e922206f490634e4b14c174276e4fa6da48debf7 872 task-italian_3.36+parrot0_all.deb
+ a779fd474542c9772cad4d031ac562796beda493a9e164535f76bbcf8ce3dc76 868 task-japanese-desktop_3.36+parrot0_all.deb
+ fbdf3b372fbc2e06c2a73c197aabf7cb1efe1a34f1acd62d5a3bcc5505f39a54 830 task-japanese-gnome-desktop_3.36+parrot0_all.deb
+ c418991e0e134395f79f521ac97f0309280903afb3e1edebf86b39f27411ef7a 822 task-japanese-kde-desktop_3.36+parrot0_all.deb
+ dd0c52e1450bc6723dd56ef76aca171c94fbf96e474622ed503bce855c8fc7e1 828 task-japanese_3.36+parrot0_all.deb
+ 71c0b5f5d257e32e1cbbdd312047bb8bd37083b5146b62d371b4e66f7086d443 840 task-kannada-desktop_3.36+parrot0_all.deb
+ 0c2891c25e04b0c0b1ca76198269e6b3d047ce467259014fc1d505181aa3365c 820 task-kannada-kde-desktop_3.36+parrot0_all.deb
+ 0a6c30c0b34358e2b3e20049efd82fe95c03836584cb2a7b6c058dcd81b5290b 798 task-kazakh-desktop_3.36+parrot0_all.deb
+ 0b52c1ff3c3591cc324f3bf49e2df3af37d11e8d9abbe4a3dc8f23ea02f5f504 806 task-kazakh-kde-desktop_3.36+parrot0_all.deb
+ 36e7e0d6970f03a2fe78a22ccbafc6d0d32bd5546892892cedec195a804f4ec5 804 task-kazakh_3.36+parrot0_all.deb
+ ee1ab76b8576e01dd06860c8e5127d5730df5bfba79a4510a4ffe8422de01743 1012 task-kde-desktop_3.36+parrot0_all.deb
+ ed8acdf6093463596b15ada077c5878ecd50b4c433c0eb0ddeffc50fca4ba157 830 task-khmer-desktop_3.36+parrot0_all.deb
+ 5319c15b365039cb622d7c01d26e19e5e09a57e899dc23325eef4c9eed528903 806 task-khmer-kde-desktop_3.36+parrot0_all.deb
+ 57c038ef8f91415d65e578338fdce4a8143f7edec386451e22040133c4aedd1e 816 task-khmer_3.36+parrot0_all.deb
+ d9dea1ccfcf1fa719b4b3207fa17b2499ee32003c52511219265f8af65e9f852 870 task-korean-desktop_3.36+parrot0_all.deb
+ 07d6c4324cd4721fe28728f010d0fbecb0a21ef9fb6c46168f70b9be7d285405 816 task-korean-gnome-desktop_3.36+parrot0_all.deb
+ 77157e3c9be5b842378d3514d0fd0802492720862f1df895aba2cf2461546670 814 task-korean-kde-desktop_3.36+parrot0_all.deb
+ 196a0fd0acddbaeb26c10a64cce2830859dcd1c74901410efa69899f36145385 808 task-korean_3.36+parrot0_all.deb
+ 8d338960d321c27c456459e1b96d16e392581594230a70f2e1cc5b57e1776395 828 task-kurdish-desktop_3.36+parrot0_all.deb
+ c79732b1c99d7f9bed52120e56296f91707fb99a9333b1f35c611058ee99e040 786 task-kurdish-kde-desktop_3.36+parrot0_all.deb
+ 0979099b178d11a84c91198ea6712cd48e415d105417c78f382a18ebb3eb1380 808 task-kurdish_3.36+parrot0_all.deb
+ 3205d8ddcdb5865af0e67717b9c8f9ec4c08706a2612d3f0279a5d617f2dacc7 834 task-laptop_3.36+parrot0_all.deb
+ 5af7da51bf0439428bd2386f4de77866dd2ccb96671b2edf69e8d7e96f913de0 820 task-latvian-desktop_3.36+parrot0_all.deb
+ 3ea02459cd7ac541370f309240a1264bc294cf1617787272f43fc5edffa8790a 806 task-latvian-kde-desktop_3.36+parrot0_all.deb
+ cf577087ec98ff30afa5b26bd8096c00657360dfa13b0ff26ce62cd126e0199a 816 task-latvian_3.36+parrot0_all.deb
+ 85b61c5201d63f68e0ecaec673436bb8a99eaf37ceaf226ee5c2c7e75aa1b670 838 task-lithuanian-desktop_3.36+parrot0_all.deb
+ 99f2b8685d6b1d543841746f9ce7a12fe60e4d5a00446a32bd292c0f49a3e240 812 task-lithuanian-kde-desktop_3.36+parrot0_all.deb
+ e9c18d3a9f7c0a15d358efcef7b2b227680d5b924a9719639f242318c8d0c4d4 830 task-lithuanian_3.36+parrot0_all.deb
+ eef5b6db9f248a074ac833369fe6f2df5f568048de8caf5e3e7fe39a8ee0dbdb 988 task-lxde-desktop_3.36+parrot0_all.deb
+ 370ae21bef1a45e83c70362bfec4fa978cd6223e2dc77aecdbd06611e2f1d3e5 836 task-macedonian-desktop_3.36+parrot0_all.deb
+ 68a2691ef8be3f694af8e45d688f4ac6d184031f334776e1ba227ba8ef7e1b26 812 task-macedonian-kde-desktop_3.36+parrot0_all.deb
+ fa5a81e8bfb9294048804101f90a19a23837379ab53e2623d3b96614460c8e27 808 task-macedonian_3.36+parrot0_all.deb
+ 3f4345fcfa9b5e8bf4a16067e16eebdedbec2e9f299977d9b84842160c9e725d 868 task-malayalam-desktop_3.36+parrot0_all.deb
+ 325ae52cb3ea31efae2f40cc09e5ad7596f79847d3ca6de9e5f29bd9afd8bebc 834 task-malayalam-gnome-desktop_3.36+parrot0_all.deb
+ 2257bee60f2ae4270bd79b1a0e41cf68cd9877c504548023d15c19663fb79f35 834 task-malayalam-kde-desktop_3.36+parrot0_all.deb
+ 50142833e917a687592290781040a3d09222a0bc1b28374f82b4ad4f46f69eeb 824 task-malayalam_3.36+parrot0_all.deb
+ b888a0ac00a922adca403035f0a860263dd41100eb3940da934c93b5d902baff 832 task-marathi-desktop_3.36+parrot0_all.deb
+ 91a58958977896c04bc36ecb1183daa2b4c87cafd1f05e307dcae4b1beae41c6 834 task-marathi_3.36+parrot0_all.deb
+ 2561247a9fd189aa3f0f3b4987cfe6738c4c4d4fcc8951f2c25909faa2b0d60b 984 task-mate-desktop_3.36+parrot0_all.deb
+ 319d802edb820c0ac4bf05b45a059b41ad281719f992137082df3e6c65119372 830 task-nepali-desktop_3.36+parrot0_all.deb
+ 58c10f4cdb3fb6ec3d2ea3ce6eb0f4f2764fbd8234fb36798a8373a659be4ae9 784 task-nepali-kde-desktop_3.36+parrot0_all.deb
+ 589717c4c888b463b2e3b8427ed9f7610df6b85ff2f79cc0e9af21c7a3e61b3f 790 task-northern-sami-desktop_3.36+parrot0_all.deb
+ f5f91f9ea4de08f0f44896588cfd9fdcad46f23ee62880e730faf659e48be1c3 836 task-northern-sami_3.36+parrot0_all.deb
+ bd354b76637c22fef82ed900a812dd8b0a4e978cef94189e2634a81405620463 854 task-norwegian-desktop_3.36+parrot0_all.deb
+ d1f5cf7e2f2994551afdc35279944ce79364e618661faef530f32cde4a062233 820 task-norwegian-kde-desktop_3.36+parrot0_all.deb
+ cc7dcee9e10ad0e3e4afba83ff50eeb4020d93455221b0ed79673584df6143a6 852 task-norwegian_3.36+parrot0_all.deb
+ e4c2f8b1395604dc0fb5b9950ca0d9444a26708a3c129aa97a628c3dec5576f9 828 task-persian-desktop_3.36+parrot0_all.deb
+ 98a2275aaaee27f4c27958f99a2738ec5f7be4cd95552f789b16674cfa5c425a 806 task-persian-kde-desktop_3.36+parrot0_all.deb
+ 33aaabb991048707d9d7baf1b7dc78dc0f4acf9da3cec8a196767c7ade79acb9 834 task-persian_3.36+parrot0_all.deb
+ 3ec4b5216b97b3b6ddab2eeb64c9eab1dce11baf54cb1b79b1eb1931b95ecf93 834 task-polish-desktop_3.36+parrot0_all.deb
+ 291c5cc317c1b0baf825df194ba5b264beba9781adac0331ed05998866953a44 804 task-polish-kde-desktop_3.36+parrot0_all.deb
+ 4d258b3a7b7486b279a88e392d3fc3b78b27dcea968b73195e9b76e5193c7939 866 task-polish_3.36+parrot0_all.deb
+ d89bb7a4ecb1d11097a73ea946aba992b02cf44fe95a8036de619ddfc184e845 838 task-portuguese-desktop_3.36+parrot0_all.deb
+ dabcef32b31aab479b12837e5cb46eee6a4fc431cac6b2114e71c096ee5c8c0c 810 task-portuguese-kde-desktop_3.36+parrot0_all.deb
+ 25edc1736ab3c0d4994adebfa7295cff717564e167eb3f9a358d8b4404357d59 832 task-portuguese_3.36+parrot0_all.deb
+ 66fd354ea1df7d5e9a296557416940cfb2af12e69b3f9780047c386f52496ae3 848 task-print-server_3.36+parrot0_all.deb
+ 5e9a0ab6e722d30611909c688bd962540c5440ce12ba9a4ae7d721ebd14f86cb 834 task-punjabi-desktop_3.36+parrot0_all.deb
+ d7a110703ef9edf5bb1af9425435dc779d8c62685ab6fc9faacb71a6e567ca3a 806 task-punjabi-kde-desktop_3.36+parrot0_all.deb
+ 7d80d6e282157f601d8347454a4995e4d57ef8976e2017564cba64c99de249db 836 task-punjabi_3.36+parrot0_all.deb
+ d0bd3ff1db1c8a2b7d080615af3275209adc4ab3cdc4890a65939c780a5bea85 842 task-romanian-desktop_3.36+parrot0_all.deb
+ ab655a75226b57392a5e8639581c3c7ffd81d1a97db0223f905659cd5f675720 806 task-romanian-kde-desktop_3.36+parrot0_all.deb
+ 620eeb193bb5d23c8b62e7ba252fec696673fa56ce37c91577e46da93006fff7 844 task-romanian_3.36+parrot0_all.deb
+ 4b04cf8ef86ef5bf32a3388df6b873fb747b2a34aae126e1b4d4dcfffd93225d 826 task-russian-desktop_3.36+parrot0_all.deb
+ ac2d634f3869bd967213ca40430035b5c8eb8a9e7381307cf5c2f76cec056b6a 806 task-russian-kde-desktop_3.36+parrot0_all.deb
+ 5541f1337911eccdd3f9f6425074efcd44ae956e3b2afced0b21026c7f79e116 828 task-russian_3.36+parrot0_all.deb
+ c037b80805dd32a05371cffbb4f622561e22b3e85decbc2aee18b994fe220c24 816 task-serbian-desktop_3.36+parrot0_all.deb
+ 3b0450412dd2e4011323d6d2feed821b0ef09dace8797d529d0d1b6da125afd9 806 task-serbian-kde-desktop_3.36+parrot0_all.deb
+ 5a5737679d0b2570d5e7506724c13f3e8ddf3d7be39103f3146152403dbe861a 808 task-serbian_3.36+parrot0_all.deb
+ 73d3ead21cc54f60f75d10a76a571ed10f6149b80295af034053d979c468e2ba 830 task-sinhala-desktop_3.36+parrot0_all.deb
+ 41bd5a440f4e6a83085cfa6c78f2b96f2f49a04cb3b1c3c7c1f565d8e1d4baf9 806 task-sinhala-kde-desktop_3.36+parrot0_all.deb
+ e9f611a76b5ee6ad9cce004a047c97c740254ea3d815f2b218abad9113c333e7 836 task-slovak-desktop_3.36+parrot0_all.deb
+ ffea11df578cb5a43b0515d238b1d0aa8beb2b1f8e5bd06934f58a5cccf1273f 802 task-slovak-kde-desktop_3.36+parrot0_all.deb
+ 77dfe8d1f68da0ae5f6640f976cca987dd6642f2a5eabd19c4450916a78b611d 816 task-slovak_3.36+parrot0_all.deb
+ d3ac28f69341a1fdc833587b58f9b39336357441f3faac9d85b3380367c6d73d 834 task-slovenian-desktop_3.36+parrot0_all.deb
+ e9e7224e461c6a4935ab36017ae9d706bc241b97c2a5bcf9fcbb89f44f3e4f1b 810 task-slovenian-kde-desktop_3.36+parrot0_all.deb
+ afaba6dc6bdb5f8584077992fe8ce37a12bc664e301ec52c2147385ca0782e70 822 task-slovenian_3.36+parrot0_all.deb
+ c93a4cf3bf4611a197153811a117212319f10c7effb66299d947c3f3c0cb936e 848 task-south-african-english-desktop_3.36+parrot0_all.deb
+ 310f8a5b195b7d5306111e23fc1850c79e43b2aad1146745b9ae8efa7bdcb0ea 856 task-spanish-desktop_3.36+parrot0_all.deb
+ e8c517f78b9c2ba575a7aa08af021ca4cbb5de933c2fc846571d12ecccca5ade 806 task-spanish-kde-desktop_3.36+parrot0_all.deb
+ 8c60eb18ffa9d8f6526da52342fccd77fcc437c7593cb23486bc55f0265ab68f 872 task-spanish_3.36+parrot0_all.deb
+ a4663caf2208ae97cedef1863ca25fc61e7e3f99bd2834d79339bf3cfe7c44ef 820 task-ssh-server_3.36+parrot0_all.deb
+ 33f63466199be283f59db0a0d67f20e0ac7e5835a73b5fc4f779bbb94b16db11 826 task-swedish-desktop_3.36+parrot0_all.deb
+ 3b0b2f8a04045a51b997adc650f4453ac1753196c92abb047cbacc7001b9817c 806 task-swedish-kde-desktop_3.36+parrot0_all.deb
+ b93b83cb62f1ec5d7c1d0df69b906a44c8f48e3f56d48c8c987bc8408e57abe4 826 task-swedish_3.36+parrot0_all.deb
+ bbe03d8d0b034bb58e7815d31a0a44204a4da28d668c658e549b4d20492c2a76 816 task-tagalog_3.36+parrot0_all.deb
+ 0701974a8e05d9a5aa2eb71d191ea270cf414e3f13a5af9b88df3a800a2372ea 828 task-tamil-desktop_3.36+parrot0_all.deb
+ 68c51d9a2519c3abfd3f44d186b2816a818739a0ed949536b14d1df6a15066a9 806 task-tamil-gnome-desktop_3.36+parrot0_all.deb
+ c3774aa4612d385a994fc94ff86ce4898e269c3c7c9d371ccc6b9d1ab96eeebc 834 task-tamil_3.36+parrot0_all.deb
+ d800e272f0fb70c918eb5a6196a8e6ad07a2f5604273be633a8ac3cc72f93d65 850 task-telugu-desktop_3.36+parrot0_all.deb
+ 07576706521726abed4f128852a5224f132300b7312dafb34280a0673b0c156c 834 task-telugu-gnome-desktop_3.36+parrot0_all.deb
+ a790efef20c36db4c4ed81e3e8774a9268c0c96f4ad15d8663d5e2e0d6b6ad8b 826 task-telugu-kde-desktop_3.36+parrot0_all.deb
+ acde8cc49b31bc22d20b1da486f9197fac0ad82feb7e804190a4eecccf08498d 830 task-telugu_3.36+parrot0_all.deb
+ 7532886e5b6105fd97f971df35d0d00d7c476877dad9e1afccc874a6dcee828c 830 task-thai-desktop_3.36+parrot0_all.deb
+ 13806a5b4945e19392689b75241f04c10843ca7580a09256687e90e92cc99194 814 task-thai-gnome-desktop_3.36+parrot0_all.deb
+ d598c10ab7f3b6cbfea12f4e710d93312887aac253226d9a54dad75820eb4645 808 task-thai-kde-desktop_3.36+parrot0_all.deb
+ 4b5e68e3381536d823d9e613f208f762c0edab2986c718b8e7298ef7d7beaf9d 808 task-thai_3.36+parrot0_all.deb
+ 959c98d11b9e58bd5b2d1dd3bbad3f746d0196701f85e9df9ca70694d9085d07 804 task-turkish-desktop_3.36+parrot0_all.deb
+ 9e8729674d7e1b775fe6a60e1617a02c5430791139bf3751598abfaf699cb300 806 task-turkish-kde-desktop_3.36+parrot0_all.deb
+ 84c50a91189cc2a0aca18f68dedd4a99151c0597bba2c0e0fb72ed231b0b74f0 832 task-turkish_3.36+parrot0_all.deb
+ e820720da213d646bba053e588d51fc553870fbb30005a0eec5ed49eb6d4411f 832 task-ukrainian-desktop_3.36+parrot0_all.deb
+ ce70615355613677c5bd58d10159988ab740c92162c13f69a8ef8ca17c409bcb 810 task-ukrainian-kde-desktop_3.36+parrot0_all.deb
+ f953561478974e7f008ada5b376d1a69c8d0f9dbc4a90ba8a8316f3885317d2f 834 task-ukrainian_3.36+parrot0_all.deb
+ 13af9669d664963b5a44e2e653c20fbb9ca3e45d79ad0a8595e34a970c96d410 814 task-uyghur-desktop_3.36+parrot0_all.deb
+ e74308745ba56c46ca4fbde1b392111563b5cc9239445c7a01f4fbea6620fc08 806 task-uyghur-kde-desktop_3.36+parrot0_all.deb
+ ca72e0ffbcc0a8dacf0930705d2905e558560047d992bdc8a2670681ba6fd645 830 task-vietnamese-desktop_3.36+parrot0_all.deb
+ f8db01ebd38163a1ccb88c05b7d4460ac4e0ae97f1ab5b5bdb621d7ebac8a4f0 812 task-vietnamese-kde-desktop_3.36+parrot0_all.deb
+ 6e7d26dcf09547f475e44755c791cfee52a10b28ec2374e4b8eae305e69e889c 816 task-web-server_3.36+parrot0_all.deb
+ 57f69c27927e9aaef02b23f89ca645f7edf4fd4e32d75d3f91b2306cef5eb2ac 818 task-welsh-desktop_3.36+parrot0_all.deb
+ cc2308e12ea2c422763c734b051ccfda61c81551e4b40d4f5f2d45ab2139438b 818 task-welsh_3.36+parrot0_all.deb
+ e6adf17d614e4397425275bb0e8f59229be5e0a349461b7fee8a29a46eaf63eb 1070 task-xfce-desktop_3.36+parrot0_all.deb
+ bdc07911e40986a665a8a8d5aba399ca4e470ff3666e62011379d76c300c75df 800 task-xhosa-desktop_3.36+parrot0_all.deb
+ 5c8f9881bbf278094245238f6a107ba8a635bfe3b8a01357fc91494ca417368a 786 task-xhosa-kde-desktop_3.36+parrot0_all.deb
+ cd8685189cae9005b19356b1522587f40c27f5957855a2ae929bb15c3d3c86e7 18552 tasksel-data_3.36+parrot0_all.deb
+ 8ad077e68c04ac96cbb88a82e0b85f4740fb0f7c3bcb57e65df50f7d12209361 94158 tasksel_3.36+parrot0_all.deb
+Files:
+ d0a8a481e5b4e69b6aeaa353d4d1f664 16911 tasks optional tasksel_3.36+parrot0.dsc
+ 6000c049c40fdd92a7a6fd3a8cc75638 789103 tasks optional tasksel_3.36+parrot0.tar.gz
+ a38d490412ef18e4c99918fed6e2c2cd 808 tasks optional task-albanian-desktop_3.36+parrot0_all.deb
+ 9d8217d2ce260280847a921b6bfc7574 838 tasks optional task-amharic-desktop_3.36+parrot0_all.deb
+ cf241ec5174a4ffd1a96245926d021ce 826 tasks optional task-amharic-kde-desktop_3.36+parrot0_all.deb
+ 5c5f65939637893e21cc127d90808188 834 tasks optional task-amharic_3.36+parrot0_all.deb
+ d2bd027af45e9a802e7b3b86309c8db8 840 tasks optional task-arabic-desktop_3.36+parrot0_all.deb
+ 5e2218d1026e2d07169b819a71b8092e 804 tasks optional task-arabic-kde-desktop_3.36+parrot0_all.deb
+ 8e4c21878e2545d920362d1000bb2a30 854 tasks optional task-arabic_3.36+parrot0_all.deb
+ 5b3595d8b351fe7184bd4df6e68d045f 822 tasks optional task-asturian-desktop_3.36+parrot0_all.deb
+ dd83b0f7da0588a6bb6a683879d12f17 806 tasks optional task-asturian_3.36+parrot0_all.deb
+ 37eb2c9c8d781bba78e0355c2874c8f6 830 tasks optional task-basque-desktop_3.36+parrot0_all.deb
+ 05c3cf957d3d6bc8c944b101c7689922 810 tasks optional task-basque-kde-desktop_3.36+parrot0_all.deb
+ 23f9fba785dadf7bd3b0b39b58189056 818 tasks optional task-basque_3.36+parrot0_all.deb
+ 7a5597dac043577f3ecbd7300a9387c0 832 tasks optional task-belarusian-desktop_3.36+parrot0_all.deb
+ 022e46d865347b0575870333d1eb7ff6 796 tasks optional task-belarusian-kde-desktop_3.36+parrot0_all.deb
+ 73ee7571246ec85f7a8a9be74665742e 808 tasks optional task-belarusian_3.36+parrot0_all.deb
+ 9eb85528175d5de5d40ec86c97784d55 842 tasks optional task-bengali-desktop_3.36+parrot0_all.deb
+ 377dfa43713be8dcd524f4bc69b4707d 786 tasks optional task-bengali-kde-desktop_3.36+parrot0_all.deb
+ fbe69e09f0de74613de2c25618c51c33 836 tasks optional task-bengali_3.36+parrot0_all.deb
+ ef0f773b25a060c36aa28152f8d564df 820 tasks optional task-bosnian-desktop_3.36+parrot0_all.deb
+ 04054d7e4fed785f17795d6ef566905d 806 tasks optional task-bosnian-kde-desktop_3.36+parrot0_all.deb
+ c9efdd2c2d9c11a62b4c2dc4f4bfbd61 826 tasks optional task-bosnian_3.36+parrot0_all.deb
+ a808a677187fd5d29b21543fd6c323db 844 tasks optional task-brazilian-portuguese-desktop_3.36+parrot0_all.deb
+ bde2808498ee78da8d2c0f8b35c4ba16 832 tasks optional task-brazilian-portuguese-kde-desktop_3.36+parrot0_all.deb
+ c16126bf450c431c9d5ee5c8b784d764 874 tasks optional task-brazilian-portuguese_3.36+parrot0_all.deb
+ 4a164961678c190d02a2983657e31722 826 tasks optional task-british-desktop_3.36+parrot0_all.deb
+ db136da9a2a63f59e8566b2cf8eb0501 806 tasks optional task-british-kde-desktop_3.36+parrot0_all.deb
+ b7d051e587f8870b361a36a2cab9234b 834 tasks optional task-bulgarian-desktop_3.36+parrot0_all.deb
+ 792c47b9eaa63bd587a35e79c7d2dcc6 812 tasks optional task-bulgarian-kde-desktop_3.36+parrot0_all.deb
+ 029d5798360962c6cc915cf5b9151d17 826 tasks optional task-bulgarian_3.36+parrot0_all.deb
+ d49740f7562dd22920c19dc3938f10b4 818 tasks optional task-catalan-desktop_3.36+parrot0_all.deb
+ 82eb9fac3c6b6709a76b5a8a9be8b190 806 tasks optional task-catalan-kde-desktop_3.36+parrot0_all.deb
+ 1ee7fd50c1783b99bda611f4d438c39e 824 tasks optional task-catalan_3.36+parrot0_all.deb
+ a0894a815d3f5df5cc3faeccd2127625 930 tasks optional task-chinese-s-desktop_3.36+parrot0_all.deb
+ e9bc18abae3eecfca87870fec4bf9019 846 tasks optional task-chinese-s-kde-desktop_3.36+parrot0_all.deb
+ 5d65c4e49e7e86372e31f722faabda0f 890 tasks optional task-chinese-s_3.36+parrot0_all.deb
+ d1de1eff7ebee2a35350d267cdfcddc1 916 tasks optional task-chinese-t-desktop_3.36+parrot0_all.deb
+ c5ea16dfb14cee8662d053135ac0cf4a 832 tasks optional task-chinese-t-kde-desktop_3.36+parrot0_all.deb
+ 47a26545e2719d149cf4ad0fef195fb5 858 tasks optional task-chinese-t_3.36+parrot0_all.deb
+ 08c984212352081def0af3d159eb3de6 882 tasks optional task-cinnamon-desktop_3.36+parrot0_all.deb
+ e23dbb03e1ce6b8d799f14bcf1c77bdd 824 tasks optional task-croatian-desktop_3.36+parrot0_all.deb
+ fa6c7854ae7ad08d1279b6063d265c95 810 tasks optional task-croatian-kde-desktop_3.36+parrot0_all.deb
+ 09c8765c37b6066c496b0fad86946653 824 tasks optional task-croatian_3.36+parrot0_all.deb
+ 7704a7d6cc2d903ee1a8f3286a54e25c 846 tasks optional task-cyrillic-desktop_3.36+parrot0_all.deb
+ 5ca4c93170c5cb84a9054996e82451c0 796 tasks optional task-cyrillic-kde-desktop_3.36+parrot0_all.deb
+ fddabfa6813c69307aab102d738b2916 858 tasks optional task-cyrillic_3.36+parrot0_all.deb
+ 949dacce91ebb85c8611d636dd8821e0 834 tasks optional task-czech-desktop_3.36+parrot0_all.deb
+ dd75992dc9e345f2d2093abbd6693a1f 806 tasks optional task-czech-kde-desktop_3.36+parrot0_all.deb
+ 8d9a7971f2fac910148cbad7a0964530 830 tasks optional task-czech_3.36+parrot0_all.deb
+ 2b75c95ef146829b40e528b46faf9020 832 tasks optional task-danish-desktop_3.36+parrot0_all.deb
+ 42c1abbf68610a0bfbe94ef7f93a691a 804 tasks optional task-danish-kde-desktop_3.36+parrot0_all.deb
+ 5a8cef03a26cb1843145cabcb7084643 836 tasks optional task-danish_3.36+parrot0_all.deb
+ 6eb5b43351bfdf4dc3f1a462f49acf43 898 tasks optional task-desktop_3.36+parrot0_all.deb
+ 8c9dcdeb4319e770f8a2eaa62279293b 828 tasks optional task-dutch-desktop_3.36+parrot0_all.deb
+ 56a3c5aeb429250ba21a998e031c62c4 804 tasks optional task-dutch-kde-desktop_3.36+parrot0_all.deb
+ 119d89dc083be32c76eb0359e9065232 840 tasks optional task-dutch_3.36+parrot0_all.deb
+ b143163c239bceb0fb77b6f989fb4c59 822 tasks optional task-dzongkha-desktop_3.36+parrot0_all.deb
+ 753ea8c1e1dc1e434fea80adc34bb70f 796 tasks optional task-dzongkha-kde-desktop_3.36+parrot0_all.deb
+ f18863cdd077f1e42e5ab5a1c0221227 852 tasks optional task-english_3.36+parrot0_all.deb
+ 6649cdceb3c18031f5bb3e1b06c0fbb5 826 tasks optional task-esperanto-desktop_3.36+parrot0_all.deb
+ 29019c34394da2f4c3ad10a521327a19 810 tasks optional task-esperanto-kde-desktop_3.36+parrot0_all.deb
+ fcd1c34efe4a84db64d3ae1ce87e0d4b 822 tasks optional task-esperanto_3.36+parrot0_all.deb
+ dc3db1d04dd27d8e0c820f41119e4530 824 tasks optional task-estonian-desktop_3.36+parrot0_all.deb
+ 85bab6cc34b5868db48bd8aaa457e948 810 tasks optional task-estonian-kde-desktop_3.36+parrot0_all.deb
+ 135e8b393a13994af2da679ff1dfa7a2 816 tasks optional task-estonian_3.36+parrot0_all.deb
+ abbe1007fec94ccc3124be47ed997af0 840 tasks optional task-finnish-desktop_3.36+parrot0_all.deb
+ 8d86dfde76adec4cd3e4eade5c03debb 806 tasks optional task-finnish-kde-desktop_3.36+parrot0_all.deb
+ 92510936305197d15d7672271207b9f6 836 tasks optional task-finnish_3.36+parrot0_all.deb
+ 409b6284bde0cb2dbd0cafee296d7dc3 836 tasks optional task-french-desktop_3.36+parrot0_all.deb
+ 2f2c23b7bf7fb2c9c61ab5e3f37d7991 806 tasks optional task-french-kde-desktop_3.36+parrot0_all.deb
+ e805f9102945011e46fa82aabeaa0309 874 tasks optional task-french_3.36+parrot0_all.deb
+ bae573b3c85910e81d20f4bad947dd9b 836 tasks optional task-galician-desktop_3.36+parrot0_all.deb
+ fd12599c67fcf895078072d5bb3cc6da 808 tasks optional task-galician-kde-desktop_3.36+parrot0_all.deb
+ 823823dd4ccb626fbaf2a953817a587b 836 tasks optional task-galician_3.36+parrot0_all.deb
+ 0f1f27516b52b20301703b3b06f10377 818 tasks optional task-georgian-desktop_3.36+parrot0_all.deb
+ 2b79705ef1231a62a98aed9f7f3ec1c9 852 tasks optional task-german-desktop_3.36+parrot0_all.deb
+ 07d098144447be9ec237f69a2fd72ff6 804 tasks optional task-german-kde-desktop_3.36+parrot0_all.deb
+ cf968d69a5e7f1d3bebd936d3412886d 850 tasks optional task-german_3.36+parrot0_all.deb
+ 0a64c6b0fb8fc93ff5520b82e7cb7daf 972 tasks optional task-gnome-desktop_3.36+parrot0_all.deb
+ 768160a0c66d1eaa8ba46ffa1ef0af5c 844 tasks optional task-greek-desktop_3.36+parrot0_all.deb
+ 4adf3f45183da8cff37a0b7ded03c564 810 tasks optional task-greek-kde-desktop_3.36+parrot0_all.deb
+ a2dd8abdb1427d941f7b7a1b2715a5c1 808 tasks optional task-greek_3.36+parrot0_all.deb
+ 1ce8331a211b71c28fdac2fff83649e2 838 tasks optional task-gujarati-desktop_3.36+parrot0_all.deb
+ 42bd48e9364ef8c8f1e2bb98fd464107 812 tasks optional task-gujarati-kde-desktop_3.36+parrot0_all.deb
+ 4d6df94f43364be4e8ae9db3ab1c221e 822 tasks optional task-gujarati_3.36+parrot0_all.deb
+ 76aea4fa966d7002e6d58ea64ee04200 832 tasks optional task-hebrew-desktop_3.36+parrot0_all.deb
+ ea423972002c875ec7830eac87b1af2a 814 tasks optional task-hebrew-gnome-desktop_3.36+parrot0_all.deb
+ d19a082ae06aff2745b48f7e94e2de40 806 tasks optional task-hebrew-kde-desktop_3.36+parrot0_all.deb
+ f0a9adc97c307e05e0150202804730cb 852 tasks optional task-hebrew_3.36+parrot0_all.deb
+ 0ccab7824fb4f9a5ec95719508aea7d0 838 tasks optional task-hindi-desktop_3.36+parrot0_all.deb
+ a02221639bb1f4896be387cf48f3da8c 806 tasks optional task-hindi-kde-desktop_3.36+parrot0_all.deb
+ b531784811c6d038036a661e59faa459 834 tasks optional task-hindi_3.36+parrot0_all.deb
+ 61f2f8cba70df41e2024fa01b6f4b48d 888 tasks optional task-hungarian-desktop_3.36+parrot0_all.deb
+ 6de49ec858ad564cbc7e41d09f8fd4b9 812 tasks optional task-hungarian-kde-desktop_3.36+parrot0_all.deb
+ 347fe28bb21421062953957abbf314e3 858 tasks optional task-hungarian_3.36+parrot0_all.deb
+ b626a66ffc367bcd50c7164285d2fb39 824 tasks optional task-icelandic-desktop_3.36+parrot0_all.deb
+ 140a77d7700bb8c24a8d039da658f4b3 810 tasks optional task-icelandic-kde-desktop_3.36+parrot0_all.deb
+ 421c75ee61767ad10d218cbb792b5238 822 tasks optional task-icelandic_3.36+parrot0_all.deb
+ 5c684c0068003ed3ef35b0da2bafc192 824 tasks optional task-indonesian-desktop_3.36+parrot0_all.deb
+ 9ad33c19923cb469d737e28085025fd5 812 tasks optional task-indonesian-kde-desktop_3.36+parrot0_all.deb
+ 9c01053415b9bd4f8f910ea03b909f1f 828 tasks optional task-irish-desktop_3.36+parrot0_all.deb
+ c4bc640140f79aefd5e4d35be123fb47 804 tasks optional task-irish-kde-desktop_3.36+parrot0_all.deb
+ 24673fe5607d4d5bdbc28e4943c888d0 816 tasks optional task-irish_3.36+parrot0_all.deb
+ 536d4847fe7c2ed3448759f55fb1e6d2 834 tasks optional task-italian-desktop_3.36+parrot0_all.deb
+ 91aed31a6c9e1edfc64abe8af21dc695 804 tasks optional task-italian-kde-desktop_3.36+parrot0_all.deb
+ c6159bf43213e554d71d080fc82a0b64 872 tasks optional task-italian_3.36+parrot0_all.deb
+ 12aa9c3110dcbf2584c1b36cfb61864d 868 tasks optional task-japanese-desktop_3.36+parrot0_all.deb
+ 2def93f5518bf0ff9de058e3228c8784 830 tasks optional task-japanese-gnome-desktop_3.36+parrot0_all.deb
+ 66d86687f41a5a73df2e5f97687dc9f5 822 tasks optional task-japanese-kde-desktop_3.36+parrot0_all.deb
+ d050dd041d016ae75f2b87de98e0b95f 828 tasks optional task-japanese_3.36+parrot0_all.deb
+ fb7132a8dda19b7db529ce6605d08aa7 840 tasks optional task-kannada-desktop_3.36+parrot0_all.deb
+ 1695e6df6cfd99808b8db2b2f881c681 820 tasks optional task-kannada-kde-desktop_3.36+parrot0_all.deb
+ 9f452e4a3ea1b300ed1ea3ec61b907da 798 tasks optional task-kazakh-desktop_3.36+parrot0_all.deb
+ 3a123307c5eb79fe8e6d4bd0d13fe317 806 tasks optional task-kazakh-kde-desktop_3.36+parrot0_all.deb
+ f02203c340901d0070b68e0e905f060c 804 tasks optional task-kazakh_3.36+parrot0_all.deb
+ cdf8a5a25c603453a95081c9e98a5252 1012 tasks optional task-kde-desktop_3.36+parrot0_all.deb
+ e70d29618476bdc9e7cdfba1ef93433d 830 tasks optional task-khmer-desktop_3.36+parrot0_all.deb
+ 87fde3fbd16ce3d6a9bedbf21954e3df 806 tasks optional task-khmer-kde-desktop_3.36+parrot0_all.deb
+ 7e4138345e0722d240b72bf8b5dc10c6 816 tasks optional task-khmer_3.36+parrot0_all.deb
+ 8988a0fe5f9a481219d75cad6e3bd9f5 870 tasks optional task-korean-desktop_3.36+parrot0_all.deb
+ c7b1b825ef28a36015adf312e05f81ab 816 tasks optional task-korean-gnome-desktop_3.36+parrot0_all.deb
+ 2d33f5769dfcaabf0f30c81160ce3382 814 tasks optional task-korean-kde-desktop_3.36+parrot0_all.deb
+ 8001f9210fa949d7fa275957a72fd19f 808 tasks optional task-korean_3.36+parrot0_all.deb
+ 659d81df13a0fc1c810312ae42f67abd 828 tasks optional task-kurdish-desktop_3.36+parrot0_all.deb
+ eac14f4fcc66fab6dc7425c13952517b 786 tasks optional task-kurdish-kde-desktop_3.36+parrot0_all.deb
+ f352fbaf07285158c1d143645261b83b 808 tasks optional task-kurdish_3.36+parrot0_all.deb
+ 6918734be4b105c3f83ff5a75c40ccc3 834 tasks optional task-laptop_3.36+parrot0_all.deb
+ 6bc3b45936d237467fbb441fb521dca1 820 tasks optional task-latvian-desktop_3.36+parrot0_all.deb
+ 17dc9fc62c4583f91e7d857ffaae8afc 806 tasks optional task-latvian-kde-desktop_3.36+parrot0_all.deb
+ 96c4c01323937297fb960337fec5c35d 816 tasks optional task-latvian_3.36+parrot0_all.deb
+ fb5eb7dbbe099317e478ebf5fe279839 838 tasks optional task-lithuanian-desktop_3.36+parrot0_all.deb
+ 00a6ed1648164cedf6f63a57bac36848 812 tasks optional task-lithuanian-kde-desktop_3.36+parrot0_all.deb
+ cc088fe7458057230d5ad6685f155a4c 830 tasks optional task-lithuanian_3.36+parrot0_all.deb
+ 44b0423872d2c5b0067cb8ca816c50e4 988 tasks optional task-lxde-desktop_3.36+parrot0_all.deb
+ 38e3b0064e43ed64ade9669398d7ad7f 836 tasks optional task-macedonian-desktop_3.36+parrot0_all.deb
+ 539de9dd5ab0e23f416b9c2e0fb76eb9 812 tasks optional task-macedonian-kde-desktop_3.36+parrot0_all.deb
+ c33aac9be0d940ddbdea646078c99877 808 tasks optional task-macedonian_3.36+parrot0_all.deb
+ 84655945cb51944a18c7017439cdede6 868 tasks optional task-malayalam-desktop_3.36+parrot0_all.deb
+ e60f245afbf0a294c493dcf06ffd6990 834 tasks optional task-malayalam-gnome-desktop_3.36+parrot0_all.deb
+ dac8d4da6847f138c9a6c8fe52f1d5b0 834 tasks optional task-malayalam-kde-desktop_3.36+parrot0_all.deb
+ 77f18864c68bf2c7308e24288048b5fa 824 tasks optional task-malayalam_3.36+parrot0_all.deb
+ d429e301030b312db3e53227da1e8cf9 832 tasks optional task-marathi-desktop_3.36+parrot0_all.deb
+ 8fd0b9079c12149e0c8f3cf2b5f129ac 834 tasks optional task-marathi_3.36+parrot0_all.deb
+ d36e4479ba56740b15957cbb84074ec3 984 tasks optional task-mate-desktop_3.36+parrot0_all.deb
+ 29ffb44d745520753f9bb97d3679c04f 830 tasks optional task-nepali-desktop_3.36+parrot0_all.deb
+ 8a4ff6a7db1276e86f57027b2c41176f 784 tasks optional task-nepali-kde-desktop_3.36+parrot0_all.deb
+ 9c6ebae578a71864d2f948d8f96b5604 790 tasks optional task-northern-sami-desktop_3.36+parrot0_all.deb
+ 6eb92e1879397f1e4717c1f0442da2e3 836 tasks optional task-northern-sami_3.36+parrot0_all.deb
+ 13a6db9d261ed09c57ccbb2f1042c332 854 tasks optional task-norwegian-desktop_3.36+parrot0_all.deb
+ 53100f35a4aa122ecb00aedad7c2fec2 820 tasks optional task-norwegian-kde-desktop_3.36+parrot0_all.deb
+ c08a0f4ff1e747457e6368a941550213 852 tasks optional task-norwegian_3.36+parrot0_all.deb
+ e9b5b93eadfe0b3935457d84c1a4adbe 828 tasks optional task-persian-desktop_3.36+parrot0_all.deb
+ 73dc53c80cce1321bff8abe0012bacb1 806 tasks optional task-persian-kde-desktop_3.36+parrot0_all.deb
+ d9d83ec208d286c66b2790604506ba56 834 tasks optional task-persian_3.36+parrot0_all.deb
+ 46e1d10833023b3d95e0e62731dbe108 834 tasks optional task-polish-desktop_3.36+parrot0_all.deb
+ d25312407615c5829d68f030798b69af 804 tasks optional task-polish-kde-desktop_3.36+parrot0_all.deb
+ 044e7840cd41b463942defcf863d1816 866 tasks optional task-polish_3.36+parrot0_all.deb
+ a3e8d77b45eec67d2ff810d34cac47ee 838 tasks optional task-portuguese-desktop_3.36+parrot0_all.deb
+ d6736ae684f5c90a12387af1048d7995 810 tasks optional task-portuguese-kde-desktop_3.36+parrot0_all.deb
+ cf91177c747a561d6a8f507dc22e30bb 832 tasks optional task-portuguese_3.36+parrot0_all.deb
+ aab67734240a6b9fd46dbb362f285482 848 tasks optional task-print-server_3.36+parrot0_all.deb
+ 9faaa3d3c11df14a65dc98860193b2a1 834 tasks optional task-punjabi-desktop_3.36+parrot0_all.deb
+ 78f3a12929a715e29d19d4df79055759 806 tasks optional task-punjabi-kde-desktop_3.36+parrot0_all.deb
+ 933f63fb122e7bdad094e909e13b28c8 836 tasks optional task-punjabi_3.36+parrot0_all.deb
+ 40610f739f981b0e4df4021977985956 842 tasks optional task-romanian-desktop_3.36+parrot0_all.deb
+ a3c13e85b8fb79179c5b7fbac505f7d7 806 tasks optional task-romanian-kde-desktop_3.36+parrot0_all.deb
+ c3066e284dde1fed726d576fa329119d 844 tasks optional task-romanian_3.36+parrot0_all.deb
+ 5e96c3f0d02dee27e3c986ca07bf399b 826 tasks optional task-russian-desktop_3.36+parrot0_all.deb
+ 9d3dc6dd65e45d365979b0dcd606d977 806 tasks optional task-russian-kde-desktop_3.36+parrot0_all.deb
+ afda3318fcbc4ec42fef1abb2bb0a1e2 828 tasks optional task-russian_3.36+parrot0_all.deb
+ 8e5d0059c6e979d35a499fc07746ca19 816 tasks optional task-serbian-desktop_3.36+parrot0_all.deb
+ 0fd10279b1cbaa885ee76e71f4ad1140 806 tasks optional task-serbian-kde-desktop_3.36+parrot0_all.deb
+ 95a640be784674e761997bbf0bfc2fd4 808 tasks optional task-serbian_3.36+parrot0_all.deb
+ a6e4d62c5efe934d57cb918321ded0de 830 tasks optional task-sinhala-desktop_3.36+parrot0_all.deb
+ 974da18c5906d3193c9249be8e81a61c 806 tasks optional task-sinhala-kde-desktop_3.36+parrot0_all.deb
+ c31b2a9e59c75c8c1a85fc28d8cebaad 836 tasks optional task-slovak-desktop_3.36+parrot0_all.deb
+ 282151751a084e994c3d6ee7346fa0eb 802 tasks optional task-slovak-kde-desktop_3.36+parrot0_all.deb
+ a37a81b97c8d87e2061ea9f6c706989a 816 tasks optional task-slovak_3.36+parrot0_all.deb
+ 1341c86f198df1f1bdc9cc42684259cc 834 tasks optional task-slovenian-desktop_3.36+parrot0_all.deb
+ 5d73a319e69d964960d151230a4b1703 810 tasks optional task-slovenian-kde-desktop_3.36+parrot0_all.deb
+ 8e34fa5435f508db401fadb4bddf0001 822 tasks optional task-slovenian_3.36+parrot0_all.deb
+ 03668d419d29d64636ef7f06b388d68a 848 tasks optional task-south-african-english-desktop_3.36+parrot0_all.deb
+ 9ace0cd13abbd44a08e08c5a17b57fb4 856 tasks optional task-spanish-desktop_3.36+parrot0_all.deb
+ 3d2f1ec0f347b2ad60b6e90c47a11a89 806 tasks optional task-spanish-kde-desktop_3.36+parrot0_all.deb
+ 2e5f9c917e890e8f25d23ed340d8de37 872 tasks optional task-spanish_3.36+parrot0_all.deb
+ 2707f4a00bd211b269232e3e81741c7f 820 tasks optional task-ssh-server_3.36+parrot0_all.deb
+ 89bc409273044701e219b6f8f278d8c6 826 tasks optional task-swedish-desktop_3.36+parrot0_all.deb
+ 5b34868e38bf747e1b51f5fc92acc90f 806 tasks optional task-swedish-kde-desktop_3.36+parrot0_all.deb
+ d2c7e8a529a11e15427d2ffb9a32f796 826 tasks optional task-swedish_3.36+parrot0_all.deb
+ fe1d3505bc466647e4666dca7796d083 816 tasks optional task-tagalog_3.36+parrot0_all.deb
+ d427c0d07d6957671b8aa5bdb48766be 828 tasks optional task-tamil-desktop_3.36+parrot0_all.deb
+ 13ffeadc01e9110f6cb1b380b4ddc69d 806 tasks optional task-tamil-gnome-desktop_3.36+parrot0_all.deb
+ 3c6354f3204838a3184c63c0ea71921e 834 tasks optional task-tamil_3.36+parrot0_all.deb
+ 35759cd91b1e8ee30baa582ae34d8bae 850 tasks optional task-telugu-desktop_3.36+parrot0_all.deb
+ b20da4d707c0e1ce4437a22b25c57120 834 tasks optional task-telugu-gnome-desktop_3.36+parrot0_all.deb
+ 57a03b6b8b8eb98cace47c6567530f85 826 tasks optional task-telugu-kde-desktop_3.36+parrot0_all.deb
+ dae036ffdf6628fb4a83ae33950d3021 830 tasks optional task-telugu_3.36+parrot0_all.deb
+ 3b680d28712aadfd468c669182f5651d 830 tasks optional task-thai-desktop_3.36+parrot0_all.deb
+ c49bb78f6bb91b6c6a8af66b2d960208 814 tasks optional task-thai-gnome-desktop_3.36+parrot0_all.deb
+ 2c6d16f7cd1e3dc5ee1a5002485e5f6e 808 tasks optional task-thai-kde-desktop_3.36+parrot0_all.deb
+ cf56e78c57de2bab80a805cfa54c2239 808 tasks optional task-thai_3.36+parrot0_all.deb
+ c57c6a395bed70796cef79667d9b89d4 804 tasks optional task-turkish-desktop_3.36+parrot0_all.deb
+ d616156ee90f02bce5574985938255c9 806 tasks optional task-turkish-kde-desktop_3.36+parrot0_all.deb
+ bacd526a5b1e90745651d49d6d9555b2 832 tasks optional task-turkish_3.36+parrot0_all.deb
+ 6bf1b2119b800f83bc5fe8bb7f77bd1a 832 tasks optional task-ukrainian-desktop_3.36+parrot0_all.deb
+ 36d1afbb3cb25b142aacb586c597b53f 810 tasks optional task-ukrainian-kde-desktop_3.36+parrot0_all.deb
+ 1f2b6f599cbf313dd5b521102a49b020 834 tasks optional task-ukrainian_3.36+parrot0_all.deb
+ 1731ddba8686412e80a535a543fcecd8 814 tasks optional task-uyghur-desktop_3.36+parrot0_all.deb
+ 895fb7b20c8c3c6071a362b017c83ba5 806 tasks optional task-uyghur-kde-desktop_3.36+parrot0_all.deb
+ 5b8861a79e5f5107f4b36b00d3f029cb 830 tasks optional task-vietnamese-desktop_3.36+parrot0_all.deb
+ 225de81f0ee7e4a01a58844e1966385e 812 tasks optional task-vietnamese-kde-desktop_3.36+parrot0_all.deb
+ 0eacc2cda787b3cdcd23af8928af49d5 816 tasks optional task-web-server_3.36+parrot0_all.deb
+ 623d45a1dcdc4577f26a96fe9017b8de 818 tasks optional task-welsh-desktop_3.36+parrot0_all.deb
+ 6f62b09efff3b0112229c20b6fd86054 818 tasks optional task-welsh_3.36+parrot0_all.deb
+ 2a7df079f08529e0840624e1d8ee4378 1070 tasks optional task-xfce-desktop_3.36+parrot0_all.deb
+ b538a8f17aa69517138dd8789ec05130 800 tasks optional task-xhosa-desktop_3.36+parrot0_all.deb
+ f8c17c425668926b270edd74ec2ad51b 786 tasks optional task-xhosa-kde-desktop_3.36+parrot0_all.deb
+ 0a999e1b642ba2dc265ff0929c3872bd 18552 admin important tasksel-data_3.36+parrot0_all.deb
+ 6a09a9449b4dda4965e8fe79fd61df3a 94158 admin important tasksel_3.36+parrot0_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBCgAGBQJX6CHaAAoJEHGs4WSSiv5qq9EP/3VxY9AK9QImMAlBLJhgNzxU
+vEgAT4ffuvhD9WYormC0AuUFTddMkCBug5pytg/zagEABSwfEl9fWYktK+yroQgl
+dZL1eAJK0ys2qVe3A0FNIhFuVQX70ofYWkUD8TLwEYOBwWUCvQEbEH60y3z27p6d
+1P8DbipCI+2+7H5yhKwZ/1QJoXH61C8wB6Mt2N/YYCGgd5gbH5NrCjO1amGFEuls
+J7YJWaZnnghQI6JT05upQm7dju14JJUotm0NusxRyxNn458jfXunBwnv7RZhUGzb
+BJsorXtccSazZP/01onzqqJVimnIbkj8QRlq/F/tHG65txZ3OWRQp7SMRqvQ/cgC
+hX2R0Cs2yD1/j2da3Yr0T8zwyPodF7WeTP8JcWNELZqiWhDoqkAqWWkV1eUbiMTe
+W4szqLTzR4IV45/ONtKyMTIflIgl00pnWCTrDNMmQwqEfoeVoUwNOaS8wgoHk8S1
+WfL4WQZM7zhbkLkzQMNZZfYM/rxN7n31yWRUv8yZCyp0lnF42o9iVCDb+ejibvt6
+qQYk49COaQ6xodRh+WW5JhlbQ16UT855INuc/kfWlEFENN2b7mqZVqabr3uRLktT
+Sv9yi6eiIfUKydfm4LrlBFecOfcTZwftNpRH1esux15bfmwqAcJTVB8AG0uFtf1I
+U84ClnlSTihyfgKTUqn8
+=XoKL
+-----END PGP SIGNATURE-----

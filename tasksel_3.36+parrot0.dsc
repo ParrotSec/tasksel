@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 Format: 1.0
 Source: tasksel
 Binary: tasksel, tasksel-data, task-desktop, task-gnome-desktop, task-kde-desktop, task-lxde-desktop, task-xfce-desktop, task-cinnamon-desktop, task-mate-desktop, task-laptop, task-web-server, task-print-server, task-ssh-server, task-albanian-desktop, task-amharic, task-amharic-desktop, task-amharic-kde-desktop, task-arabic, task-arabic-desktop, task-arabic-kde-desktop, task-asturian, task-asturian-desktop, task-basque, task-basque-desktop, task-basque-kde-desktop, task-belarusian, task-belarusian-desktop, task-belarusian-kde-desktop, task-bengali, task-bengali-desktop, task-bengali-kde-desktop, task-bosnian, task-bosnian-desktop, task-bosnian-kde-desktop, task-brazilian-portuguese, task-brazilian-portuguese-desktop, task-brazilian-portuguese-kde-desktop, task-british-desktop, task-british-kde-desktop, task-bulgarian, task-bulgarian-desktop, task-bulgarian-kde-desktop, task-catalan, task-catalan-desktop, task-catalan-kde-desktop, task-chinese-s, task-chinese-s-desktop,
@@ -7,9 +10,8 @@ Binary: tasksel, tasksel-data, task-desktop, task-gnome-desktop, task-kde-deskto
  task-spanish, task-spanish-desktop, task-spanish-kde-desktop, task-swedish, task-swedish-desktop, task-swedish-kde-desktop, task-tagalog, task-tamil, task-tamil-desktop, task-tamil-gnome-desktop, task-telugu, task-telugu-desktop, task-telugu-gnome-desktop, task-telugu-kde-desktop, task-thai, task-thai-desktop, task-thai-gnome-desktop, task-thai-kde-desktop, task-turkish, task-turkish-desktop, task-turkish-kde-desktop, task-ukrainian, task-ukrainian-desktop, task-ukrainian-kde-desktop, task-uyghur-desktop, task-uyghur-kde-desktop, task-vietnamese-desktop, task-vietnamese-kde-desktop, task-welsh, task-welsh-desktop, task-xhosa-desktop, task-xhosa-kde-desktop, task-cyrillic, task-cyrillic-desktop,
  task-cyrillic-kde-desktop
 Architecture: all
-Version: 3.35+parrot0
-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Uploaders: Otavio Salvador <otavio@debian.org>, Christian Perrier <bubulle@debian.org>
+Version: 3.36+parrot0
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
 Standards-Version: 3.9.5
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=tasksel/tasksel.git
 Vcs-Git: git://git.debian.org/git/tasksel/tasksel.git
@@ -234,8 +236,26 @@ Package-List:
  tasksel deb admin important arch=all
  tasksel-data deb admin important arch=all
 Checksums-Sha1:
- 1ddc79c0c95aed44142cafd569d9742dad6ca949 776245 tasksel_3.35+parrot0.tar.gz
+ 2c31bc8f9748a019a69205e199364d5457fa45ce 789103 tasksel_3.36+parrot0.tar.gz
 Checksums-Sha256:
- edb695d0074ec5f1316385e63abaf20e49b333c924a8f7e731290fd1de91a420 776245 tasksel_3.35+parrot0.tar.gz
+ 308ee68b2b3b3a203ad2cc5b7b1d4302c9a65e90bc2daaee515e57270700d10d 789103 tasksel_3.36+parrot0.tar.gz
 Files:
- bb5145b889a78bbe29c5f776ba9bef43 776245 tasksel_3.35+parrot0.tar.gz
+ 6000c049c40fdd92a7a6fd3a8cc75638 789103 tasksel_3.36+parrot0.tar.gz
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBCgAGBQJX6CFpAAoJEHGs4WSSiv5qr70P/0kuFTN0zwGgniuI+zbXeR42
+djtqtS5dQnRhO3SsjLFq+oaQcGbsLXxXAf40GXvdPcQD316iEutSZ0ZvSIQsgF/B
+Y/6Virpg0KKvPv5vFUYyckK/3htPSg9KFFUNapumlobFFqTCAK4T5ej2DMNxql8J
+Xxc+FI++2NavHPuP6Nzp4SqtKinJE8mDAxKyWkFPHD69JrXgP9lBCQAnhBUUV3DR
+CnjrLDEY/bmgQQR/d3G3DMz26TwRFsXmlItpcF0Gpst8ZDCHJN4zek9hI6BOMgAc
+3gFrrW1KG6tnu/V1c6jokQ+BkQdTdIFK9wSUig0vFzvyIpCIpvgTR0EP3hN89cAu
+VBVAL14WOIbjGZJOkpD3aPkQoWB+jju4hN/+OO8nRPhPe9E40S+FZTurIHWbOlp8
+uAZfXwtGyZ1WpXDCOo5K0M5LmPXemr+trxxvhWPjIKBWgc31b2reIV+zkCp48LA4
+KPzzk3AKC3qlpXQyp4ejrTWvkpV+BfRorUfu8T6vNKNB3fU9xlzBS+3vsnrfyqiQ
+o0f4/E2XKJbeu9JUM8a3SlsqzGJsSgRotJw22lwEGLNfPBEqN3qnBOyrBATlm+K1
+UnvM4l4/eWoGnG7tIGVY4lCqMIzYNPpuysMq8eQrPtnvohD7fSIFA9vrZgz4OsbX
+hHy+39TbFyRiGZ+PAuQo
+=gzSV
+-----END PGP SIGNATURE-----

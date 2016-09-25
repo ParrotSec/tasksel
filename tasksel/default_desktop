@@ -6,8 +6,8 @@
 
 default_desktop_for_arch() {
 	case "$1" in
-		i386) echo gnome ;;
-		amd64) echo gnome ;;
+		i386) echo mate ;;
+		amd64) echo mate ;;
 		# gnome only works on linux,
 		# and only on arches with 3d hardware
 		# or llvmpipe. See #765839.

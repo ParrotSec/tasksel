@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-22 19:52+0200\n"
+"POT-Creation-Date: 2016-07-24 01:48+0200\n"
 "PO-Revision-Date: 2009-04-09 18:45+0600\n"
 "Last-Translator: Loba Yeasmeen <loba@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
@@ -23,12 +23,94 @@ msgstr ""
 "X-Generator: WordForge 0.5-beta1\n"
 
 #. Description
-#: ../po/debian-tasks.desc:16001
+#: ../po/debian-tasks.desc:8001
+msgid "Parrot System"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:8001
+#, fuzzy
+#| msgid "This task installs a reasonably small character-mode system."
+msgid "This is a key task to install a Parrot core system."
+msgstr "এই কাজটি একটি অপেক্ষাকৃত ছোট ক্যারেক্টার-মোড সিস্টেম ইনস্টল করে।"
+
+#. Description
+#: ../po/debian-tasks.desc:9001
+msgid "Parrot Cloud"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:9001
+msgid ""
+"This task provides all the necessary packages to configure a Parrot Cloud "
+"environment"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:10001
+msgid "Full Interface"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:10001
+msgid ""
+"This task provides a variety of useful graphical applications suitable for a "
+"daily use."
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:11001
+msgid "Mini Tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:11001
+msgid "This task installs a minimal set of pentesting tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:12001
+msgid "Pico Tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:12001
+msgid ""
+"This task installs a very restricted set of tools for embedded devices and "
+"space constrained systems."
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:13001
+msgid "Standard Tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:13001
+msgid ""
+"This task provides the standard set of parrot tools it is an accurately "
+"selected of must-have pentesting tools."
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:14001
+msgid "Full Tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:14001
+msgid ""
+"This task provides the full and complete Parrot pentesting environment with "
+"almost all the tools provided by the parrot repository."
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:17001
 msgid "standard system utilities"
 msgstr "স্ট্যান্ডার্ড সিস্টেম ইউটিলিটি"
 
 #. Description
-#: ../po/debian-tasks.desc:16001
+#: ../po/debian-tasks.desc:17001
 msgid ""
 "This task sets up a basic user environment, providing a reasonably small "
 "selection of services and tools usable on the command line."
@@ -173,9 +255,6 @@ msgstr ""
 
 #~ msgid "Desktop environment"
 #~ msgstr "ডেস্কটপ পরিবেশ"
-
-#~ msgid "This task installs a reasonably small character-mode system."
-#~ msgstr "এই কাজটি একটি অপেক্ষাকৃত ছোট ক্যারেক্টার-মোড সিস্টেম ইনস্টল করে।"
 
 #~ msgid "Amharic environment"
 #~ msgstr "আরবী পরিবেশ"

@@ -1,7 +1,0 @@
-Task: parrot-nano
-Section: user
-Parent: tools
-Relevance: 8
-Test-default-desktop: 4 parrot-nano
-Key:
-  parrot-nano

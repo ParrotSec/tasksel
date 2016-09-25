@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tasksel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-22 19:52+0200\n"
+"POT-Creation-Date: 2016-07-24 01:48+0200\n"
 "PO-Revision-Date: 2015-05-15 16:01-0300\n"
 "Last-Translator: Adriano Rafael Gomes <adrianorg@arg.eti.br>\n"
 "Language-Team: l10n portuguese <debian-l10n-portuguese@lists.debian.org>\n"
@@ -20,12 +20,100 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Description
-#: ../po/debian-tasks.desc:16001
+#: ../po/debian-tasks.desc:8001
+msgid "Parrot System"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:8001
+#, fuzzy
+#| msgid "This task installs a reasonably small character-mode system."
+msgid "This is a key task to install a Parrot core system."
+msgstr "Esta tarefa instala um sistema em modo texto razoavelmente pequeno."
+
+#. Description
+#: ../po/debian-tasks.desc:9001
+msgid "Parrot Cloud"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:9001
+#, fuzzy
+#| msgid ""
+#| "This task provides necessary packages for composing documents in TeX/"
+#| "LaTeX."
+msgid ""
+"This task provides all the necessary packages to configure a Parrot Cloud "
+"environment"
+msgstr ""
+"Esta tarefa fornece os pacotes necessários para compor documentos em TeX/"
+"LaTeX."
+
+#. Description
+#: ../po/debian-tasks.desc:10001
+msgid "Full Interface"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:10001
+msgid ""
+"This task provides a variety of useful graphical applications suitable for a "
+"daily use."
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:11001
+msgid "Mini Tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:11001
+msgid "This task installs a minimal set of pentesting tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:12001
+msgid "Pico Tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:12001
+msgid ""
+"This task installs a very restricted set of tools for embedded devices and "
+"space constrained systems."
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:13001
+msgid "Standard Tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:13001
+msgid ""
+"This task provides the standard set of parrot tools it is an accurately "
+"selected of must-have pentesting tools."
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:14001
+msgid "Full Tools"
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:14001
+msgid ""
+"This task provides the full and complete Parrot pentesting environment with "
+"almost all the tools provided by the parrot repository."
+msgstr ""
+
+#. Description
+#: ../po/debian-tasks.desc:17001
 msgid "standard system utilities"
 msgstr "utilitários de sistema padrão"
 
 #. Description
-#: ../po/debian-tasks.desc:16001
+#: ../po/debian-tasks.desc:17001
 msgid ""
 "This task sets up a basic user environment, providing a reasonably small "
 "selection of services and tools usable on the command line."
@@ -181,9 +269,6 @@ msgstr ""
 
 #~ msgid "Desktop environment"
 #~ msgstr "Ambiente Desktop"
-
-#~ msgid "This task installs a reasonably small character-mode system."
-#~ msgstr "Esta tarefa instala um sistema em modo texto razoavelmente pequeno."
 
 #~ msgid "Amharic environment"
 #~ msgstr "Ambiente Amárico"
@@ -2012,13 +2097,6 @@ msgstr ""
 
 #~ msgid "TeX/LaTeX environment"
 #~ msgstr "Ambiente TeX/LaTeX"
-
-#~ msgid ""
-#~ "This task provides necessary packages for composing documents in TeX/"
-#~ "LaTeX."
-#~ msgstr ""
-#~ "Esta tarefa fornece os pacotes necessários para compor documentos em TeX/"
-#~ "LaTeX."
 
 #~ msgid "Conventional Unix server"
 #~ msgstr "Servidor Unix convencional"

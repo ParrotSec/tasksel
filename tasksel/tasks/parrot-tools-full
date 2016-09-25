@@ -1,7 +1,12 @@
 Task: parrot-tools-full
+Relevance: 2
+Parent: parrot
 Section: user
-Parent: tools
-Relevance: 8
-Test-default-desktop: 2 full tools setup
+Test-parrot: 3
+Description: Full Tools
+ This task provides the full and complete Parrot pentesting environment
+ with almost all the tools provided by the parrot repository.
 Key:
-  parrot-tools-full
+ parrot-tools-full
+Packages: list
+ parrot-tools-full

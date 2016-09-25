@@ -1,7 +1,13 @@
 Task: parrot-interface-full
+Relevance: 3
+Parent: parrot
 Section: user
-Parent: tools
-Relevance: 8
-Test-default-desktop: 6 extra packages for parrot interface
+Test-parrot: 3
+Description: Full Interface
+ This task provides a variety of useful graphical applications
+ suitable for a daily use.
 Key:
-  parrot-interface-full
+ parrot-interface-full
+Packages: list
+ parrot-interface-full
+ libreoffice

@@ -1,7 +1,12 @@
 Task: parrot-pico
+Relevance: 3
+Parent: parrot
 Section: user
-Parent: tools
-Relevance: 8
-Test-default-desktop: 5 parrot-pico
+Test-parrot: 3
+Description: Pico Tools
+ This task installs a very restricted set of tools
+ for embedded devices and space constrained systems.
 Key:
-  parrot-pico
+ parrot-pico
+Packages: list
+ parrot-pico

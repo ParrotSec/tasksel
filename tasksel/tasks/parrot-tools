@@ -1,7 +1,12 @@
 Task: parrot-tools
+Relevance: 2
+Parent: parrot
 Section: user
-Parent: tools
-Relevance: 8
-Test-default-desktop: 1 standard tools
+Test-parrot: 3
+Description: Standard Tools
+ This task provides the standard set of parrot tools
+ it is an accurately selected of must-have pentesting tools.
 Key:
-  parrot-tools
+ parrot-tools
+Packages: list
+ parrot-tools
