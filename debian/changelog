@@ -1,3 +1,9 @@
+tasksel (3.37+parrot0) testing; urgency=medium
+
+  * Update version to replace the latest debian update
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Mon, 05 Dec 2016 15:56:06 +0100
+
 tasksel (3.36+parrot0) testing; urgency=medium
 
   * Update version to replace new debian release
