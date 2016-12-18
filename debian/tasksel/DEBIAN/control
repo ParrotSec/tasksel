@@ -1,0 +1,13 @@
+Package: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 374
+Pre-Depends: debconf (>= 1.5.34) | cdebconf (>= 0.106)
+Depends: debconf (>= 0.5) | debconf-2.0, liblocale-gettext-perl, apt, tasksel-data, perl-base (>= 5.14.0-1)
+Conflicts: base-config (<< 2.32), debconf (<< 1.4.27)
+Section: admin
+Priority: important
+Description: tool for selecting tasks for installation on Debian systems
+ This package provides 'tasksel', a simple interface for users who
+ want to configure their system to perform a specific task.

@@ -1,0 +1,12 @@
+Package: task-japanese-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Kenshi Muto <kmuto@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: firefox-esr-l10n-ja | firefox-l10n-ja, fonts-vlgothic, fonts-ipafont, uim, uim-anthy, uim-mozc, mozc-utils-gui, anthy, libreoffice-l10n-ja, libreoffice-help-ja, poppler-data
+Section: tasks
+Priority: optional
+Description: Japanese desktop
+ This task localises the desktop in Japanese.

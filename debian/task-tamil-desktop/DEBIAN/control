@@ -1,0 +1,12 @@
+Package: task-tamil-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: fonts-lohit-taml, libreoffice-l10n-ta, firefox-esr-l10n-ta | firefox-l10n-ta
+Section: tasks
+Priority: optional
+Description: Tamil desktop
+ This task localises the desktop in Tamil.

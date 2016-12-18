@@ -1,0 +1,181 @@
+Task: cinnamon-desktop
+Parent: desktop
+Relevance: 8
+Key: 
+  task-cinnamon-desktop
+Section: user
+Test-default-desktop: 3 cinnamon
+
+Task: desktop
+Relevance: 2
+Key: 
+  task-desktop
+Section: user
+Test-desktop: 1
+
+Task: gnome-desktop
+Parent: desktop
+Relevance: 1
+Key: 
+  task-gnome-desktop
+Section: user
+Test-default-desktop: 3 gnome
+
+Task: kde-desktop
+Parent: desktop
+Relevance: 7
+Key: 
+  task-kde-desktop
+Section: user
+Test-default-desktop: 3 kde
+
+Task: laptop
+Relevance: 9
+Key: 
+  task-laptop
+Section: user
+Test-laptop: 1
+
+Task: lxde-desktop
+Parent: desktop
+Relevance: 9
+Key: 
+  task-lxde-desktop
+Section: user
+Test-default-desktop: 3 lxde
+
+Task: mate-desktop
+Parent: desktop
+Relevance: 8
+Key: 
+  task-mate-desktop
+Section: user
+Test-default-desktop: 3 mate
+
+Task: parrot
+Relevance: 1
+_Description: Parrot System
+ This is a key task to install a Parrot core system.
+Key: 
+ parrot-core
+Packages: list
+ apt-parrot
+ parrot-core
+Section: user
+Test-parrot: 2
+
+Task: parrot-cloud
+Parent: parrot
+Relevance: 2
+_Description: Parrot Cloud
+ This task provides all the necessary packages to
+ configure a Parrot Cloud environment 
+Key: 
+ parrot-tools-cloud
+Packages: list
+ parrot-cloud
+ parrot-tools-cloud
+ 
+Section: user
+Test-parrot: 3
+
+Task: parrot-interface-full
+Parent: parrot
+Relevance: 3
+_Description: Full Interface
+ This task provides a variety of useful graphical applications
+ suitable for a daily use.
+Key: 
+ parrot-interface-full
+Packages: list
+ parrot-interface-full
+ libreoffice
+Section: user
+Test-parrot: 3
+
+Task: parrot-mini
+Parent: parrot
+Relevance: 3
+_Description: Mini Tools
+ This task installs a minimal set of pentesting tools
+Key: 
+ parrot-mini
+Packages: list
+ parrot-mini
+Section: user
+Test-parrot: 3
+
+Task: parrot-pico
+Parent: parrot
+Relevance: 3
+_Description: Pico Tools
+ This task installs a very restricted set of tools
+ for embedded devices and space constrained systems.
+Key: 
+ parrot-pico
+Packages: list
+ parrot-pico
+Section: user
+Test-parrot: 3
+
+Task: parrot-tools
+Parent: parrot
+Relevance: 2
+_Description: Standard Tools
+ This task provides the standard set of parrot tools
+ it is an accurately selected of must-have pentesting tools.
+Key: 
+ parrot-tools
+Packages: list
+ parrot-tools
+Section: user
+Test-parrot: 3
+
+Task: parrot-tools-full
+Parent: parrot
+Relevance: 2
+_Description: Full Tools
+ This task provides the full and complete Parrot pentesting environment
+ with almost all the tools provided by the parrot repository.
+Key: 
+ parrot-tools-full
+Packages: list
+ parrot-tools-full
+Section: user
+Test-parrot: 3
+
+Task: print-server
+Relevance: 4
+Key: 
+ task-print-server
+Section: server
+Test-desktop: 1
+
+Task: ssh-server
+Key: 
+  task-ssh-server
+Section: server
+Test-server: 1
+
+Task: standard
+_Description: standard system utilities
+ This task sets up a basic user environment, providing a reasonably
+ small selection of services and tools usable on the command line.
+Packages: standard
+Section: user
+Test-new-install: mark skip
+
+Task: web-server
+Relevance: 3
+Key: 
+  task-web-server
+Section: server
+
+Task: xfce-desktop
+Parent: desktop
+Relevance: 2
+Key: 
+  task-xfce-desktop
+Section: user
+Test-default-desktop: 3 xfce
+

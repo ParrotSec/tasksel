@@ -1,0 +1,13 @@
+Package: task-english
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0), locales
+Recommends: util-linux-locales, ibritish, iamerican
+Section: tasks
+Priority: optional
+Description: General English environment
+ This task installs packages and documentation in British
+ and American English to help English speaking people use Debian.

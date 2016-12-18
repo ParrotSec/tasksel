@@ -1,0 +1,13 @@
+Package: task-ukrainian
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Eugeniy Meshcheryakov <eugen@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: aspell-uk, konwert, iukrainian, doc-debian-uk
+Section: tasks
+Priority: optional
+Description: Ukrainian environment
+ This task installs programs and documentation in Ukrainian
+ to help Ukrainian speaking people use Debian.

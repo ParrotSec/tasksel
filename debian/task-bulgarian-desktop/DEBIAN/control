@@ -1,0 +1,12 @@
+Package: task-bulgarian-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Anton Zinoviev <zinoviev@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: libreoffice-l10n-bg, firefox-esr-l10n-bg | firefox-l10n-bg, fonts-dejavu, myspell-bg
+Section: tasks
+Priority: optional
+Description: Bulgarian desktop
+ This task localises the desktop in Bulgarian.

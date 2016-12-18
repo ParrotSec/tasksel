@@ -1,0 +1,12 @@
+Package: task-romanian-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Eddy Petrişor <eddy.petrisor@gmail.com>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: libreoffice-l10n-ro, fonts-dejavu, fonts-freefont, firefox-esr-l10n-ro | firefox-l10n-ro, hunspell-ro
+Section: tasks
+Priority: optional
+Description: Romanian desktop
+ This task localises the desktop in Romanian.

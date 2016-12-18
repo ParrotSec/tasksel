@@ -1,0 +1,12 @@
+Package: task-chinese-t-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: scim, scim-chewing, scim-gtk-immodule, im-config, fonts-arphic-ukai, fonts-arphic-uming, fonts-noto, ttf-wqy-microhei, ttf-wqy-zenhei, libreoffice-l10n-zh-tw, libreoffice-help-zh-tw, firefox-esr-l10n-zh-tw | firefox-l10n-zh-tw, poppler-data
+Section: tasks
+Priority: optional
+Description: Traditional Chinese desktop
+ This task localises the desktop in Traditional Chinese.

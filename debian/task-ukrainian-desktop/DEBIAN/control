@@ -1,0 +1,12 @@
+Package: task-ukrainian-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Eugeniy Meshcheryakov <eugen@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: libreoffice-l10n-uk, firefox-esr-l10n-uk | firefox-l10n-uk, fonts-dejavu, myspell-uk
+Section: tasks
+Priority: optional
+Description: Ukrainian desktop
+ This task localises the desktop in Ukrainian.

@@ -1,0 +1,13 @@
+Package: task-kurdish
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: aspell-ku
+Section: tasks
+Priority: optional
+Description: Kurdish environment
+ This task installs packages and documentation in Kurdish
+ to help Kurds use Debian.

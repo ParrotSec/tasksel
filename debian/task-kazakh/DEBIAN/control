@@ -1,0 +1,13 @@
+Package: task-kazakh
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Timur Birsh <taem@linukz.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: aspell-kk
+Section: tasks
+Priority: optional
+Description: Kazakh environment
+ This task installs programs and documentation in Kazakh
+ to help Kazakh speaking people use Debian.

@@ -1,0 +1,13 @@
+Package: task-russian
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Peter Novodvorsky <nidd@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: irussian, mueller7-dict, konwert, re, aspell-ru
+Section: tasks
+Priority: optional
+Description: Russian environment
+ This task installs programs and documentation in Russian
+ to help Russian speaking people use Debian.

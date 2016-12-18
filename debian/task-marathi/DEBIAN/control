@@ -1,0 +1,14 @@
+Package: task-marathi
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: aspell-mr
+Section: tasks
+Priority: optional
+Description: Marathi environment
+ This task installs programs, data files, fonts, and
+ documentation that makes it easier for Marathi speakers
+ to use Debian.

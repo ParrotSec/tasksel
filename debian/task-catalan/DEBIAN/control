@@ -1,0 +1,13 @@
+Package: task-catalan
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Jordi Mallach <jordi@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: aspell-ca, icatalan, wcatalan, util-linux-locales
+Section: tasks
+Priority: optional
+Description: Catalan environment
+ This task installs packages and documentation in Catalan
+ to help Catalan speaking people use Debian.

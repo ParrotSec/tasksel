@@ -1,0 +1,12 @@
+Package: task-catalan-kde-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: kde-l10n-ca
+Section: tasks
+Priority: optional
+Description: Catalan KDE desktop
+ This task localises the KDE desktop in Catalan.

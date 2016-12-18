@@ -1,0 +1,12 @@
+Package: task-slovak-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: libreoffice-l10n-sk, libreoffice-help-sk, mythes-sk, firefox-esr-l10n-sk | firefox-l10n-sk, myspell-sk
+Section: tasks
+Priority: optional
+Description: Slovak desktop
+ This task localises the desktop in Slovak.

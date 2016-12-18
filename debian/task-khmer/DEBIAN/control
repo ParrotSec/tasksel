@@ -1,0 +1,13 @@
+Package: task-khmer
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: khmerconverter
+Section: tasks
+Priority: optional
+Description: Khmer environment
+ This task installs packages and documentation in Khmer
+ to help Khmer speaking people use Debian.

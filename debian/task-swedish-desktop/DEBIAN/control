@@ -1,0 +1,12 @@
+Package: task-swedish-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Per Olofsson <pelle@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: gimp-help-sv, libreoffice-l10n-sv, libreoffice-help-sv, firefox-esr-l10n-sv-se | firefox-l10n-sv-se, hunspell-sv-se
+Section: tasks
+Priority: optional
+Description: Swedish desktop
+ This task localises the desktop in Swedish.

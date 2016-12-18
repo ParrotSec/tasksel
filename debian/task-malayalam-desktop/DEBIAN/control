@@ -1,0 +1,12 @@
+Package: task-malayalam-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: libreoffice-l10n-ml, firefox-esr-l10n-ml | firefox-l10n-ml, im-config, fcitx, fcitx-table-malayalam-phonetic, hunspell-ml, fonts-lohit-mlym
+Section: tasks
+Priority: optional
+Description: Malayalam desktop
+ This task localises the desktop in Malayalam.

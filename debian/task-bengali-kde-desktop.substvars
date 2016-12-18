@@ -1,0 +1,2 @@
+misc:Depends=tasksel (= ${binary:Version})
+misc:Pre-Depends=

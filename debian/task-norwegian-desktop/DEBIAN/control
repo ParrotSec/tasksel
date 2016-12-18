@@ -1,0 +1,12 @@
+Package: task-norwegian-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Petter Reinholdtsen <pere@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: libreoffice-l10n-nb, libreoffice-l10n-nn, firefox-esr-l10n-nb-no | firefox-l10n-nb-no, firefox-esr-l10n-nn-no | firefox-l10n-nn-no, myspell-nn, myspell-nb
+Section: tasks
+Priority: optional
+Description: Norwegian (Bokmaal and Nynorsk) desktop
+ This task localises the desktop in Norwegian.

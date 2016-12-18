@@ -1,0 +1,12 @@
+Package: task-danish-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: firefox-esr-l10n-da | firefox-l10n-da, libreoffice-l10n-da, libreoffice-help-da, myspell-da | hunspell-da
+Section: tasks
+Priority: optional
+Description: Danish desktop
+ This task localises the desktop in Danish.

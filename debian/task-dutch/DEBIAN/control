@@ -1,0 +1,14 @@
+Package: task-dutch
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: idutch, wdutch, aspell-nl
+Section: tasks
+Priority: optional
+Description: Dutch environment
+ This task installs programs, data files, fonts, and
+ documentation that makes it easier for Dutch speakers
+ to use Debian.

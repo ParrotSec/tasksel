@@ -1,0 +1,12 @@
+Package: task-dutch-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: firefox-esr-l10n-nl | firefox-l10n-nl, libreoffice-l10n-nl, libreoffice-help-nl, myspell-nl
+Section: tasks
+Priority: optional
+Description: Dutch desktop
+ This task localises the desktop in Dutch.

@@ -1,0 +1,13 @@
+Package: task-finnish
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: tmispell-voikko, voikko-fi, libenchant-voikko
+Section: tasks
+Priority: optional
+Description: Finnish environment
+ This task installs packages and documentation in Finnish
+ to help Finnish speaking people use Debian.

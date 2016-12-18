@@ -1,0 +1,12 @@
+Package: task-telugu-kde-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Y Giridhar Appaji Nag <appaji@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: fcitx-frontend-qt4, kde-config-fcitx
+Section: tasks
+Priority: optional
+Description: Telugu KDE desktop environment
+ This task localises the KDE desktop environment in Telugu.

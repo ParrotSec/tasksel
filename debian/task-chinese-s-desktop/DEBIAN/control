@@ -1,0 +1,12 @@
+Package: task-chinese-s-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: im-config, fcitx, fcitx-sunpinyin, fcitx-googlepinyin, fcitx-table-wubi, fonts-arphic-ukai, fonts-arphic-uming, fonts-noto, ttf-wqy-microhei, ttf-wqy-zenhei, libreoffice-l10n-zh-cn, libreoffice-help-zh-cn, firefox-esr-l10n-zh-cn | firefox-l10n-zh-cn, goldendict, poppler-data
+Section: tasks
+Priority: optional
+Description: Simplified Chinese desktop
+ This task localises the desktop in Simplified Chinese.

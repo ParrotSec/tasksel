@@ -1,0 +1,13 @@
+Package: task-swedish
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Per Olofsson <pelle@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0), locales
+Recommends: util-linux-locales, wswedish, aspell-sv
+Section: tasks
+Priority: optional
+Description: Swedish environment
+ This task installs packages and documentation in Swedish
+ to help Swedish speaking people use Debian.

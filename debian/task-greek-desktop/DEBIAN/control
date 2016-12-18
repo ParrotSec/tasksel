@@ -1,0 +1,12 @@
+Package: task-greek-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Konstantinos Margaritis <markos@debian.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: fonts-freefont, fonts-mgopen, libreoffice-l10n-el, firefox-esr-l10n-el | firefox-l10n-el, myspell-el-gr, libreoffice-help-el
+Section: tasks
+Priority: optional
+Description: Greek desktop
+ This task localises the desktop in Greek.

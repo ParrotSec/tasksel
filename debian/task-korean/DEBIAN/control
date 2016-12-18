@@ -1,0 +1,13 @@
+Package: task-korean
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: zhcon
+Section: tasks
+Priority: optional
+Description: Korean environment
+ This task installs packages that make it easier for Korean speakers
+ to use Debian.

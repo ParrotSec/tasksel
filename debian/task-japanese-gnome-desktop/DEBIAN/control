@@ -1,0 +1,12 @@
+Package: task-japanese-gnome-desktop
+Source: tasksel
+Version: 3.37+parrot0
+Architecture: all
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@frozenbox.org>
+Installed-Size: 6
+Depends: tasksel (= 3.37+parrot0)
+Recommends: uim-applet-gnome, icedove, icedove-l10n-ja
+Section: tasks
+Priority: optional
+Description: Japanese GNOME desktop
+ This task localises the GNOME desktop in Japanese.
