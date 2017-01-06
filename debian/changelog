@@ -1,34 +1,71 @@
-tasksel (3.38+parrot0) testing; urgency=medium
+tasksel (3.39+parrot0) testing; urgency=medium
 
-  * Increment version to replace the latest debian update
+  * Import new Debian release
+  * Reapply parrot mods
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sun, 18 Dec 2016 18:48:13 +0100
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 06 Jan 2017 22:42:03 +0100
 
-tasksel (3.37+parrot0) testing; urgency=medium
+tasksel (3.39) unstable; urgency=medium
 
-  * Increment version to replace the latest debian update
+  * Mention proper locations of *.desc files in tasksel's manpage, based
+    on a bug report and patch by Zakhar Volchak (Closes: #824877).
+  * Add support for DEBIAN_TASKS_ONLY to be used in Debian Installer to
+    make sure only tasksel-data tasks are considered (See: #758116,
+    #846002).
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Mon, 05 Dec 2016 15:56:06 +0100
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 24 Dec 2016 13:46:53 +0100
 
-tasksel (3.36+parrot0) testing; urgency=medium
+tasksel (3.38) unstable; urgency=medium
 
-  * Increment version to replace new debian release
+  [ Christian Perrier ]
+  * Replace ttf-wqy-{micro,zen}hei by their fonts- equivalent in both
+    Chinese desktop tasks. Closes: #842331
+    Thanks to Boyuan Yang for pointing this.
+  * Drop Otavio Salvador from Uploaders. Thank you for your work
+    within the D-I team. Closes: #847254
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sun, 25 Sep 2016 21:09:20 +0200
+  [ Rene Engelhard ]
+  * debian/control:
+    - change libreoffice-gtk to libreoffice-gtk2 in new lxqt-desktop task
 
-tasksel (3.35+parrot1) testing; urgency=medium
+  [ Samuel Thibault ]
+  * debian/control: Add gnome-orca to new lxqt-desktop task.
 
-  * Fix parrot tasks
-  * Reorganize parrot tasks in a more rational way
+ -- Christian Perrier <bubulle@debian.org>  Wed, 07 Dec 2016 14:46:22 +0100
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sun, 24 Jul 2016 00:54:59 +0200
+tasksel (3.37) unstable; urgency=medium
 
-tasksel (3.35+parrot0) testing; urgency=medium
+  * Add LXQt desktop task. Thanks to Alf Gaida for the patch
+    Closes: #814923
 
-  * Add parrot packages
-  * Modify task metapackages to integrate parrot metapackages
+ -- Christian Perrier <bubulle@debian.org>  Wed, 26 Oct 2016 06:38:16 +0200
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 22 Jul 2016 19:51:36 +0200
+tasksel (3.36) unstable; urgency=medium
+
+  [ Rene Engelhard ]
+  * debian/control:
+    - change libreoffice-gtk to libreoffice-gtk2 in task-*-desktop
+
+  [ Dimitri John Ledkov ]
+  * Set s390x as unlikely desktop architecture.
+
+  [ Christian Perrier ]
+  * Replace fonts-freefont by fonts-freefont-ttf in
+    task-{greek,romanian,hungarian}-desktop
+    Thanks to Raphaël Halimi for pointing this.
+    Closes: #834418
+  * Drop acpi from task-laptop. Closes: #762311
+  * Replace fonts-lklug-sinhala by fonts-noto-hinted in
+    task-sinhala-desktop
+    Thanks to Harshula for pointing this.
+    Closes: #837969
+
+  [ Yves-Alexis Perez ]
+  * debian/control:
+    - replace dbux-x11 by default-dbus-session-bus | dbus-session-bus for
+      task-xfce-desktop.                                        closes: #836044
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 18 Sep 2016 18:02:20 +0200
 
 tasksel (3.35) unstable; urgency=medium
 

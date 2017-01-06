@@ -33,7 +33,7 @@ common_desktop_architecture () {
 # this task.
 unlikely_desktop_architecture () {
 	case "$arch" in
-	m68k|s390|hppa)
+	m68k|s390|s390x|hppa)
 		return 0
 	;;
 	*)

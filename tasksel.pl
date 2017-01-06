@@ -43,7 +43,12 @@ sub run {
 
 # A list of all available task desc files.
 sub list_task_descs {
-	return glob("$descdir/*.desc"), glob("$localdescdir/*.desc");
+	if ($ENV{DEBIAN_TASKS_ONLY}) {
+		return glob("$descdir/debian-tasks.desc");
+	}
+	else {
+		return glob("$descdir/*.desc"), glob("$localdescdir/*.desc");
+	}
 }
 
 # Returns a list of hashes; hash values are arrays for multi-line fields.

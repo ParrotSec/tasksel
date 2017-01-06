@@ -17,7 +17,7 @@ _Description: Choose software to install:
 
 Template: tasksel/desktop
 Type: multiselect
-Choices: gnome, kde, xfce, lxde, cinnamon, mate
+Choices: gnome, kde, xfce, lxde, cinnamon, mate, lxqt
 Description: This can be preseeded to override the default desktop.
 
 Template: tasksel/title

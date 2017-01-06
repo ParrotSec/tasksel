@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-24 01:48+0200\n"
+"POT-Creation-Date: 2014-09-25 09:45-0400\n"
 "PO-Revision-Date: 2008-01-17 01:35+0100\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <Librezale@librezale.org>\n"
@@ -19,94 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #. Description
-#: ../po/debian-tasks.desc:8001
-msgid "Parrot System"
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:8001
-#, fuzzy
-#| msgid "This task installs a reasonably small character-mode system."
-msgid "This is a key task to install a Parrot core system."
-msgstr "Zeregin honek karakete-modu sistema nahiko txiki bat instalatuko du"
-
-#. Description
-#: ../po/debian-tasks.desc:9001
-msgid "Parrot Cloud"
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:9001
-msgid ""
-"This task provides all the necessary packages to configure a Parrot Cloud "
-"environment"
-msgstr ""
-
-#. Description
 #: ../po/debian-tasks.desc:10001
-msgid "Full Interface"
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:10001
-msgid ""
-"This task provides a variety of useful graphical applications suitable for a "
-"daily use."
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:11001
-msgid "Mini Tools"
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:11001
-msgid "This task installs a minimal set of pentesting tools"
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:12001
-msgid "Pico Tools"
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:12001
-msgid ""
-"This task installs a very restricted set of tools for embedded devices and "
-"space constrained systems."
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:13001
-msgid "Standard Tools"
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:13001
-msgid ""
-"This task provides the standard set of parrot tools it is an accurately "
-"selected of must-have pentesting tools."
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:14001
-msgid "Full Tools"
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:14001
-msgid ""
-"This task provides the full and complete Parrot pentesting environment with "
-"almost all the tools provided by the parrot repository."
-msgstr ""
-
-#. Description
-#: ../po/debian-tasks.desc:17001
 msgid "standard system utilities"
 msgstr "Sistema estandar lanabesak"
 
 #. Description
-#: ../po/debian-tasks.desc:17001
+#: ../po/debian-tasks.desc:10001
 msgid ""
 "This task sets up a basic user environment, providing a reasonably small "
 "selection of services and tools usable on the command line."
@@ -256,6 +174,9 @@ msgstr ""
 
 #~ msgid "Desktop environment"
 #~ msgstr "Mahaigaina ingurunea"
+
+#~ msgid "This task installs a reasonably small character-mode system."
+#~ msgstr "Zeregin honek karakete-modu sistema nahiko txiki bat instalatuko du"
 
 #~ msgid "Amharic environment"
 #~ msgstr "Amharar ingurunea"
