@@ -34,18 +34,17 @@ Package: task-desktop
 Architecture: all
 Description: Debian desktop environment
  This task package is used to install the Debian desktop.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	xorg,
 	xserver-xorg-video-all,
 	xserver-xorg-input-all,
 	desktop-base,
-	parrot-interface
 Recommends:
 # One of the actual desktop tasks is needed to get a full desktop environment.
 # The order here is significant when installing this task manually;
 # when tasksel installs this task it instead selects one of these based
 # on the tasksel/desktop debconf setting.
-	task-mate-desktop | task-gnome-desktop | task-xfce-desktop | task-kde-desktop | task-lxde-desktop | task-cinnamon-desktop | task-lxqt-desktop,
+	task-gnome-desktop | task-xfce-desktop | task-kde-desktop | task-lxde-desktop | task-cinnamon-desktop | task-mate-desktop | task-lxqt-desktop,
 # For use by third-party apps.
 	xdg-utils,
 # mdns/zeroconf stuff
@@ -66,11 +65,10 @@ Description: GNOME
  This task package is used to install the Debian desktop, featuring
  the GNOME desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	task-desktop,
 # only depend on a very minimal gnome desktop, to ensure it fits on CD1
 	gnome-core,
-	parrot-gnome
 Recommends:
 # The full gnome desktop environment should be included if possible
 # even if the larger gnome metapackage doesn't fit.
@@ -104,11 +102,10 @@ Description: KDE
  This task package is used to install the Debian desktop, featuring
  the KDE desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	task-desktop,
 	kde-standard,
 	sddm,
-	parrot-kde
 Recommends:
 # accessibility support
 	kdeaccessibility,
@@ -122,8 +119,6 @@ Recommends:
 # This is configured by d-i to be used to gain root on systems with
 # no root password. It is not enabled by default.
 	kdesudo,
-# KDE libreoffice integration
-	libreoffice-kde,
 # Package management.
 	apper,
 # temporarily moved from task-desktop due to #525077
@@ -152,11 +147,10 @@ Description: LXDE
  This task package is used to install the Debian desktop, featuring
  the LXDE desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	task-desktop,
 	lightdm,
 	lxde,
-	parrot-lxde
 Recommends:
 	lxtask,
 	lxlauncher,
@@ -225,22 +219,21 @@ Description: Xfce
  This task package is used to install the Debian desktop, featuring
  the Xfce desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	task-desktop,
 # The basics of xfce, not the whole thing.
 	xfce4,
 	lightdm,
-	light-locker,
-	parrot-xfce
+	light-locker 
 Recommends:
 # well known xfce4 enhancements
 	xfce4-goodies,
 	xfce4-power-manager,
 	xfce4-mixer,
 	xfce4-terminal,
-# xfce text editor
+# xfce text editor  
 	mousepad,
-# calendar application
+# calendar application  
 	orage,
 # libreoffice widgets using just gtk
 	libreoffice-gtk2,
@@ -285,7 +278,7 @@ Description: Cinnamon
  This task package is used to install the Debian desktop, featuring
  the Cinnamon desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	task-desktop,
 	cinnamon-desktop-environment
 
@@ -299,7 +292,6 @@ Depends: ${misc:Depends},
 	task-desktop,
 	mate-desktop-environment,
 	lightdm,
-	parrot-mate
 Recommends:
 # temporarily moved from task-desktop due to #525077
 	gimp,
@@ -329,7 +321,7 @@ Package: task-laptop
 Architecture: all
 Description: laptop
  This task package installs software useful for a laptop.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	anacron,
 Recommends:
 	avahi-autoipd,
@@ -345,7 +337,7 @@ Architecture: all
 Description: web server
  This task selects packages useful for a general purpose web server
  system.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	apache2,
 Recommends:
 	apache2-doc,
@@ -355,7 +347,7 @@ Package: task-print-server
 Architecture: all
 Description: print server
  This task sets up your system to be a print server.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	cups,
 	cups-client,
 	cups-bsd,
@@ -371,7 +363,7 @@ Architecture: all
 Description: SSH server
  This task sets up your system to be remotely accessed through SSH
  connections.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	openssh-server,
 Recommends:
 	openssh-client,
@@ -380,9 +372,10 @@ Package: task-albanian-desktop
 Architecture: all
 Description: Albanian desktop
  This task localises the desktop in Albanian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-sq | firefox-l10n-sq,
+	mispell-sq,
 
 Package: task-amharic
 Architecture: all
@@ -390,7 +383,7 @@ Description: Amharic environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Amharic speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-am
 
@@ -411,9 +404,10 @@ Package: task-amharic-kde-desktop
 Architecture: all
 Description: Amharic KDE desktop
  This task localises the KDE desktop in Amharic.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fcitx-frontend-qt4,
+	fcitx-frontend-qt5,
 	kde-config-fcitx
 
 Package: task-arabic
@@ -422,7 +416,7 @@ Description: Arabic environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Arabic speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-arabeyes,
 	aspell-ar,
@@ -433,7 +427,7 @@ Package: task-arabic-desktop
 Architecture: all
 Description: Arabic desktop
  This task localises the desktop in Arabic.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-kacst,
 	fonts-farsiweb,
@@ -445,7 +439,7 @@ Package: task-arabic-kde-desktop
 Architecture: all
 Description: Arabic KDE desktop
  This task localises the KDE desktop in Arabic.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-ar
 
@@ -454,14 +448,14 @@ Architecture: all
 Description: Asturian environment
  This task installs packages and documentation in Asturian
  to help Asturian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-asturian-desktop
 Architecture: all
 Description: Asturian desktop
  This task localises the desktop in Asturian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-ast,
 	firefox-esr-l10n-ast | firefox-l10n-ast,
@@ -471,7 +465,7 @@ Architecture: all
 Description: Basque environment
  This task installs packages and documentation in Basque
  to help Basque speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-eu-es
 
@@ -479,7 +473,7 @@ Package: task-basque-desktop
 Architecture: all
 Description: Basque desktop
  This task localises the desktop in Basque.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-eu | firefox-l10n-eu,
 	libreoffice-l10n-eu,
@@ -490,7 +484,7 @@ Package: task-basque-kde-desktop
 Architecture: all
 Description: Basque KDE desktop
  This task localises the KDE desktop in Basque.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-eu
 
@@ -499,14 +493,14 @@ Architecture: all
 Description: Belarusian environment
  This task installs packages and documentation in Belarusian
  to help Belarusian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-belarusian-desktop
 Architecture: all
 Description: Belarusian desktop
  This task localises the desktop in Belarusian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-be,
 	firefox-esr-l10n-be | firefox-l10n-be,
@@ -516,7 +510,7 @@ Package: task-belarusian-kde-desktop
 Architecture: all
 Description: Belarusian KDE desktop
  This task localises the KDE desktop in Belarusian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-bengali
@@ -525,7 +519,7 @@ Description: Bengali environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Bengali speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-bn
 
@@ -533,7 +527,7 @@ Package: task-bengali-desktop
 Architecture: all
 Description: Bengali desktop
  This task localises the desktop in Bengali.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-bn,
 	firefox-esr-l10n-bn-in | firefox-l10n-bn-in,
@@ -544,16 +538,16 @@ Package: task-bengali-kde-desktop
 Architecture: all
 Description: Bengali KDE desktop
  This task localises the KDE desktop in Bengali.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-bosnian
 Architecture: all
-XBC-Maintainer: Safir Secerovic <sapphire@linux.org.ba>
+XBC-Maintainer: Safir Secerovic <sapphire@linux.org.ba> 
 Description: Bosnian environment
  This task installs packages and documentation in Bosnian
  to help Bosnian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	locales
 Recommends:
 	aspell-hr,
@@ -565,7 +559,7 @@ Architecture: all
 XBC-Maintainer: Safir Secerovic <sapphire@linux.org.ba>
 Description: Bosnian desktop
  This task localises the desktop in Bosnian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-bs,
 	firefox-esr-l10n-bs | firefox-l10n-bs,
@@ -575,7 +569,7 @@ Package: task-bosnian-kde-desktop
 Architecture: all
 Description: Bosnian KDE desktop
  This task localises the KDE desktop in Bosnian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-bs
 
@@ -586,7 +580,7 @@ Description: Brazilian Portuguese environment
  This task installs programs, data files, and
  documentation that make it easier for Brazilian Portuguese speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	manpages-pt
 Recommends:
 # Dictionaries
@@ -601,7 +595,7 @@ Architecture: all
 XBC-Maintainer: Otavio Salvador <otavio@debian.org>
 Description: Brazilian Portuguese desktop
  This task localises the desktop in Brasilian Portuguese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-pt-br,
 	firefox-esr-l10n-pt-br | firefox-l10n-pt-br,
@@ -611,7 +605,7 @@ Package: task-brazilian-portuguese-kde-desktop
 Architecture: all
 Description: Brazilian Portuguese KDE desktop
  This task localises the KDE desktop in Brazilian Portuguese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-ptbr
 
@@ -620,7 +614,7 @@ Architecture: all
 Description: British English desktop
  This task localises the desktop in British English.
 XBC-Maintainer: Per Olofsson <pelle@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-en-gb | firefox-l10n-en-gb,
 	libreoffice-help-en-gb,
@@ -631,7 +625,7 @@ Package: task-british-kde-desktop
 Architecture: all
 Description: British KDE desktop
  This task localises the KDE desktop in British.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-engb
 
@@ -641,7 +635,7 @@ Description: Bulgarian environment
  This task installs programs and data files that make it easier for
  Bulgarian speakers to use Debian.
 XBC-Maintainer: Anton Zinoviev <zinoviev@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-bg,
 	ibulgarian,
@@ -652,7 +646,7 @@ Architecture: all
 Description: Bulgarian desktop
  This task localises the desktop in Bulgarian.
 XBC-Maintainer: Anton Zinoviev <zinoviev@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-bg,
 	firefox-esr-l10n-bg | firefox-l10n-bg,
@@ -663,7 +657,7 @@ Package: task-bulgarian-kde-desktop
 Architecture: all
 Description: Bulgarian KDE desktop
  This task localises the KDE desktop in Bulgarian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-bg
 
@@ -673,7 +667,7 @@ XBC-Maintainer: Jordi Mallach <jordi@debian.org>
 Description: Catalan environment
  This task installs packages and documentation in Catalan
  to help Catalan speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-ca,
 	icatalan,
@@ -685,7 +679,7 @@ Architecture: all
 XBC-Maintainer: Jordi Mallach <jordi@debian.org>
 Description: Catalan desktop
  This task localises the desktop in Catalan.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-ca | firefox-l10n-ca,
 	libreoffice-l10n-ca,
@@ -696,7 +690,7 @@ Package: task-catalan-kde-desktop
 Architecture: all
 Description: Catalan KDE desktop
  This task localises the KDE desktop in Catalan.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-ca
 
@@ -710,7 +704,6 @@ Depends: ${misc:Depends}
 Recommends:
 	opencc,
 	zhcon,
-	debian-zh-faq-s,
 	manpages-zh,
 	fortune-zh
 
@@ -718,7 +711,7 @@ Package: task-chinese-s-desktop
 Architecture: all
 Description: Simplified Chinese desktop
  This task localises the desktop in Simplified Chinese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 # Input method stuff
 	im-config,
@@ -730,8 +723,7 @@ Recommends:
 	fonts-arphic-ukai,
 	fonts-arphic-uming,
 	fonts-noto,
-	fonts-wqy-microhei,
-	fonts-wqy-zenhei,
+	fonts-noto-cjk,
 # Software help and localization
 	libreoffice-l10n-zh-cn,
 	libreoffice-help-zh-cn,
@@ -746,10 +738,11 @@ Package: task-chinese-s-kde-desktop
 Architecture: all
 Description: Simplified Chinese KDE desktop
  This task localises the KDE desktop in Simplified Chinese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-zhcn,
 	fcitx-frontend-qt4,
+	fcitx-frontend-qt5,
 	kde-config-fcitx
 
 Package: task-chinese-t
@@ -776,8 +769,7 @@ Recommends:
 	fonts-arphic-uming,
 # seems openjdk needs this to display Chinese.
 	fonts-noto,
-	fonts-wqy-microhei,
-	fonts-wqy-zenhei,
+	fonts-noto-cjk,
 	libreoffice-l10n-zh-tw,
 	libreoffice-help-zh-tw,
 	firefox-esr-l10n-zh-tw | firefox-l10n-zh-tw,
@@ -800,7 +792,7 @@ XBC-Maintainer: Safir Secerovic <sapphire@linux.org.ba>
 Description: Croatian environment
  This task installs packages and documentation in Croatian
  to help Croatian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	locales
 Recommends:
 	aspell-hr,
@@ -811,7 +803,7 @@ Architecture: all
 XBC-Maintainer: Safir Secerovic <sapphire@linux.org.ba>
 Description: Croatian desktop
  This task localises the desktop in Croatian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	hyphen-hr,
 	libreoffice-l10n-hr,
@@ -822,7 +814,7 @@ Package: task-croatian-kde-desktop
 Architecture: all
 Description: Croatian KDE desktop
  This task localises the KDE desktop in Croatian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-hr
 
@@ -841,7 +833,7 @@ Package: task-czech-desktop
 Architecture: all
 Description: Czech desktop
  This task localises the desktop in Czech.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-cs | firefox-l10n-cs,
 	libreoffice-l10n-cs,
@@ -853,7 +845,7 @@ Package: task-czech-kde-desktop
 Architecture: all
 Description: Czech KDE desktop
  This task localises the KDE desktop in Czech.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-cs
 
@@ -862,7 +854,7 @@ Architecture: all
 Description: Danish environment
  This task installs packages and documentation in Danish
  to help Danish speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-da,
 	idanish,
@@ -873,7 +865,7 @@ Package: task-danish-desktop
 Architecture: all
 Description: Danish desktop
  This task localises the desktop in Danish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-da | firefox-l10n-da,
 	libreoffice-l10n-da,
@@ -884,7 +876,7 @@ Package: task-danish-kde-desktop
 Architecture: all
 Description: Danish KDE desktop
  This task localises the KDE desktop in Danish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-da
 
@@ -894,7 +886,7 @@ Description: Dutch environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Dutch speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	idutch,
 	wdutch,
@@ -904,7 +896,7 @@ Package: task-dutch-desktop
 Architecture: all
 Description: Dutch desktop
  This task localises the desktop in Dutch.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-nl | firefox-l10n-nl,
 	libreoffice-l10n-nl,
@@ -915,7 +907,7 @@ Package: task-dutch-kde-desktop
 Architecture: all
 Description: Dutch KDE desktop
  This task localises the KDE desktop in Dutch.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-nl
 
@@ -923,7 +915,7 @@ Package: task-dzongkha-desktop
 Architecture: all
 Description: Dzongkha desktop
  This task localises the desktop in Dzongkha.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-dzongkha,
 	libreoffice-l10n-dz,
@@ -933,7 +925,7 @@ Package: task-dzongkha-kde-desktop
 Architecture: all
 Description: Dzongkha KDE desktop
  This task localises the KDE desktop in Dzongkha.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-english
@@ -941,7 +933,7 @@ Architecture: all
 Description: General English environment
  This task installs packages and documentation in British
  and American English to help English speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	locales
 Recommends:
 	util-linux-locales,
@@ -953,7 +945,7 @@ Architecture: all
 Description: Esperanto environment
  This task installs packages and documentation in Esperanto
  to help Esperanto speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-eo
 
@@ -961,7 +953,7 @@ Package: task-esperanto-desktop
 Architecture: all
 Description: Esperanto desktop
  This task localises the desktop in Esperanto.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	myspell-eo,
 	libreoffice-l10n-eo,
@@ -971,7 +963,7 @@ Package: task-esperanto-kde-desktop
 Architecture: all
 Description: Esperanto KDE desktop
  This task localises the KDE desktop in Esperanto.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-eo
 
@@ -980,7 +972,7 @@ Architecture: all
 Description: Estonian environment
  This task installs packages and documentation in Estonian
  to help Estonian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-et
 
@@ -988,7 +980,7 @@ Package: task-estonian-desktop
 Architecture: all
 Description: Estonian desktop
  This task localises the desktop in Estonian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-et,
 	libreoffice-help-et,
@@ -998,7 +990,7 @@ Package: task-estonian-kde-desktop
 Architecture: all
 Description: Estonian KDE desktop
  This task localises the KDE desktop in Estonian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-et
 
@@ -1007,7 +999,7 @@ Architecture: all
 Description: Finnish environment
  This task installs packages and documentation in Finnish
  to help Finnish speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	tmispell-voikko,
 	voikko-fi,
@@ -1017,7 +1009,7 @@ Package: task-finnish-desktop
 Architecture: all
 Description: Finnish desktop
  This task localises the desktop in Finnish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-help-fi,
 	libreoffice-l10n-fi,
@@ -1029,7 +1021,7 @@ Package: task-finnish-kde-desktop
 Architecture: all
 Description: Finnish KDE desktop
  This task localises the KDE desktop in Finnish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-fi
 
@@ -1038,7 +1030,7 @@ Architecture: all
 Description: French environment
  This task installs packages and documentation in French
  to help French speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	manpages-fr
 Recommends:
 	doc-linux-fr-text,
@@ -1054,7 +1046,7 @@ Package: task-french-desktop
 Architecture: all
 Description: French desktop
  This task localises the desktop in French.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-fr,
 	libreoffice-help-fr,
@@ -1066,7 +1058,7 @@ Package: task-french-kde-desktop
 Architecture: all
 Description: French KDE desktop
  This task localises the KDE desktop in French.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-fr
 
@@ -1075,7 +1067,7 @@ Architecture: all
 Description: Galician environment
  This task installs packages and documentation in Galician
  to help Galician speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-gl-minimos,
 	util-linux-locales
@@ -1084,7 +1076,7 @@ Package: task-galician-desktop
 Architecture: all
 Description: Galician desktop
  This task localises the desktop in Galician.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-gl,
 	libreoffice-help-gl,
@@ -1095,7 +1087,7 @@ Package: task-galician-kde-desktop
 Architecture: all
 Description: Galician KDE desktop
  This task localises the KDE desktop in Galician.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-gl
 
@@ -1103,7 +1095,7 @@ Package: task-georgian-desktop
 Architecture: all
 Description: Georgian desktop
  This task localises the desktop in Georgian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-bpg-georgian,
 	libreoffice-l10n-ka
@@ -1113,7 +1105,7 @@ Architecture: all
 Description: German environment
  This task installs packages and documentation in German
  to help German speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	manpages-de
 Recommends:
 	wngerman,
@@ -1127,7 +1119,7 @@ Package: task-german-desktop
 Architecture: all
 Description: German desktop
  This task localises the desktop in German.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-de | firefox-l10n-de,
 	libreoffice-help-de,
@@ -1143,7 +1135,7 @@ Package: task-german-kde-desktop
 Architecture: all
 Description: German KDE desktop
  This task localises the KDE desktop in German.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-de
 
@@ -1153,7 +1145,7 @@ XBC-Maintainer: Konstantinos Margaritis <markos@debian.org>
 Description: Greek environment
  This task installs packages and documentation in Greek
  to help Greek speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-el
 
@@ -1162,7 +1154,7 @@ Architecture: all
 XBC-Maintainer: Konstantinos Margaritis <markos@debian.org>
 Description: Greek desktop
  This task localises the desktop in Greek.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-freefont-ttf,
 	fonts-mgopen,
@@ -1175,7 +1167,7 @@ Package: task-greek-kde-desktop
 Architecture: all
 Description: Greek KDE desktop
  This task localises the KDE desktop in Greek.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-el
 
@@ -1184,7 +1176,7 @@ Architecture: all
 Description: Gujarati environment
  This task installs packages and documentation in Gujarati
  to help Gujarati speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-gu
 
@@ -1192,7 +1184,7 @@ Package: task-gujarati-desktop
 Architecture: all
 Description: Gujarati desktop
  This task localises the desktop in Gujarati.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-lohit-gujr,
 	libreoffice-l10n-gu,
@@ -1202,7 +1194,7 @@ Package: task-gujarati-kde-desktop
 Architecture: all
 Description: Gujarati KDE desktop
  This task localises the KDE desktop in Gujarati.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-gu
 
@@ -1212,7 +1204,7 @@ Description: Hebrew environment
  This task installs programs and documentation in Hebrew
  to help Hebrew speaking people use Debian.
 XBC-Maintainer: Debian Hebrew Team <debian-hebrew-common@lists.alioth.debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libfribidi0,
 	libhdate1,
@@ -1227,7 +1219,7 @@ Architecture: all
 Description: Hebrew desktop
  This task localises the desktop in Hebrew.
 XBC-Maintainer: Debian Hebrew Team <debian-hebrew-common@lists.alioth.debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	hspell-gui,
 	libreoffice-l10n-he,
@@ -1238,7 +1230,7 @@ Package: task-hebrew-gnome-desktop
 Architecture: all
 Description: Hebrew GNOME desktop
  This task localises the GNOME desktop in Hebrew.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	hdate-applet
 
@@ -1246,7 +1238,7 @@ Package: task-hebrew-kde-desktop
 Architecture: all
 Description: Hebrew KDE desktop
  This task localises the KDE desktop in Hebrew.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-he
 
@@ -1256,7 +1248,7 @@ Description: Hindi environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Hindi speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-hi
 
@@ -1264,7 +1256,7 @@ Package: task-hindi-desktop
 Architecture: all
 Description: Hindi desktop
  This task localises the desktop in Hindi.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-hi,
 	libreoffice-help-hi,
@@ -1275,7 +1267,7 @@ Package: task-hindi-kde-desktop
 Architecture: all
 Description: Hindi KDE desktop
  This task localises the KDE desktop in Hindi.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-hi
 
@@ -1284,7 +1276,7 @@ Architecture: all
 Description: Hungarian environment
  This task installs packages and documentation in Hungarian
  to help Hungarian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	hunspell,
 	aspell-hu,
@@ -1315,7 +1307,7 @@ Package: task-hungarian-kde-desktop
 Architecture: all
 Description: Hungarian KDE desktop
  This task localises the KDE desktop in Hungarian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-hu
 
@@ -1324,7 +1316,7 @@ Architecture: all
 Description: Icelandic environment
  This task installs packages and documentation in Icelandic
  to help Icelandic speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-is
 
@@ -1332,7 +1324,7 @@ Package: task-icelandic-desktop
 Architecture: all
 Description: Icelandic desktop
  This task localises the desktop in Icelandic.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-is,
 	firefox-esr-l10n-is | firefox-l10n-is,
@@ -1341,7 +1333,7 @@ Package: task-icelandic-kde-desktop
 Architecture: all
 Description: Icelandic KDE desktop
  This task localises the KDE desktop in Icelandic.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-is
 
@@ -1349,7 +1341,7 @@ Package: task-indonesian-desktop
 Architecture: all
 Description: Indonesian desktop
  This task localises the desktop in Indonesian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-id | firefox-l10n-id,
 	libreoffice-l10n-id
@@ -1358,7 +1350,7 @@ Package: task-indonesian-kde-desktop
 Architecture: all
 Description: Indonesian KDE desktop
  This task localises the KDE desktop in Indonesian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-id
 
@@ -1367,7 +1359,7 @@ Architecture: all
 Description: Irish environment
  This task installs packages and documentation in Irish
  to help Irish speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-ga
 
@@ -1375,7 +1367,7 @@ Package: task-irish-desktop
 Architecture: all
 Description: Irish desktop
  This task localises the desktop in Irish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-ga-ie | firefox-l10n-ga-ie,
 	libreoffice-l10n-ga,
@@ -1385,7 +1377,7 @@ Package: task-irish-kde-desktop
 Architecture: all
 Description: Irish KDE desktop
  This task localises the KDE desktop in Irish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-ga
 
@@ -1394,7 +1386,7 @@ Architecture: all
 Description: Italian environment
  This task installs packages and documentation in Italian
  to help Italian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	manpages-it
 Recommends:
 	aspell-it,
@@ -1410,7 +1402,7 @@ Package: task-italian-desktop
 Architecture: all
 Description: Italian desktop
  This task localises the desktop in Italian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-help-it,
 	libreoffice-l10n-it,
@@ -1422,7 +1414,7 @@ Package: task-italian-kde-desktop
 Architecture: all
 Description: Italian KDE desktop
  This task localises the KDE desktop in Italian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-it
 
@@ -1432,7 +1424,7 @@ XBC-Maintainer: Kenshi Muto <kmuto@debian.org>
 Description: Japanese environment
  This task installs packages that make it easier for Japanese speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	manpages-ja,
 # lv is required package for Japanese to see manpage. less can't handle.
 	lv
@@ -1447,7 +1439,7 @@ Architecture: all
 XBC-Maintainer: Kenshi Muto <kmuto@debian.org>
 Description: Japanese desktop
  This task localises the desktop in Japanese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-ja | firefox-l10n-ja,
 	fonts-vlgothic,
@@ -1455,7 +1447,7 @@ Recommends:
 	uim,
 	uim-anthy,
 	uim-mozc,
-	mozc-utils-gui,
+	mozc-utils-gui, 
 	anthy,
 	libreoffice-l10n-ja,
 	libreoffice-help-ja,
@@ -1465,9 +1457,8 @@ Package: task-japanese-gnome-desktop
 Architecture: all
 Description: Japanese GNOME desktop
  This task localises the GNOME desktop in Japanese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
-	uim-applet-gnome,
 # evolution has a problem for Japanese, for example it uses always UTF-8
 # subject instead of iso-2022-jp used Japanese de-facto. I recommend
 # icedove as default mailer for Japanese desktop users.
@@ -1478,28 +1469,27 @@ Package: task-japanese-kde-desktop
 Architecture: all
 Description: Japanese KDE desktop
  This task localises the KDE desktop in Japanese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
-	kde-l10n-ja,
-	plasma-widget-uim
+	kde-l10n-ja
 
 Package: task-kannada-desktop
 Architecture: all
 Description: Kannada desktop
  This task localises the desktop in Kannada.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	firefox-esr-l10n-kn | firefox-l10n-kn,
-Recommends:
+Recommends: 
 	fonts-lohit-knda,
 	fcitx,
 	fcitx-m17n,
 	fcitx-config-gtk
-
+ 
 Package: task-kannada-kde-desktop
 Architecture: all
 Description: Kannada KDE desktop
  This task localises the KDE desktop in Kannada.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-kn,
 	kde-config-fcitx
@@ -1519,7 +1509,7 @@ Architecture: all
 Description: Kazakh desktop
  This task localises the desktop in Kazakh.
 XBC-Maintainer: Timur Birsh <taem@linukz.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	hunspell-kk,
 	firefox-esr-l10n-kk | firefox-l10n-kk,
@@ -1528,7 +1518,7 @@ Package: task-kazakh-kde-desktop
 Architecture: all
 Description: Kazakh KDE desktop
  This task localises the KDE desktop in Kazakh.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-kk
 
@@ -1537,7 +1527,7 @@ Architecture: all
 Description: Khmer environment
  This task installs packages and documentation in Khmer
  to help Khmer speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	khmerconverter,
 
@@ -1545,7 +1535,7 @@ Package: task-khmer-desktop
 Architecture: all
 Description: Khmer desktop
  This task localises the desktop in Khmer.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-khmeros,
 	firefox-esr-l10n-km | firefox-l10n-km,
@@ -1556,7 +1546,7 @@ Package: task-khmer-kde-desktop
 Architecture: all
 Description: Khmer KDE desktop
  This task localises the KDE desktop in Khmer.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-km
 
@@ -1565,7 +1555,7 @@ Architecture: all
 Description: Korean environment
  This task installs packages that make it easier for Korean speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	zhcon
 
@@ -1573,7 +1563,7 @@ Package: task-korean-desktop
 Architecture: all
 Description: Korean desktop
  This task localises the desktop in Korean.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	im-config,
 	ibus-hangul,
@@ -1591,7 +1581,7 @@ Package: task-korean-gnome-desktop
 Architecture: all
 Description: Korean GNOME desktop
  This task localises the GNOME desktop in Korean.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	ibus-gtk,
 	ibus-gtk3
@@ -1600,7 +1590,7 @@ Package: task-korean-kde-desktop
 Architecture: all
 Description: Korean KDE desktop
  This task localises the KDE desktop in Korean.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	ibus-qt4,
 	kde-l10n-ko
@@ -1610,7 +1600,7 @@ Architecture: all
 Description: Kurdish environment
  This task installs packages and documentation in Kurdish
  to help Kurds use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-ku
 
@@ -1618,7 +1608,7 @@ Package: task-kurdish-desktop
 Architecture: all
 Description: Kurdish desktop
  This task localises the desktop in Kurdish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-ku,
 	fonts-dejavu,
@@ -1629,7 +1619,7 @@ Package: task-kurdish-kde-desktop
 Architecture: all
 Description: Kurdish KDE desktop
  This task localises the KDE desktop in Kurdish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-latvian
@@ -1637,7 +1627,7 @@ Architecture: all
 Description: Latvian environment
  This task installs packages and documentation in Latvian
  to help Latvian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-lv
 
@@ -1645,7 +1635,7 @@ Package: task-latvian-desktop
 Architecture: all
 Description: Latvian desktop
  This task localises the desktop in Latvian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-lv,
 	firefox-esr-l10n-lv | firefox-l10n-lv,
@@ -1654,7 +1644,7 @@ Package: task-latvian-kde-desktop
 Architecture: all
 Description: Latvian KDE desktop
  This task localises the KDE desktop in Latvian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-lv
 
@@ -1664,7 +1654,7 @@ XBC-Maintainer: Kęstutis Biliūnas <kebil@kaunas.init.lt>
 Description: Lithuanian environment
  This task installs packages and documentation in Lithuanian
  to help Lithuanian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-lt,
 	ilithuanian
@@ -1674,7 +1664,7 @@ Architecture: all
 XBC-Maintainer: Kęstutis Biliūnas <kebil@kaunas.init.lt>
 Description: Lithuanian desktop
  This task localises the desktop in Lithuanian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-lt,
 	hyphen-lt,
@@ -1685,7 +1675,7 @@ Package: task-lithuanian-kde-desktop
 Architecture: all
 Description: Lithuanian KDE desktop
  This task localises the KDE desktop in Lithuanian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-lt
 
@@ -1694,14 +1684,14 @@ Architecture: all
 Description: Macedonian environment
  This task installs packages and documentation in Macedonian
  to help Macedonian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-macedonian-desktop
 Architecture: all
 Description: Macedonian desktop
  This task localises the desktop in Macedonian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-mk | firefox-l10n-mk,
 	libreoffice-l10n-mk,
@@ -1711,7 +1701,7 @@ Package: task-macedonian-kde-desktop
 Architecture: all
 Description: Macedonian KDE desktop
  This task localises the KDE desktop in Macedonian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-mk
 
@@ -1720,7 +1710,7 @@ Architecture: all
 Description: Malayalam environment
  This task installs packages and documentation in Malayalam
  to help Malayalam speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-ml
 
@@ -1728,7 +1718,7 @@ Package: task-malayalam-desktop
 Architecture: all
 Description: Malayalam desktop
  This task localises the desktop in Malayalam.
-Depends: ${misc:Depends}
+Depends: ${misc:Depends} 
 Recommends:
 	libreoffice-l10n-ml,
 	firefox-esr-l10n-ml | firefox-l10n-ml,
@@ -1743,7 +1733,7 @@ Package: task-malayalam-gnome-desktop
 Architecture: all
 Description: Malayalam GNOME desktop
  This task localises the GNOME desktop in Malayalam.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fcitx-frontend-gtk3,
 	fcitx-frontend-gtk2,
@@ -1753,10 +1743,11 @@ Package: task-malayalam-kde-desktop
 Architecture: all
 Description: Malayalam KDE desktop
  This task localises the KDE desktop in Malayalam.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-ml,
 	fcitx-frontend-qt4,
+	fcitx-frontend-qt5,
 	kde-config-fcitx
 
 Package: task-marathi
@@ -1765,7 +1756,7 @@ Description: Marathi environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Marathi speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-mr
 
@@ -1783,7 +1774,7 @@ Package: task-nepali-desktop
 Architecture: all
 Description: Nepali desktop
  This task localises the desktop in Nepali.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-lohit-deva,
 	libreoffice-l10n-ne,
@@ -1794,7 +1785,7 @@ Package: task-nepali-kde-desktop
 Architecture: all
 Description: Nepali KDE desktop
  This task localises the KDE desktop in Nepali.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-northern-sami
@@ -1802,7 +1793,7 @@ Architecture: all
 Description: Northern Sami environment
  This task installs packages and documentation in Northern Sami
  to help Northern Sami speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	hunspell,
 	hunspell-se
@@ -1811,7 +1802,7 @@ Package: task-northern-sami-desktop
 Architecture: all
 Description: Northern Sami desktop
  This task localises the desktop in Northern Sami.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-norwegian
@@ -1820,7 +1811,7 @@ Description: Norwegian (Bokmaal and Nynorsk) environment
  This task installs packages and documentation in Norwegian
  to help Norwegian speaking people use Debian.
 XBC-Maintainer: Petter Reinholdtsen <pere@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	locales
 Recommends:
 	util-linux-locales,
@@ -1833,7 +1824,7 @@ Architecture: all
 Description: Norwegian (Bokmaal and Nynorsk) desktop
  This task localises the desktop in Norwegian.
 XBC-Maintainer: Petter Reinholdtsen <pere@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-nb,
 	libreoffice-l10n-nn,
@@ -1846,7 +1837,7 @@ Package: task-norwegian-kde-desktop
 Architecture: all
 Description: Norwegian KDE desktop
  This task localises the KDE desktop in Norwegian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-nb,
 	kde-l10n-nn
@@ -1857,7 +1848,7 @@ Description: Persian environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Persian speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-fa
 
@@ -1865,7 +1856,7 @@ Package: task-persian-desktop
 Architecture: all
 Description: Persian desktop
  This task localises the desktop in Persian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-fa,
 	fonts-farsiweb,
@@ -1875,7 +1866,7 @@ Package: task-persian-kde-desktop
 Architecture: all
 Description: Persian KDE desktop
  This task localises the KDE desktop in Persian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-fa
 
@@ -1884,7 +1875,7 @@ Architecture: all
 Description: Polish environment
  This task installs packages and documentation in Polish
  to help Polish speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	manpages-pl
 Recommends:
 	konwert,
@@ -1901,7 +1892,7 @@ Package: task-polish-desktop
 Architecture: all
 Description: Polish desktop
  This task localises the desktop in Polish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-pl,
 	libreoffice-help-pl,
@@ -1913,7 +1904,7 @@ Package: task-polish-kde-desktop
 Architecture: all
 Description: Polish KDE desktop
  This task localises the KDE desktop in Polish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-pl
 
@@ -1922,7 +1913,7 @@ Architecture: all
 Description: Portuguese environment
  This task installs packages and documentation in Portuguese
  to help Portuguese speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-pt-pt,
 	iportuguese,
@@ -1932,7 +1923,7 @@ Package: task-portuguese-desktop
 Architecture: all
 Description: Portuguese desktop
  This task localises the desktop in Portuguese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-pt,
 	libreoffice-help-pt,
@@ -1943,7 +1934,7 @@ Package: task-portuguese-kde-desktop
 Architecture: all
 Description: Portuguese KDE desktop
  This task localises the KDE desktop in Portuguese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-pt
 
@@ -1953,7 +1944,7 @@ Description: Punjabi environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Punjabi speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-pa
 
@@ -1961,7 +1952,7 @@ Package: task-punjabi-desktop
 Architecture: all
 Description: Punjabi desktop
  This task localises the desktop in Punjabi.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-pa-in,
 	fonts-lohit-guru,
@@ -1971,7 +1962,7 @@ Package: task-punjabi-kde-desktop
 Architecture: all
 Description: Punjabi KDE desktop
  This task localises the KDE desktop in Punjabi.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-pa
 
@@ -1981,7 +1972,7 @@ Description: Romanian environment
  This task installs packages and documentation in Romanian
  to help Romanian speaking people use Debian.
 XBC-Maintainer: Eddy Petrişor <eddy.petrisor@gmail.com>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	console-terminus,
 	util-linux-locales,
@@ -1992,7 +1983,7 @@ Architecture: all
 Description: Romanian desktop
  This task localises the desktop in Romanian.
 XBC-Maintainer: Eddy Petrişor <eddy.petrisor@gmail.com>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-ro,
 # this appears to be one of the few fonts that has t with comma bellow
@@ -2005,7 +1996,7 @@ Package: task-romanian-kde-desktop
 Architecture: all
 Description: Romanian KDE desktop
  This task localises the KDE desktop in Romanian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-ro
 
@@ -2015,7 +2006,7 @@ Description: Russian environment
  This task installs programs and documentation in Russian
  to help Russian speaking people use Debian.
 XBC-Maintainer: Peter Novodvorsky <nidd@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	irussian,
 	mueller7-dict,
@@ -2028,7 +2019,7 @@ Architecture: all
 Description: Russian desktop
  This task localises the desktop in Russian.
 XBC-Maintainer: Peter Novodvorsky <nidd@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-ru,
 	libreoffice-help-ru,
@@ -2040,17 +2031,17 @@ Package: task-russian-kde-desktop
 Architecture: all
 Description: Russian KDE desktop
  This task localises the KDE desktop in Russian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-ru
 
 Package: task-serbian
 Architecture: all
-XBC-Maintainer: Safir Secerovic <sapphire@linux.org.ba>
+XBC-Maintainer: Safir Secerovic <sapphire@linux.org.ba> 
 Description: Serbian environment
  This task installs packages and documentation in Serbian
  to help Serbian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	doc-linux-hr
 
@@ -2059,7 +2050,7 @@ Architecture: all
 XBC-Maintainer: Safir Secerovic <sapphire@linux.org.ba>
 Description: Serbian desktop
  This task localises the desktop in Serbian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-sr,
 	firefox-esr-l10n-sr | firefox-l10n-sr,
@@ -2069,7 +2060,7 @@ Package: task-serbian-kde-desktop
 Architecture: all
 Description: Serbian KDE desktop
  This task localises the KDE desktop in Serbian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-sr
 
@@ -2077,7 +2068,7 @@ Package: task-sinhala-desktop
 Architecture: all
 Description: Sinhala desktop
  This task localises the desktop in Sinhala.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-noto-hinted,
 	libreoffice-l10n-si,
@@ -2087,7 +2078,7 @@ Package: task-sinhala-kde-desktop
 Architecture: all
 Description: Sinhala KDE desktop
  This task localises the KDE desktop in Sinhala.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-si
 
@@ -2096,7 +2087,7 @@ Architecture: all
 Description: Slovak environment
  This task installs packages and documentation in Slovak
  to help Slovak speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-sk
 
@@ -2104,7 +2095,7 @@ Package: task-slovak-desktop
 Architecture: all
 Description: Slovak desktop
  This task localises the desktop in Slovak.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-sk,
 	libreoffice-help-sk,
@@ -2116,7 +2107,7 @@ Package: task-slovak-kde-desktop
 Architecture: all
 Description: Slovak KDE desktop
  This task localises the KDE desktop in Slovak.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-sk
 
@@ -2125,7 +2116,7 @@ Architecture: all
 Description: Slovenian environment
  This task installs packages and documentation in Slovenian
  to help Slovenian speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-sl
 
@@ -2133,7 +2124,7 @@ Package: task-slovenian-desktop
 Architecture: all
 Description: Slovenian desktop
  This task localises the desktop in Slovenian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-sl | firefox-l10n-sl,
 	libreoffice-l10n-sl,
@@ -2144,7 +2135,7 @@ Package: task-slovenian-kde-desktop
 Architecture: all
 Description: Slovenian KDE desktop
  This task localises the KDE desktop in Slovenian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-sl
 
@@ -2152,7 +2143,7 @@ Package: task-south-african-english-desktop
 Architecture: all
 Description: South African English desktop
  This task localises the desktop in South African English.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-en-za,
 	firefox-esr-l10n-en-za | firefox-l10n-en-za,
@@ -2162,7 +2153,7 @@ Architecture: all
 Description: Spanish environment
  This task installs programs, data files, and
  documentation that make it easier for Spanish speakers to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	manpages-es
 Recommends:
 # Dictionaries
@@ -2179,7 +2170,7 @@ Package: task-spanish-desktop
 Architecture: all
 Description: Spanish desktop
  This task localises the desktop in Spanish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-es,
 	libreoffice-help-es,
@@ -2193,7 +2184,7 @@ Package: task-spanish-kde-desktop
 Architecture: all
 Description: Spanish KDE desktop
  This task localises the KDE desktop in Spanish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-es
 
@@ -2203,7 +2194,7 @@ Description: Swedish environment
  This task installs packages and documentation in Swedish
  to help Swedish speaking people use Debian.
 XBC-Maintainer: Per Olofsson <pelle@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	locales
 Recommends:
 	util-linux-locales,
@@ -2215,7 +2206,7 @@ Architecture: all
 Description: Swedish desktop
  This task localises the desktop in Swedish.
 XBC-Maintainer: Per Olofsson <pelle@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	gimp-help-sv,
 	libreoffice-l10n-sv,
@@ -2227,7 +2218,7 @@ Package: task-swedish-kde-desktop
 Architecture: all
 Description: Swedish KDE desktop
  This task localises the KDE desktop in Swedish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-sv
 
@@ -2236,7 +2227,7 @@ Architecture: all
 Description: Tagalog environment
  This task installs packages and documentation in Tagalog
  to help Tagalog speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-tl
 
@@ -2246,7 +2237,7 @@ Description: Tamil environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Tamil speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-ta
 
@@ -2254,7 +2245,7 @@ Package: task-tamil-desktop
 Architecture: all
 Description: Tamil desktop
  This task localises the desktop in Tamil.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fonts-lohit-taml,
 	libreoffice-l10n-ta,
@@ -2264,7 +2255,7 @@ Package: task-tamil-gnome-desktop
 Architecture: all
 Description: Tamil GNOME desktop
  This task localises the GNOME desktop in Tamil.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	tamil-gtk2im
 
@@ -2275,7 +2266,7 @@ Description: Telugu environment
  This task installs programs, data files, fonts, and
  documentation that makes it easier for Telugu speakers
  to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-te
 
@@ -2284,7 +2275,7 @@ Architecture: all
 XBC-Maintainer: Y Giridhar Appaji Nag <appaji@debian.org>
 Description: Telugu desktop
  This task localises the desktop environment in Telugu.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-te,
 	firefox-esr-l10n-te | firefox-l10n-te,
@@ -2298,7 +2289,7 @@ Architecture: all
 XBC-Maintainer: Y Giridhar Appaji Nag <appaji@debian.org>
 Description: Telugu GNOME desktop environment
  This task localises the GNOME desktop environment in Telugu.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fcitx-frontend-gtk2,
 	fcitx-frontend-gtk3,
@@ -2309,9 +2300,10 @@ Architecture: all
 XBC-Maintainer: Y Giridhar Appaji Nag <appaji@debian.org>
 Description: Telugu KDE desktop environment
  This task localises the KDE desktop environment in Telugu.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	fcitx-frontend-qt4,
+	fcitx-frontend-qt5,
 	kde-config-fcitx
 
 Package: task-thai
@@ -2319,7 +2311,7 @@ Architecture: all
 Description: Thai environment
  This task installs packages that make it easier for Thai speaking
  people to use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	swath
 
@@ -2327,7 +2319,7 @@ Package: task-thai-desktop
 Architecture: all
 Description: Thai desktop
  This task localises the desktop in Thai.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	xiterm+thai,
 	libreoffice-l10n-th,
@@ -2338,7 +2330,7 @@ Package: task-thai-gnome-desktop
 Architecture: all
 Description: Thai GNOME desktop
  This task localises the GNOME desktop in Thai.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	gtk-im-libthai,
 	gtk3-im-libthai
@@ -2347,7 +2339,7 @@ Package: task-thai-kde-desktop
 Architecture: all
 Description: Thai KDE desktop
  This task localises the KDE desktop in Thai.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-th,
 	libthai-dev
@@ -2358,7 +2350,7 @@ Description: Turkish environment
  This task installs packages and documentation in Turkish
  to help Turkish speaking people use Debian.
 XBC-Maintainer: Recai Oktas <roktas@omu.edu.tr>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	locales,
 	manpages-tr
 Recommends:
@@ -2370,7 +2362,7 @@ Architecture: all
 Description: Turkish desktop
  This task localises the desktop in Turkish.
 XBC-Maintainer: Recai Oktas <roktas@omu.edu.tr>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-tr,
 	firefox-esr-l10n-tr | firefox-l10n-tr,
@@ -2379,7 +2371,7 @@ Package: task-turkish-kde-desktop
 Architecture: all
 Description: Turkish KDE desktop
  This task localises the KDE desktop in Turkish.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-tr
 
@@ -2389,7 +2381,7 @@ Description: Ukrainian environment
  This task installs programs and documentation in Ukrainian
  to help Ukrainian speaking people use Debian.
 XBC-Maintainer: Eugeniy Meshcheryakov <eugen@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-uk,
 	konwert,
@@ -2401,7 +2393,7 @@ Architecture: all
 Description: Ukrainian desktop
  This task localises the desktop in Ukrainian.
 XBC-Maintainer: Eugeniy Meshcheryakov <eugen@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-uk,
 	firefox-esr-l10n-uk | firefox-l10n-uk,
@@ -2412,7 +2404,7 @@ Package: task-ukrainian-kde-desktop
 Architecture: all
 Description: Ukrainian KDE desktop
  This task localises the KDE desktop in Ukrainian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-uk
 
@@ -2420,7 +2412,7 @@ Package: task-uyghur-desktop
 Architecture: all
 Description: Uyghur desktop
  This task localises the desktop in Uyghur.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-ug,
 	fonts-ukij-uyghur
@@ -2429,7 +2421,7 @@ Package: task-uyghur-kde-desktop
 Architecture: all
 Description: Uyghur KDE desktop
  This task localises the KDE desktop in Uyghur.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-ug
 
@@ -2437,7 +2429,7 @@ Package: task-vietnamese-desktop
 Architecture: all
 Description: Vietnamese desktop
  This task localises the desktop in Vietnamese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-vi,
 	firefox-esr-l10n-vi | firefox-l10n-vi,
@@ -2447,7 +2439,7 @@ Package: task-vietnamese-kde-desktop
 Architecture: all
 Description: Vietnamese KDE desktop
  This task localises the KDE desktop in Vietnamese.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	kde-l10n-vi
 
@@ -2456,7 +2448,7 @@ Architecture: all
 Description: Welsh environment
  This task installs packages and documentation in Welsh
  to help Welsh speaking people use Debian.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	aspell-cy
 
@@ -2464,7 +2456,7 @@ Package: task-welsh-desktop
 Architecture: all
 Description: Welsh desktop
  This task localises the desktop in Welsh.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-cy,
 	firefox-esr-l10n-cy | firefox-l10n-cy,
@@ -2473,7 +2465,7 @@ Package: task-xhosa-desktop
 Architecture: all
 Description: Xhosa desktop
  This task localises the desktop in Xhosa.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 	libreoffice-l10n-xh
 
@@ -2481,7 +2473,7 @@ Package: task-xhosa-kde-desktop
 Architecture: all
 Description: Xhosa KDE desktop
  This task localises the KDE desktop in Xhosa.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 
 Package: task-cyrillic
@@ -2491,7 +2483,7 @@ Description: Cyrillic environment
  order to use Cyrillic.  It supports Belarusian, Bulgarian,
  Macedonian, Russian, Serbian and Ukrainian.
 XBC-Maintainer: Anton Zinoviev <zinoviev@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 # Translates Cyrillic encodings.
 	konwert
@@ -2502,7 +2494,7 @@ Description: Cyrillic desktop
  This task localises the desktop in Cyrillic.
  It supports Belarusian, Bulgarian, Macedonian, Russian, Serbian and Ukrainian.
 XBC-Maintainer: Anton Zinoviev <zinoviev@debian.org>
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 	t1-cyrillic
 Recommends:
 # Keyboard state indicator and switcher for X:
@@ -2514,6 +2506,6 @@ Package: task-cyrillic-kde-desktop
 Architecture: all
 Description: Cyrillic KDE desktop
  This task localises the KDE desktop in Cyrillic.
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, 
 Recommends:
 

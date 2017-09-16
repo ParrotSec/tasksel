@@ -1,0 +1,5 @@
+*.mo
+debian/files
+debian/tasksel*
+debian/task-*
+debian-tasks.desc

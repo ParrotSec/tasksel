@@ -1,15 +1,21 @@
-tasksel (3.39+parrot1) testing; urgency=medium
+tasksel (3.40) unstable; urgency=medium
 
-  * Add parrot-crypto
+  [ Cyril Brulebois ]
+  * Update Chinese fonts, thanks to Boyuan Yang (Closes: #861934).
+  * Add fcitx-frontend-qt5 alongside fcitx-frontend-qt4, for all tasks
+    which recommended the latter. Based on a suggestion by Boyuan Yang
+    for Chinese (See: #861934).
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 24 Feb 2017 00:42:35 +0100
+  [ Christian Perrier ]
+  * Drop debian-zh-faq-s from task-chinese-s. Closes: #874322
+  * Add myspell-sq to the albanian-desktop task. Closes: #875508
+  * Drop libreoffice-kde from kde-desktop. Closes: #875844
 
-tasksel (3.39+parrot0) testing; urgency=medium
+  [ Kenshi Muto ]
+  * Drop uim-applet-gnome from task-japanese-gnome-desktop. Closes: #874493
+  * Drop plasma-widget-uim from task-japanese-kde-desktop. Closes: #874495
 
-  * Import new Debian release
-  * Reapply parrot mods
-
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 06 Jan 2017 22:42:03 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sat, 16 Sep 2017 07:32:29 +0200
 
 tasksel (3.39) unstable; urgency=medium
 

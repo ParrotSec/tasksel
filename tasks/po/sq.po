@@ -2,6 +2,7 @@
 # Copyright (C) 2004 THE tasksel_tasks'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the tasksel_tasks package.
 # Elian Myftiu <elian.myftiu@gmail.com>, 2006.
+# Nafie Shehu <nafie.shehu@gmail.com>, 2017.
 #
 #
 msgid ""
@@ -10,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-25 09:45-0400\n"
 "PO-Revision-Date: 2008-05-05 20:17+0200\n"
-"Last-Translator: Elian Myftiu <elian.myftiu@gmail.com>\n"
+"Last-Translator: Nafie Shehu <nafie.shehu@gmail.com>\n"
 "Language-Team: Debian L10n Albanian <debian-l10n-albanian@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,17 +20,16 @@ msgstr ""
 
 #. Description
 #: ../po/debian-tasks.desc:10001
-#, fuzzy
-#| msgid "standard system"
 msgid "standard system utilities"
-msgstr "Sistemi Standard"
+msgstr "shërbimet standarte të sistemit"
 
 #. Description
 #: ../po/debian-tasks.desc:10001
 msgid ""
 "This task sets up a basic user environment, providing a reasonably small "
 "selection of services and tools usable on the command line."
-msgstr ""
+msgstr "Kjo detyrë krijon një mjedis bazë të përdoruesit, duke siguruar një përzgjedhje të vogël"
+"të arsyeshme të shërbimeve dhe mjeteve të përdorshme në këtë linjë komandash"
 
 #~ msgid "manual package selection"
 #~ msgstr "zgjedhje paketash manuale"
