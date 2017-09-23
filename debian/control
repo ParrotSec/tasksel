@@ -39,13 +39,12 @@ Depends: ${misc:Depends},
 	xserver-xorg-video-all,
 	xserver-xorg-input-all,
 	desktop-base,
-	parrot-interface-common
 Recommends:
 # One of the actual desktop tasks is needed to get a full desktop environment.
 # The order here is significant when installing this task manually;
 # when tasksel installs this task it instead selects one of these based
 # on the tasksel/desktop debconf setting.
-	task-mate-desktop | task-gnome-desktop | task-xfce-desktop | task-kde-desktop | task-lxde-desktop | task-cinnamon-desktop | task-lxqt-desktop,
+	task-gnome-desktop | task-xfce-desktop | task-kde-desktop | task-lxde-desktop | task-cinnamon-desktop | task-mate-desktop | task-lxqt-desktop,
 # For use by third-party apps.
 	xdg-utils,
 # mdns/zeroconf stuff
@@ -59,8 +58,6 @@ Recommends:
 	iw,
 # sound
 	alsa-utils,
-# Parrot interface utils
-	parrot-interface
 
 Package: task-gnome-desktop
 Architecture: all
@@ -72,7 +69,6 @@ Depends: ${misc:Depends},
 	task-desktop,
 # only depend on a very minimal gnome desktop, to ensure it fits on CD1
 	gnome-core,
-	parrot-gnome
 Recommends:
 # The full gnome desktop environment should be included if possible
 # even if the larger gnome metapackage doesn't fit.
@@ -109,7 +105,6 @@ Description: KDE
 Depends: ${misc:Depends}, 
 	task-desktop,
 	kde-standard,
-	parrot-kde,
 	sddm,
 Recommends:
 # accessibility support
@@ -154,7 +149,6 @@ Description: LXDE
  expect to have available on the desktop.
 Depends: ${misc:Depends}, 
 	task-desktop,
-	parrot-lxde,
 	lightdm,
 	lxde,
 Recommends:
@@ -230,7 +224,6 @@ Depends: ${misc:Depends},
 # The basics of xfce, not the whole thing.
 	xfce4,
 	lightdm,
-	parrot-xfce,
 	light-locker 
 Recommends:
 # well known xfce4 enhancements
@@ -297,7 +290,6 @@ Description: MATE
  expect to have available on the desktop.
 Depends: ${misc:Depends},
 	task-desktop,
-	parrot-mate,
 	mate-desktop-environment,
 	lightdm,
 Recommends:
@@ -307,7 +299,7 @@ Recommends:
 	synaptic,
 # firefox) is the most popular web browser at the moment,
 # although both gnome and kde offer their own too
-	firefox | firefox-esr,
+	firefox-esr | firefox,
 # libreoffice is the best word processor / office suite at the moment
 	libreoffice,
 # make help menu work
@@ -383,7 +375,7 @@ Description: Albanian desktop
 Depends: ${misc:Depends}, 
 Recommends:
 	firefox-esr-l10n-sq | firefox-l10n-sq,
-	mispell-sq,
+	myspell-sq,
 
 Package: task-amharic
 Architecture: all
