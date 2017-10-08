@@ -1,8 +1,21 @@
+tasksel (3.41+parrot0) testing; urgency=medium
+
+  * Import new debian version.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Mon, 09 Oct 2017 01:02:52 +0200
+
 tasksel (3.41) unstable; urgency=medium
 
   * Correct macpakge name for myspell-sq. Sigh...
 
  -- Christian Perrier <bubulle@debian.org>  Sat, 23 Sep 2017 06:50:17 +0200
+
+tasksel (3.40+parrot0) testing; urgency=medium
+
+  * Import new Debian version.
+  * Refresh parrot patches.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Tue, 26 Sep 2017 16:53:15 +0200
 
 tasksel (3.40) unstable; urgency=medium
 
@@ -22,6 +35,19 @@ tasksel (3.40) unstable; urgency=medium
   * Drop plasma-widget-uim from task-japanese-kde-desktop. Closes: #874495
 
  -- Christian Perrier <bubulle@debian.org>  Sat, 16 Sep 2017 07:32:29 +0200
+
+tasksel (3.39+parrot1) testing; urgency=medium
+
+  * Add parrot-crypto
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 24 Feb 2017 00:42:35 +0100
+
+tasksel (3.39+parrot0) testing; urgency=medium
+
+  * Import new Debian release
+  * Reapply parrot mods
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 06 Jan 2017 22:42:03 +0100
 
 tasksel (3.39) unstable; urgency=medium
 
