@@ -1,0 +1,7 @@
+Task: lxqt-desktop
+Relevance: 9
+Parent: desktop
+Test-default-desktop: 3 lxqt
+Section: user
+Key:
+  task-lxqt-desktop

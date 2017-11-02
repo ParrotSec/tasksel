@@ -1,3 +1,14 @@
+tasksel (3.42+parrot0) testing; urgency=medium
+
+  [ Cyril Brulebois ]
+  * Add lxqt-desktop task to improve lxde/lxqt images, thanks to
+    Alf Gaida (Closes: #869529).
+
+  [ Lorenzo "Palinuro" Faletra ]
+  * Import new Debian version.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 27 Oct 2017 12:03:51 +0200
+
 tasksel (3.41+parrot0) testing; urgency=medium
 
   * Import new debian version.
