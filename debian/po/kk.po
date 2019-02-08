@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tasksel\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2015-04-02 10:55+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -48,8 +48,14 @@ msgstr ""
 "Сіз осында көрсетілген бір немесе бірнеше бағдарламалық қамтама жинақтарын "
 "орната аласыз."
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "Бағдарламалық қамтаманы таңдау"

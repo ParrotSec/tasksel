@@ -12,8 +12,7 @@ tasksel [options]
 
 =head1 DESCRIPTION
 
-tasksel shows all available tasks and allows to user to select
-ones to install
+tasksel shows all available tasks and allows selecting ones to install
 
 =head1 OPTIONS
 

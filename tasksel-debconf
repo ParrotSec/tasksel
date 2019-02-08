@@ -3,6 +3,9 @@
 . /usr/share/debconf/confmodule
 set -e
 
+# provide an exit path, and abort if none is possible
+db_capb backup
+
 tmpfile=$1
 choices="$2"
 choicestrans="$3"

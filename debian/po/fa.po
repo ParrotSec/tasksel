@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fa\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2010-06-25 09:27+0330\n"
 "Last-Translator: Hadi Soufi <hadi.soufi@gmail.com>\n"
 "Language-Team: debian-l10n-debian <debian-l10n-debian@lists.debian.org>\n"
@@ -59,9 +59,15 @@ msgstr ""
 "شما میتوانید از مجموعه های مقابل یک یا چند مجموعه ازپیش تعریف شده را برای "
 "نصب انتخاب کنید."
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "انتخاب نرم‌افزار"
 

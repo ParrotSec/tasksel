@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tasksel-debian\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2010-06-21 07:42+0700\n"
 "Last-Translator: Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>\n"
 "Language-Team: Debian Indonesian <debid@yahoogroups.com>\n"
@@ -44,9 +44,15 @@ msgstr ""
 "Anda dapat memilih untuk memasang satu atau lebih kelompok perangkat lunak "
 "yang telah didefinisikan berikut ini."
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "Pemilihan perangkat lunak"
 

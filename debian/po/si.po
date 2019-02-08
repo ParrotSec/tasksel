@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2011-09-05 12:46+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -44,8 +44,14 @@ msgid ""
 "collections of software."
 msgstr "ඔබට පහත සඳහන් පෙරනිවේශිත මෘදුකාංග එකතු එකක් හෝ කිහිපයක් ස්ථාපනයට තෝරාගත හැක."
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "මෘදුකාංග තෝරාගැනීම"

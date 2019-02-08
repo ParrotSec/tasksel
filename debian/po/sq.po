@@ -8,19 +8,20 @@
 # or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Developers do not need to manually edit POT or PO files.
 # , fuzzy
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: tasksel\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2006-09-30 12:58+0200\n"
 "Last-Translator: Elian Myftiu <pinguiniREMOVEBOLD at fastwebnet dot it>\n"
 "Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: multiselect
 #. Description
@@ -38,9 +39,9 @@ msgid ""
 "to your needs, you can choose to install one or more of the following "
 "predefined collections of software."
 msgstr ""
-"Momentalisht, vetëm baza e sistemit është instaluar. Për të "
-"sintonizuar sistemin sipas nevojave të tua, mund të zgjidhësh të instalosh "
-"një koleksion të parapërcaktuar programesh nga lista e mëposhtme."
+"Momentalisht, vetëm baza e sistemit është instaluar. Për të sintonizuar "
+"sistemin sipas nevojave të tua, mund të zgjidhësh të instalosh një koleksion "
+"të parapërcaktuar programesh nga lista e mëposhtme."
 
 #. Type: multiselect
 #. Description
@@ -52,9 +53,15 @@ msgstr ""
 "Mund të zgjedhësh të instalosh një koleksion software-i të parapërcaktuar "
 "nga lista e mëtejshme."
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "Zgjedhja e software-it"
 

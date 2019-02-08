@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tasksel_debian\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2011-02-15 20:06+0600\n"
 "Last-Translator: Sahran <Sahran.ug@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -46,8 +46,14 @@ msgstr ""
 "تۆۋەندىكى بىر ياكى كۆپ ئالدىن بەلگىلەنگەن يۇمشاق دېتاللار توپلىمىنى تاللاپ "
 "ئورناتسىڭىز بولىدۇ."
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "يۇمشاق دېتال تاللاش"

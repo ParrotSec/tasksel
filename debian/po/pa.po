@@ -15,11 +15,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2006-10-30 07:37+0530\n"
 "Last-Translator: A S Alam <apbrar@gmail.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
+"Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,9 +43,8 @@ msgid ""
 "to your needs, you can choose to install one or more of the following "
 "predefined collections of software."
 msgstr ""
-"ਇਸ ਮੌਕੇ ਉੱਤੇ ਸਿਰਫ਼ ਮੁੱਢਲਾ ਡੇਬੀਅਨ ਹੀ ਇੰਸਟਾਲ ਹੈ। ਸਿਸਟਮ ਨੂੰ ਆਪਣੀ ਲੋੜ ਮੁਤਾਬਕ "
-"ਤਿਆਰ ਕਰਨ ਲਈ, ਤੁਸੀਂ ਹੇਠ ਦਿੱਤੇ ਸਾਫਟਵੇਅਰ ਭੰਡਾਰ ਵਿੱਚ ਇੱਕ ਜਾਂ ਵੱਧ ਦੀ ਚੋਣ ਕਰ "
-"ਸਕਦੇ ਹੋ।"
+"ਇਸ ਮੌਕੇ ਉੱਤੇ ਸਿਰਫ਼ ਮੁੱਢਲਾ ਡੇਬੀਅਨ ਹੀ ਇੰਸਟਾਲ ਹੈ। ਸਿਸਟਮ ਨੂੰ ਆਪਣੀ ਲੋੜ ਮੁਤਾਬਕ ਤਿਆਰ ਕਰਨ ਲਈ, ਤੁਸੀਂ "
+"ਹੇਠ ਦਿੱਤੇ ਸਾਫਟਵੇਅਰ ਭੰਡਾਰ ਵਿੱਚ ਇੱਕ ਜਾਂ ਵੱਧ ਦੀ ਚੋਣ ਕਰ ਸਕਦੇ ਹੋ।"
 
 #. Type: multiselect
 #. Description
@@ -54,9 +54,14 @@ msgid ""
 "collections of software."
 msgstr "ਤੁਸੀਂ ਹੇਠਾਂ ਦੇ ਸਾਫਟਵੇਅਰ ਭੰਡਾਰ ਵਿੱਚੋਂ ਇੱਕ ਜਾਂ ਵੱਧ ਭਾਗਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਚੋਣ ਕਰ ਸਕਦੇ ਹੋ।"
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "ਸਾਫਟਵੇਅਰ ਚੋਣ"
-

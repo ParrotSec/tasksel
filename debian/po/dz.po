@@ -5,11 +5,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tasksel-debconf\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2006-04-06 00:46-0500\n"
 "Last-Translator: kinley tshering <gaseokuenden2k3@hotmail.com>\n"
 "Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,9 +46,15 @@ msgstr ""
 "ཁྱོད་ཀྱི་ འོག་གི་སྔ་གོང་ངོས་འཛིན་འབད་མི་ མཉན་ཆས་བསྡུ་གསོག་ གཅིག་ཡང་ན་ དེ་ལས་ལྷགཔ་གདམ་སྟེ་གཞི་"
 "བཙུགས་འབད་བཏུབ།"
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "མཉན་ཆས་ སེལ་འཐུ།"
 

@@ -10,18 +10,22 @@
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans
 #
 #    Developers do not need to manually edit POT or PO files.
+# Frans Spiesschaert <Frans.Spiesschaert@yucom.be>, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: tasksel\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
-"PO-Revision-Date: 2006-08-08 18:03+0100\n"
-"Last-Translator: Bart Cornelis <cobaco@skolelinux.no>\n"
-"Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
+"Project-Id-Version: tasksel_3.44\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
+"PO-Revision-Date: 2018-07-30 20:35+0200\n"
+"Last-Translator: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>\n"
+"Language-Team: Debian Dutch l10n Team <debian-l10n-dutch@lists.debian.org>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #. Type: multiselect
 #. Description
@@ -39,7 +43,7 @@ msgid ""
 "to your needs, you can choose to install one or more of the following "
 "predefined collections of software."
 msgstr ""
-"Momenteel is enkel het kernsysteem geïnstalleerd. Om de installatie aan uw "
+"Momenteel is enkel het kernsysteem geÃ¯nstalleerd. Om de installatie aan uw "
 "behoeften aan te passen kunt u een of meer van de voorgedefinieerde software-"
 "collecties installeren."
 
@@ -53,9 +57,17 @@ msgstr ""
 "U heeft de mogelijkheid om een of meer van de volgende voorgedefinieerde "
 "softwarecollecties te gebruiken."
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+"Dit kan via een antwoordbestand voorgeconfigureerd worden om de standaard "
+"werkomgeving te vervangen."
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "Software-selectie"
 

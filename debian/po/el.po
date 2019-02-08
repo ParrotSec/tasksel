@@ -17,8 +17,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-09-13 14:42-0400\n"
+"Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
+"POT-Creation-Date: 2018-05-23 01:37+0200\n"
 "PO-Revision-Date: 2006-10-03 03:32+0300\n"
 "Last-Translator: Socrates VAVILIS <s_vavilis@yahoo.fr>\n"
 "Language-Team: Greek <i18ngr@hellug.gr>\n"
@@ -59,8 +59,14 @@ msgstr ""
 "Μπορείτε να εγκαταστήσετε μία ή και περισσότερες από τις ακόλουθες "
 "προκαθορισμένες συλλογές λογισμικού."
 
-#. Type: title
+#. Type: multiselect
 #. Description
 #: ../templates:3001
+msgid "This can be preseeded to override the default desktop."
+msgstr ""
+
+#. Type: title
+#. Description
+#: ../templates:4001
 msgid "Software selection"
 msgstr "Επιλογή λογισμικού"
