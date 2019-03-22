@@ -1,0 +1,12 @@
+Task: parrot-cloud
+Relevance: 2
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Parrot Cloud Pentest
+ This task provides Pentest tools for cloud environment.
+Key:
+ parrot-tools-cloud
+Packages: list
+ parrot-tools-cloud
+ 

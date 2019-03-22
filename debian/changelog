@@ -1,3 +1,10 @@
+tasksel (3.50+parrot1) testing; urgency=medium
+
+  * Import new Debian release.
+  * Update Parrot modules.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 22 Mar 2019 11:11:49 +0100
+
 tasksel (3.50) unstable; urgency=medium
   * Team upload.
 
