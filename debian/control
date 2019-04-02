@@ -3,11 +3,11 @@ Section: tasks
 Priority: optional
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Uploaders: Christian Perrier <bubulle@debian.org>,
-           Nicolas Braud-Santoni <nicolas@braud-santoni.eu>
+           Nicolas Braud-Santoni <nicoo@debian.org>
 Standards-Version: 4.1.4
 Build-Depends: po-debconf, debhelper (>= 9), gettext, dpkg-dev (>= 1.9.0)
-Vcs-Browser: https://nest.parrotsec.org/debian-packages/tasksel
-Vcs-Git: https://nest.parrotsec.org/debian-packages/tasksel.git
+Vcs-Browser: https://salsa.debian.org/installer-team/tasksel
+Vcs-Git: https://salsa.debian.org/installer-team/tasksel.git
 
 Package: tasksel
 Section: admin
@@ -40,18 +40,19 @@ Depends: ${misc:Depends},
 	xserver-xorg-video-all,
 	xserver-xorg-input-all,
 	desktop-base,
-	parrot-interface,
 Recommends:
 # One of the actual desktop tasks is needed to get a full desktop environment.
 # The order here is significant when installing this task manually;
 # when tasksel installs this task it instead selects one of these based
 # on the tasksel/desktop debconf setting.
-	task-mate-desktop | task-kde-desktop | task-gnome-desktop | task-lxde-desktop | task-cinnamon-desktop | task-gnome-desktop | task-lxqt-desktop,
+	task-gnome-desktop | task-xfce-desktop | task-kde-desktop | task-lxde-desktop | task-cinnamon-desktop | task-mate-desktop | task-lxqt-desktop,
 # For use by third-party apps.
 	xdg-utils,
 # mdns/zeroconf stuff
 	avahi-daemon,
 	libnss-mdns,
+# desktop machines might not be up 24/7
+	anacron,
 # Make sure that CDs etc can be ejected. May not be installed by d-i.
 	eject,
 # wireless networking tools (they're more and more used on desktops too)
@@ -79,7 +80,7 @@ Depends: ${misc:Depends},
 Recommends:
 # The full gnome desktop environment should be included if possible
 # even if the larger gnome metapackage doesn't fit.
-	gnome, parrot-gnome,
+	gnome,
 # GNOME support in LibreOffice
 	libreoffice-gnome,
 # libreoffice is the best word processor / office suite at the moment
@@ -104,7 +105,7 @@ Description: KDE Plasma
  the KDE Plasma desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
 Depends: ${misc:Depends},
-	task-desktop, parrot-kde,
+	task-desktop,
 	kde-standard,
 	sddm,
 Recommends:
@@ -147,7 +148,7 @@ Description: LXDE
 Depends: ${misc:Depends},
 	task-desktop,
 	lightdm,
-	lxde, parrot-lxde,
+	lxde,
 Recommends:
 	lxtask,
 	lxlauncher,
@@ -211,7 +212,7 @@ Description: Xfce
 Depends: ${misc:Depends},
 	task-desktop,
 # The basics of xfce, not the whole thing.
-	xfce4, parrot-xfce,
+	xfce4,
 	lightdm,
 	light-locker
 Recommends:
@@ -262,7 +263,7 @@ Description: Cinnamon
  expect to have available on the desktop.
 Depends: ${misc:Depends},
 	task-desktop,
-	cinnamon-desktop-environment, parrot-cinnamon,
+	cinnamon-desktop-environment
 
 Package: task-mate-desktop
 Architecture: all
@@ -272,7 +273,7 @@ Description: MATE
  expect to have available on the desktop.
 Depends: ${misc:Depends},
 	task-desktop,
-	mate-desktop-environment, parrot-mate,
+	mate-desktop-environment,
 	lightdm,
 Recommends:
 # temporarily moved from task-desktop due to #525077
@@ -301,6 +302,7 @@ Architecture: all
 Description: laptop
  This task package installs software useful for a laptop.
 Depends: ${misc:Depends},
+	anacron,
 Recommends:
 	avahi-autoipd,
 	bluetooth,
@@ -312,13 +314,13 @@ Recommends:
 
 Package: task-web-server
 Architecture: all
-Description: web server (nginx + php-fpm)
+Description: web server
  This task selects packages useful for a general purpose web server
  system.
 Depends: ${misc:Depends},
-	nginx,
+	apache2,
 Recommends:
-	php-fpm,
+	apache2-doc,
 	analog,
 
 Package: task-print-server
@@ -536,7 +538,7 @@ Depends: ${misc:Depends},
 Recommends:
 	libreoffice-l10n-bs,
 	firefox-esr-l10n-bs | firefox-l10n-bs,
-	myspell-hr
+	hunspell-hr
 
 Package: task-bosnian-kde-desktop
 Architecture: all
@@ -572,7 +574,7 @@ Depends: ${misc:Depends},
 Recommends:
 	libreoffice-l10n-pt-br,
 	firefox-esr-l10n-pt-br | firefox-l10n-pt-br,
-	myspell-pt-br
+	hunspell-pt-br
 
 Package: task-brazilian-portuguese-kde-desktop
 Architecture: all
@@ -624,7 +626,7 @@ Recommends:
 	libreoffice-l10n-bg,
 	firefox-esr-l10n-bg | firefox-l10n-bg,
 	fonts-dejavu,
-	myspell-bg
+	hunspell-bg
 
 Package: task-bulgarian-kde-desktop
 Architecture: all
@@ -657,7 +659,7 @@ Recommends:
 	firefox-esr-l10n-ca | firefox-l10n-ca,
 	libreoffice-l10n-ca,
 	libreoffice-help-ca,
-	myspell-ca
+	hunspell-ca
 
 Package: task-catalan-kde-desktop
 Architecture: all
@@ -678,7 +680,6 @@ Recommends:
 	opencc,
 	zhcon,
 	manpages-zh,
-	fortune-zh
 
 Package: task-chinese-s-desktop
 Architecture: all
@@ -779,7 +780,7 @@ Depends: ${misc:Depends},
 Recommends:
 	hyphen-hr,
 	libreoffice-l10n-hr,
-	myspell-hr,
+	hunspell-hr,
 	firefox-esr-l10n-hr | firefox-l10n-hr,
 
 Package: task-croatian-kde-desktop
@@ -873,7 +874,7 @@ Recommends:
 	firefox-esr-l10n-nl | firefox-l10n-nl,
 	libreoffice-l10n-nl,
 	libreoffice-help-nl,
-	myspell-nl
+	hunspell-nl
 
 Package: task-dutch-kde-desktop
 Architecture: all
@@ -986,7 +987,6 @@ Recommends:
 	libreoffice-l10n-fi,
 	libreoffice-voikko,
 	firefox-esr-l10n-fi | firefox-l10n-fi,
-	xul-ext-mozvoikko
 
 Package: task-finnish-kde-desktop
 Architecture: all
@@ -1003,8 +1003,6 @@ Description: French environment
  to help French speaking people use Debian.
 Depends: ${misc:Depends},
 Recommends:
-	doc-linux-fr-text,
-	doc-debian-fr,
 	ifrench-gut,
 	wfrench,
 	aspell-fr,
@@ -1124,7 +1122,6 @@ Description: Greek desktop
 Depends: ${misc:Depends},
 Recommends:
 	fonts-freefont-ttf,
-	fonts-mgopen,
 	libreoffice-l10n-el,
 	firefox-esr-l10n-el | firefox-l10n-el,
 	myspell-el-gr,
@@ -1161,9 +1158,7 @@ Package: task-gujarati-kde-desktop
 Architecture: all
 Description: Gujarati KDE Plasma desktop
  This task localises the KDE Plasma desktop in Gujarati.
-Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-gu
+Depends: ${misc:Depends}
 
 Package: task-hebrew
 Architecture: all
@@ -1266,7 +1261,6 @@ Recommends:
 	firefox-esr-l10n-hu | firefox-l10n-hu,
 	libreoffice-l10n-hu,
 	libreoffice-help-hu,
-	libreoffice-thesausus-hu,
 	hyphen-hu,
 	hunspell-hu
 
@@ -1373,7 +1367,7 @@ Recommends:
 	libreoffice-l10n-it,
 	mythes-it,
 	firefox-esr-l10n-it | firefox-l10n-it,
-	myspell-it
+	hunspell-it
 
 Package: task-italian-kde-desktop
 Architecture: all
@@ -1456,7 +1450,6 @@ Description: Kannada KDE Plasma desktop
  This task localises the KDE Plasma desktop in Kannada.
 Depends: ${misc:Depends},
 Recommends:
-	kde-l10n-kn,
 	kde-config-fcitx
 
 Package: task-kazakh
@@ -1575,9 +1568,8 @@ Description: Kurdish desktop
  This task localises the desktop in Kurdish.
 Depends: ${misc:Depends},
 Recommends:
-	libreoffice-l10n-ku,
 	fonts-dejavu,
-	myspell-ku,
+	hunspell-kmr,
 	fonts-unikurdweb
 
 Package: task-kurdish-kde-desktop
@@ -1633,7 +1625,7 @@ Recommends:
 	libreoffice-l10n-lt,
 	hyphen-lt,
 	firefox-esr-l10n-lt | firefox-l10n-lt,
-	myspell-lt
+	hunspell-lt
 
 Package: task-lithuanian-kde-desktop
 Architecture: all
@@ -1664,9 +1656,7 @@ Package: task-macedonian-kde-desktop
 Architecture: all
 Description: Macedonian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Macedonian.
-Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-mk
+Depends: ${misc:Depends}
 
 Package: task-malayalam
 Architecture: all
@@ -1708,7 +1698,6 @@ Description: Malayalam KDE Plasma desktop
  This task localises the KDE Plasma desktop in Malayalam.
 Depends: ${misc:Depends},
 Recommends:
-	kde-l10n-ml,
 	fcitx-frontend-qt4,
 	fcitx-frontend-qt5,
 	kde-config-fcitx
@@ -1743,7 +1732,7 @@ Recommends:
 	libreoffice-l10n-ne,
 	mythes-ne,
 	hunspell-ne,
-	firefox-esr-l10n-ne-np
+	firefox-esr-l10n-ne-np | firefox-l10n-ne-np
 
 Package: task-nepali-kde-desktop
 Architecture: all
@@ -1843,9 +1832,7 @@ Recommends:
 	konwert,
 	ipolish,
 	wpolish,
-	doc-linux-pl,
 	manpages-pl-dev,
-	doc-linux-pl-html,
 	aspell-pl,
 # Other packages to i18n common software
 	util-linux-locales
@@ -1860,7 +1847,7 @@ Recommends:
 	libreoffice-help-pl,
 	mythes-pl,
 	firefox-esr-l10n-pl | firefox-l10n-pl,
-	myspell-pl
+	hunspell-pl
 
 Package: task-polish-kde-desktop
 Architecture: all
@@ -1890,7 +1877,7 @@ Recommends:
 	libreoffice-l10n-pt,
 	libreoffice-help-pt,
 	firefox-esr-l10n-pt-pt | firefox-l10n-pt-pt,
-	myspell-pt-pt
+	hunspell-pt-pt
 
 Package: task-portuguese-kde-desktop
 Architecture: all
@@ -2038,9 +2025,7 @@ Package: task-sinhala-kde-desktop
 Architecture: all
 Description: Sinhala KDE Plasma desktop
  This task localises the KDE Plasma desktop in Sinhala.
-Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-si
+Depends: ${misc:Depends}
 
 Package: task-slovak
 Architecture: all
@@ -2089,7 +2074,7 @@ Recommends:
 	firefox-esr-l10n-sl | firefox-l10n-sl,
 	libreoffice-l10n-sl,
 	libreoffice-help-sl,
-	myspell-sl
+	hunspell-sl
 
 Package: task-slovenian-kde-desktop
 Architecture: all
@@ -2122,7 +2107,6 @@ Recommends:
 	aspell-es,
 # Useful documentation for spanish-speakers
 	debian-reference-es,
-	doc-debian-es,
 # Other packages to i18n common software
 	util-linux-locales
 
@@ -2284,7 +2268,7 @@ Recommends:
 	xiterm+thai,
 	libreoffice-l10n-th,
 	firefox-esr-l10n-th | firefox-l10n-th,
-	myspell-th
+	hunspell-th
 
 Package: task-thai-gnome-desktop
 Architecture: all
@@ -2301,7 +2285,6 @@ Description: Thai KDE Plasma desktop
  This task localises the KDE Plasma desktop in Thai.
 Depends: ${misc:Depends},
 Recommends:
-	kde-l10n-th,
 	libthai-dev
 
 Package: task-turkish
@@ -2345,8 +2328,7 @@ Depends: ${misc:Depends},
 Recommends:
 	aspell-uk,
 	konwert,
-	iukrainian,
-	doc-debian-uk
+	iukrainian
 
 Package: task-ukrainian-desktop
 Architecture: all
@@ -2399,9 +2381,7 @@ Package: task-vietnamese-kde-desktop
 Architecture: all
 Description: Vietnamese KDE Plasma desktop
  This task localises the KDE Plasma desktop in Vietnamese.
-Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-vi
+Depends: ${misc:Depends}
 
 Package: task-welsh
 Architecture: all

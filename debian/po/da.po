@@ -11,20 +11,21 @@
 #
 # Claus Hindsgaul <claus_h@image.dk>, 2004, 2005.
 # Claus Hindsgaul <claus.hindsgaul@gmail.com>, 2006.
+# Joe Hansen <joedalton2@yahoo.dk>, 2019.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: tasksel v2\n"
 "Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
 "POT-Creation-Date: 2018-05-23 01:37+0200\n"
-"PO-Revision-Date: 2006-08-19 23:42+0200\n"
-"Last-Translator: Claus Hindsgaul <claus.hindsgaul@gmail.com>\n"
+"PO-Revision-Date: 2019-02-17 23:42+0200\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish\n"
-"Language: \n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Type: multiselect
 #. Description
@@ -32,7 +33,7 @@ msgstr ""
 #. Description
 #: ../templates:1001 ../templates:2001
 msgid "Choose software to install:"
-msgstr "Vælg programmer at installere:"
+msgstr "VÃ¦lg programmer at installere:"
 
 #. Type: multiselect
 #. Description
@@ -42,8 +43,8 @@ msgid ""
 "to your needs, you can choose to install one or more of the following "
 "predefined collections of software."
 msgstr ""
-"For øjeblikket er kun systemets kerne installeret. For at tilpasse systemet "
-"til dine behov, kan du vælge at installere en eller flere af følgende "
+"For Ã¸jeblikket er kun systemets kerne installeret. For at tilpasse systemet "
+"til dine behov, kan du vÃ¦lge at installere en eller flere af fÃ¸lgende "
 "foruddefinerede programsamlinger."
 
 #. Type: multiselect
@@ -53,14 +54,14 @@ msgid ""
 "You can choose to install one or more of the following predefined "
 "collections of software."
 msgstr ""
-"Du kan vælge at installere en eller flere af følgende foruddefinerede "
+"Du kan vÃ¦lge at installere en eller flere af fÃ¸lgende foruddefinerede "
 "programsamlinger."
 
 #. Type: multiselect
 #. Description
 #: ../templates:3001
 msgid "This can be preseeded to override the default desktop."
-msgstr ""
+msgstr "Dette kan forhÃ¥ndskonfigureres for at overskrive standardskrivebordet."
 
 #. Type: title
 #. Description

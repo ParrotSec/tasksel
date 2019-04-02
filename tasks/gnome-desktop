@@ -1,7 +1,7 @@
 Task: gnome-desktop
 Relevance: 1
 Parent: desktop
-Test-parrot: 2
+Test-default-desktop: 3 gnome
 Section: user
 Key:
   task-gnome-desktop

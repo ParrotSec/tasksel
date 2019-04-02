@@ -1,9 +1,35 @@
-tasksel (3.50+parrot1) testing; urgency=medium
+tasksel (3.52) unstable; urgency=medium
+  * Team upload.
 
-  * Import new Debian release.
-  * Update Parrot modules.
+  [ Updated translations ]
+  * Czech (cs.po) by Miroslav Kure
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 22 Mar 2019 11:11:49 +0100
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 02 Apr 2019 22:48:50 +0200
+
+tasksel (3.51) unstable; urgency=medium
+  * Team upload.
+
+  * Add firefox-l10n-ne-np to task-nepali-desktop. Closes: #922123
+  * Re-add anacron to task-desktop and task-laptop (removed in 3.49).
+    Closes: #924037, #915370
+  * task-catalan-desktop: replace removed myspell-ca by hunspell-ca.
+    Closes: #910615
+  * task-greek-desktop: remove no longer existing fonts-mgopen. Closes: #823150
+  * Some clean-up: (Closes: #923975)
+      * Remove several no longer existing packages.
+      * Remove some badly outdated documentation packages.
+      * Replace some transitional packages by their Depends.
+      * Correct name inconsistency in tasks/uyghur-desktop.
+  * Replace transitional package myspell-bg by its Depends hunspell-bg.
+    Closes: #824729
+  * Replace some more myspell-* transitional packages by their Depends
+    (hunspell-*).
+
+  [ Updated debconf translations ]
+  * Danish (da.po) by Joe Dalton.
+  * Norwegian Bokmål (nb.po) by Petter Reinholdtsen.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 10 Mar 2019 23:12:54 +0100
 
 tasksel (3.50) unstable; urgency=medium
   * Team upload.
