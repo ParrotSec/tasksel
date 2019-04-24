@@ -2,6 +2,6 @@ Task: mate-desktop
 Section: user
 Parent: desktop
 Relevance: 8
-Test-default-desktop: 3 mate
+Test-parrot: 2
 Key:
   task-mate-desktop

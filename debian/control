@@ -40,12 +40,13 @@ Depends: ${misc:Depends},
 	xserver-xorg-video-all,
 	xserver-xorg-input-all,
 	desktop-base,
+	parrot-interface,
 Recommends:
 # One of the actual desktop tasks is needed to get a full desktop environment.
 # The order here is significant when installing this task manually;
 # when tasksel installs this task it instead selects one of these based
 # on the tasksel/desktop debconf setting.
-	task-gnome-desktop | task-xfce-desktop | task-kde-desktop | task-lxde-desktop | task-cinnamon-desktop | task-mate-desktop | task-lxqt-desktop,
+	task-mate-desktop | task-kde-desktop | task-lxqt-desktop | task-cinnamon-desktop | task-gnome-desktop | task-lxde-desktop,
 # For use by third-party apps.
 	xdg-utils,
 # mdns/zeroconf stuff
@@ -80,7 +81,7 @@ Depends: ${misc:Depends},
 Recommends:
 # The full gnome desktop environment should be included if possible
 # even if the larger gnome metapackage doesn't fit.
-	gnome,
+	gnome, parrot-gnome,
 # GNOME support in LibreOffice
 	libreoffice-gnome,
 # libreoffice is the best word processor / office suite at the moment
@@ -105,9 +106,9 @@ Description: KDE Plasma
  the KDE Plasma desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
 Depends: ${misc:Depends},
-	task-desktop,
+	task-desktop, parrot-kde,
 	kde-standard,
-	sddm,
+	lightdm-parrot | sddm,
 Recommends:
 # accessibility support
 	kdeaccessibility,
@@ -148,7 +149,7 @@ Description: LXDE
 Depends: ${misc:Depends},
 	task-desktop,
 	lightdm,
-	lxde,
+	lxde, parrot-lxde,
 Recommends:
 	lxtask,
 	lxlauncher,
@@ -212,7 +213,7 @@ Description: Xfce
 Depends: ${misc:Depends},
 	task-desktop,
 # The basics of xfce, not the whole thing.
-	xfce4,
+	xfce4, parrot-xfce,
 	lightdm,
 	light-locker
 Recommends:
@@ -272,7 +273,7 @@ Description: MATE
  the MATE desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
 Depends: ${misc:Depends},
-	task-desktop,
+	task-desktop, parrot-mate,
 	mate-desktop-environment,
 	lightdm,
 Recommends:
@@ -314,14 +315,13 @@ Recommends:
 
 Package: task-web-server
 Architecture: all
-Description: web server
+Description: web server (nginx + php-fpm)
  This task selects packages useful for a general purpose web server
  system.
 Depends: ${misc:Depends},
-	apache2,
+	nginx,
 Recommends:
-	apache2-doc,
-	analog,
+	php-fpm,
 
 Package: task-print-server
 Architecture: all

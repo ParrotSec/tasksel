@@ -1,0 +1,12 @@
+Task: parrot-interface-full
+Relevance: 3
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Parrot Desktop Full
+ This task provides a variety of useful graphical applications
+ suitable for a daily use.
+Key:
+ parrot-interface-full
+Packages: list
+ parrot-interface-full

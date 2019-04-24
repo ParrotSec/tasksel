@@ -1,0 +1,11 @@
+Task: parrot-devel
+Relevance: 3
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Parrot Development Suite
+ This task installs the Development suite.
+Key:
+ parrot-devel
+Packages: list
+ parrot-devel

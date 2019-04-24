@@ -1,3 +1,10 @@
+tasksel (3.52+parrot1) testing; urgency=medium
+
+  * Import new Debian release.
+  * Minor parrot updates.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Wed, 24 Apr 2019 03:23:02 +0200
+
 tasksel (3.52) unstable; urgency=medium
   * Team upload.
 
@@ -30,6 +37,13 @@ tasksel (3.51) unstable; urgency=medium
   * Norwegian Bokmål (nb.po) by Petter Reinholdtsen.
 
  -- Holger Wansing <hwansing@mailbox.org>  Sun, 10 Mar 2019 23:12:54 +0100
+
+tasksel (3.50+parrot1) testing; urgency=medium
+
+  * Import new Debian release.
+  * Update Parrot modules.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 22 Mar 2019 11:11:49 +0100
 
 tasksel (3.50) unstable; urgency=medium
   * Team upload.
