@@ -1,5 +1,5 @@
 Task: kde-desktop
-Relevance: 7
+Relevance: 3
 Parent: desktop
 Test-default-desktop: 3 kde
 Section: user

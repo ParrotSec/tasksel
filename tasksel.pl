@@ -16,7 +16,12 @@ my $descdir="/usr/share/tasksel/descs";
 my $localdescdir="/usr/local/share/tasksel/descs";
 my $statusfile="/var/lib/dpkg/status";
 my $infodir="/usr/lib/tasksel/info";
+
+# This boolean indicates whether we are in dry-run (no-do) mode.  More
+# specifically, it disables the actual running of commands by the
+# &run() function.
 my $testmode=0;
+
 my $taskpackageprefix="task-";
 
 sub warning {
@@ -28,6 +33,8 @@ sub error {
 	exit 1;
 }
 
+# my $statuscode = &run("ls", "-l", "/tmp");
+# => 0
 # Run a shell command except in test mode, and returns its exit code.
 # Prints the command in test mode. Parameters should be pre-split for
 # system.
@@ -41,8 +48,13 @@ sub run {
 	}
 }
 
-# A list of all available task desc files.
+# my @paths = &list_task_descs();
+# => ("/path/to/debian-tasks.desc", "/some/other/taskfile.desc")
+# Get the list of desc files.
 sub list_task_descs {
+	# Setting DEBIAN_TASKS_ONLY is a way for the Debian installer
+	# to tell tasksel to only use the Debian tasks (from
+	# tasksel-data).
 	if ($ENV{DEBIAN_TASKS_ONLY}) {
 		return glob("$descdir/debian-tasks.desc");
 	}
@@ -51,14 +63,44 @@ sub list_task_descs {
 	}
 }
 
+# &read_task_desc("/path/to/taskfile.desc");
+# => (
+#      {
+#        task => "gnome-desktop",
+#        parent => "desktop",
+#        relevance => 1,
+#        key => [task-gnome-desktop"],
+#        section => "user",
+#        test-default-desktop => "3 gnome",
+#        sortkey => 1desktop-01
+#      },
+#      ...
+#    )
 # Returns a list of hashes; hash values are arrays for multi-line fields.
 sub read_task_desc {
 	my $desc=shift;
+
+        # %tasks maps the name of each task (the Task: field) to its
+        # %%data information (that maps each key to value(s), see the
+        # %"while" loop below).
 	my %tasks;
-	open (DESC, "<$desc") || die "read $desc\: $!";
+
+	open (DESC, "<$desc") || die "Could not open $desc for reading: $!";
 	local $/="\n\n";
-	while (<DESC>) {
+	while (defined($_ = <DESC>)) {
+		# %data will contain the keys/values of the current
+		# stanza.
+                # 
+                # The keys are stored lowercase.
+                # 
+                # A single-line value is stored as a scalar "line1"; a
+                # multi-line value is stored as a ref to array
+                # ["line1", "line2"].
+                #
+                # $data{relevance} is set to 5 if not otherwise
+                # specified in the stanza.
 		my %data;
+
 		my @lines=split("\n");
 		while (@lines) {
 			my $line=shift(@lines);
@@ -68,9 +110,12 @@ sub read_task_desc {
 				if (@lines && $lines[0] =~ /^\s+/) {
 					# multi-line field
 					my @values;
+
+                                        # Ignore the first line if it is empty.
 					if (defined $value && length $value) {
 						push @values, $value;
 					}
+
 					while (@lines && $lines[0] =~ /^\s+(.*)/) {
 						push @values, $1;
 						shift @lines;
@@ -82,7 +127,7 @@ sub read_task_desc {
 				}
 			}
 			else {
-				warning "parse error in stanza $. of $desc";
+				warning "$desc: in stanza $.: warning: parse error, ignoring line: $line";
 			}
 		}
 		$data{relevance}=5 unless exists $data{relevance};
@@ -91,13 +136,40 @@ sub read_task_desc {
 		}
 	}
 	close DESC;
+
 	my @ret;
+        # In this loop, we simultaneously:
+        # 
+        # - enrich the %data structures of all tasks with a
+        #   ->{sortkey} field
+        #
+        # - and collect them into @ret.
 	foreach my $task (keys %tasks) {
 		my $t=$tasks{$task};
 		if (exists $t->{parent} && exists $tasks{$t->{parent}}) {
+                        # This task has a "Parent:" task.  For example:
+                        #
+                        #   Task: sometask
+                        #   Relevance: 3
+                        #   Parent: parenttask
+                        #
+                        #   Task: parenttask
+                        #   Relevance: 6
+                        #
+                        # In this case, we set the sortkey to "6parenttask-03".
+                        #
+                        # XXX TODO: support correct sorting when
+                        # Relevance is 10 or more (e.g. package
+                        # education-tasks).
 			$t->{sortkey}=$tasks{$t->{parent}}->{relevance}.$t->{parent}."-0".$t->{relevance};
 		}
 		else {
+                        # This task has no "Parent:" task.  For example:
+                        # 
+                        #   Task: sometask
+                        #   Relevance: 3
+                        #
+                        # In this case, we set the sortkey to "3sometask-00".
 			$t->{sortkey}=$t->{relevance}.$t->{task}."-00";
 		}
 		push @ret, $t;
@@ -105,13 +177,37 @@ sub read_task_desc {
 	return @ret;
 }
 
+# &all_tasks();
+# => (
+#      {
+#        task => "gnome-desktop",
+#        parent => "desktop",
+#        relevance => 1,
+#        key => [task-gnome-desktop"],
+#        section => "user",
+#        test-default-desktop => "3 gnome",
+#        sortkey => 1desktop-01
+#      },
+#      ...
+#    )
 # Loads info for all tasks, and returns a set of task structures.
 sub all_tasks {
 	my %seen;
+        # Filter out duplicates: only the first occurrence of each
+        # task name is taken into account.
 	grep { $seen{$_->{task}}++; $seen{$_->{task}} < 2 }
 	map { read_task_desc($_) } list_task_descs();
 }
 
+
+# my %apt_available = %_info_avail()
+# => (
+#   "debian-policy" => { priority => "optional", section => "doc" },
+#   ...
+# )
+# 
+# Call "apt-cache dumpavail" and collect the output information about
+# package name, priority and section.
 sub _info_avail {
 	my %ret = ();
 	# Might be better to use the perl apt bindings, but they are not
@@ -122,6 +218,7 @@ sub _info_avail {
 	while (<AVAIL>) {
 		chomp;
 		if (not $_) {
+                        # End of stanza
 			if (defined $package && defined $priority && defined $section) {
 				$ret{$package} = {
 				       	"priority" => $priority,
@@ -143,11 +240,17 @@ sub _info_avail {
 	return %ret;
 }
 
+# my @installed = &list_installed();
+# => ("emacs", "vim", ...)
 # Returns a list of all installed packages.
+# This is not memoised and will run dpkg-query at each invocation.
+# See &package_installed() for memoisation.
 sub list_installed {
 	my @list;
 	open (LIST, q{LANG=C dpkg-query -W -f='${Package} ${Status}\n' |});
 	while (<LIST>) {
+                # Each line looks like this:
+                # "adduser install ok installed"
 		if (/^([^ ]+) .* installed$/m) {
 			push @list, $1;
 		}
@@ -158,7 +261,12 @@ sub list_installed {
 
 my %_info_avail_cache;
 
-# Returns a hash of all available packages.
+# my $apt_available = &info_avail();
+# => {
+#   "debian-policy" => { priority => "optional", section => "doc" },
+#   ...
+# }
+# Returns a hash of all available packages.  Memoised.
 sub info_avail {
 	my $package = shift;
 	if (!%_info_avail_cache) {
@@ -167,14 +275,19 @@ sub info_avail {
 	return \%_info_avail_cache;
 }
 
-# Given a package name, checks to see if it's available. Memoised.
+# if (&package_avail("debian-policy")) { ... }
+# Given a package name, checks to see if it's installed or available.
+# Memoised.
 sub package_avail {
 	my $package = shift;
 	return info_avail()->{$package} || package_installed($package);
 }
 
+# Memoisation for &package_installed().
 my %installed_pkgs;
-# Given a package name, checks to see if it's installed. Memoised.
+
+# if (&package_installed("debian-policy")) { ... }
+# Given a package name, checks to see if it's installed.  Memoised.
 sub package_installed {
 	my $package=shift;
 	
@@ -187,7 +300,10 @@ sub package_installed {
 	return $installed_pkgs{$package};
 }
 
-# Given a task hash, checks if its key packages are available.
+# if (&task_avail($task)) { ... }
+# Given a task hash, checks that all of its key packages are installed or available.
+# Returns true if all key packages are installed or available.
+# Returns false if any of the key packages is not.
 sub task_avail {
 	local $_;
 	my $task=shift;
@@ -204,8 +320,9 @@ sub task_avail {
 	}
 }
 
+# if (&task_installed($task)) { ... }
 # Given a task hash, checks to see if it is already installed.
-# (All of its key packages must be installed.)
+# All of its key packages must be installed.  Other packages are not checked.
 sub task_installed {
 	local $_;
 	my $task=shift;
@@ -222,21 +339,38 @@ sub task_installed {
 	}
 }
 
-# Given task hash, returns a list of all available packages in the task.
+# my @packages = &task_packages($task);
+# Given a task hash, returns a list of all available packages in the task.
+# 
+# It is the list of "Key:" packages, plus the packages indicated
+# through the "Packages:" field.
 sub task_packages {
 	my $task=shift;
 	
+        # The %list hashtable is used as a set: only its keys matter,
+        # the value is irrelevant.
 	my %list;
 
-	# key packages are always included
+	# "Key:" packages are always included.
 	if (ref $task->{key}) {
+                # $task->{key} is not a line but a reference (to an
+                # array of lines).
 		map { $list{$_}=1 } @{$task->{key}};
 	}
 	
 	if (! defined $task->{packages}) {
+                # No "Packages:" field.
 		# only key
 	}
 	elsif ($task->{packages} eq 'standard') {
+                # Special case of "Packages: standard"
+                #
+                # The standard packages are the non-library ones in
+                # "main" which priority is required, important or
+                # standard.
+                #
+                # We add all standard packages to %list, except the
+                # ones that are already installed.
 		my %info_avail=%{info_avail()};
 		while (my ($package, $info) = each(%info_avail)) {
 			my ($priority, $section) = ($info->{priority}, $info->{section});
@@ -254,6 +388,24 @@ sub task_packages {
 	else {
 		# external method
 		my ($method, @params);
+
+                # "Packages:" requests to run a program and use its
+                # output as the names of packages.
+                #
+                # There are basically two forms:
+                #
+                #   Packages: myprogram
+                #
+                # Runs /usr/lib/tasksel/packages/myprogram TASKNAME
+                #
+                #   Packages: myprogram
+                #     arg1
+                #     arg2...
+                #
+                # Runs /usr/lib/tasksel/packages/myprogram TASKNAME arg1 arg2...
+                #
+                # The tasksel package provides the simple "list"
+                # program which simply outputs its arguments.
 		if (ref $task->{packages}) {
 			@params=@{$task->{packages}};
 			$method=shift @params;
@@ -270,14 +422,37 @@ sub task_packages {
 	return keys %list;
 }
 
+# &task_test($task, $new_install, $display_by_default, $install_by_default);
 # Given a task hash, runs any test program specified in its data, and sets
 # the _display and _install fields to 1 or 0 depending on its result.
+#
+# If _display is true, _install means the default proposal shown to
+# the user, who can modify it.  If _display is false, _install says
+# what to do, without asking the user.
 sub task_test {
 	my $task=shift;
 	my $new_install=shift;
 	$task->{_display} = shift; # default
 	$task->{_install} = shift; # default
 	$ENV{NEW_INSTALL}=$new_install if defined $new_install;
+        # Each task may define one or more tests in the form:
+        #
+        #   Test-PROGRAM: ARGUMENTS...
+        #
+        # Each of the programs will be run like this:
+        #
+        #   /usr/lib/tasksel/tests/PROGRAM TASKNAME ARGUMENTS...
+        #
+        # If $new_install is true, the NEW_INSTALL environment
+        # variable is set for invoking the program.
+        #
+        # The return code of the invocation then indicates what to set:
+        #
+        #   0 - don't display, but install it
+        #   1 - don't display, don't install
+        #   2 - display, mark for installation
+        #   3 - display, don't mark for installation
+        #   anything else - don't change the values of _display or _install
 	foreach my $test (grep /^test-.*/, keys %$task) {
 		$test=~s/^test-//;
 		if (-x "$testdir/$test") {
@@ -305,8 +480,12 @@ sub task_test {
 	return $task;
 }
 
+# &hide_enhancing_tasks($task);
+# 
 # Hides a task and marks it not to be installed if it enhances other
 # tasks.
+#
+# Returns $task.
 sub hide_enhancing_tasks {
 	my $task=shift;
 	if (exists $task->{enhances} && length $task->{enhances}) {
@@ -316,8 +495,22 @@ sub hide_enhancing_tasks {
 	return $task;
 }
 
+# &getdescriptions(@tasks);
+# 
 # Looks up the descriptions of a set of tasks, returning a new list
-# with the shortdesc fields filled in.
+# with the ->{shortdesc} fields filled in.
+#
+# Ideally, the .desc file would indicate a description of each task,
+# which would be retrieved quickly.  For missing Description fields,
+# we fetch the data with "apt-cache show task-TASKNAME...", which
+# takes longer.
+#
+# @tasks: list of references, each referencing a task data structure.
+# 
+# Each data structured is enriched with a ->{shortdesc} field,
+# containing the localized short description.
+#
+# Returns @tasks.
 sub getdescriptions {
 	my @tasks=@_;
 
@@ -336,7 +529,7 @@ sub getdescriptions {
 	if (@todo) {
 		open(APT_CACHE, "apt-cache show ".join(" ", map { $taskpackageprefix.$_->{task} } @todo)." |") || die "apt-cache show: $!";
 		local $/="\n\n";
-		while (<APT_CACHE>) {
+		while (defined($_ = <APT_CACHE>)) {
 			my ($name)=/^Package: $taskpackageprefix(.*)$/m;
 			my ($description)=/^Description-(?:[a-z][a-z](?:_[A-Z][A-Z])?): (.*)$/m;
 			($description)=/^Description: (.*)$/m
@@ -356,12 +549,18 @@ sub getdescriptions {
 	return @tasks;
 }
 
+# &task_to_debconf(@tasks);
+# => "task1, task2, task3"
 # Converts a list of tasks into a debconf list of the task short
 # descriptions.
 sub task_to_debconf {
 	join ", ", map { format_description_for_debconf($_) } getdescriptions(@_);
 }
 
+# my $debconf_string = &format_description_for_debconf($task);
+# => "... GNOME"
+# Build a string for making a debconf menu item.
+# If the task has a parent task, "... " is prepended.
 sub format_description_for_debconf {
 	my $task=shift;
 	my $d=$task->{shortdesc};
@@ -370,11 +569,15 @@ sub format_description_for_debconf {
 	return $d;
 }
 
+# my $debconf_string = &task_to_debconf_C(@tasks);
+# => "gnome-desktop, kde-desktop"
 # Converts a list of tasks into a debconf list of the task names.
 sub task_to_debconf_C {
 	join ", ", map { $_->{task} } @_;
 }
 
+# my @my_tasks = &list_to_tasks("task1, task2, task3", @tasks);
+# => ($task1, $task2, $task3)
 # Given a first parameter that is a string listing task names, and then a
 # list of task hashes, returns a list of hashes for all the tasks
 # in the list.
@@ -384,7 +587,9 @@ sub list_to_tasks {
 	return grep { defined } map { $lookup{$_} } split /[, ]+/, $list;
 }
 
+# my @sorted_tasks = &order_for_display(@tasks);
 # Orders a list of tasks for display.
+# The tasks are ordered according to the ->{sortkey}.
 sub order_for_display {
 	sort {
 		$a->{sortkey} cmp $b->{sortkey}
@@ -393,12 +598,26 @@ sub order_for_display {
 	} @_;
 }
 
+# &name_to_task($taskname, &all_tasks());
+# &name_to_task("gnome-desktop", &all_tasks());
+# => {
+#      task => "gnome-desktop",
+#      parent => "desktop",
+#      relevance => 1,
+#      key => [task-gnome-desktop"],
+#      section => "user",
+#      test-default-desktop => "3 gnome",
+#      sortkey => 1desktop-01
+#    }
 # Given a set of tasks and a name, returns the one with that name.
 sub name_to_task {
 	my $name=shift;
 	return (grep { $_->{task} eq $name } @_)[0];
 }
 
+# &task_script($task, "preinst") or die;
+# Run the task's (pre|post)(inst|rm) script, if there is any.
+# Such scripts are located under /usr/lib/tasksel/info/.
 sub task_script {
 	my $task=shift;
 	my $script=shift;
@@ -414,16 +633,21 @@ sub task_script {
 	return 1;
 }
 
+# &usage;
+# Print the usage.
 sub usage {
-	print STDERR gettext(q{Usage:
-tasksel install <task>...
-tasksel remove <task>...
-tasksel [options]
-	-t, --test          test mode; don't really do anything
-	    --new-install   automatically install some tasks
-	    --list-tasks    list tasks that would be displayed and exit
-	    --task-packages list available packages in a task
-	    --task-desc     returns the description of a task
+        print STDERR gettext(q{tasksel [OPTIONS...] [COMMAND...]
+ Commands:
+  install TASK...       install tasks
+  remove TASK...        uninstall tasks
+  --task-packages=TASK  list packages installed by TASK; can be repeated
+  --task-desc=TASK      print the description of a task
+  --list-tasks          list tasks that would be displayed and exit
+ Options:
+  -t, --test            dry-run: don't really change anything
+      --new-install     automatically install some tasks
+  --debconf-apt-progress="ARGUMENTS..."
+                        provide additional arguments to debconf-apt-progress(1)
 });
 }
 
@@ -455,6 +679,9 @@ sub getopts {
 	return %ret;
 }
 
+# &interactive($options, @tasks);
+# Ask the user and mark tasks to install or remove accordingly.
+# The tasks are enriched with ->{_install} or ->{_remove} set to true accordingly.
 sub interactive {
 	my $options = shift;
 	my @tasks = @_;
@@ -483,7 +710,7 @@ sub interactive {
 			$question="tasksel/first";
 		}
 		my @default = grep { $_->{_display} == 1 && ($_->{_install} == 1 || $_->{_installed} == 1) } @tasks;
-		my $tmpfile=`tempfile`;
+		my $tmpfile=`mktemp`;
 		chomp $tmpfile;
 		my $ret=system($debconf_helper, $tmpfile,
 			task_to_debconf_C(@list),
@@ -520,6 +747,22 @@ sub interactive {
 		}
 	}
 
+        # When a $task Enhances: a @group_of_tasks, it means that
+        # $task can only be installed if @group_of_tasks are also
+        # installed; and if @group_of_tasks is installed, it is an
+        # incentive to also install $task.
+        #
+        # For example, consider this task:
+        # 
+        #   Task: amharic-desktop
+        #   Enhances: desktop, amharic
+        #
+        # The task amharic-desktop installs packages that make
+        # particular sense if the user wants both a desktop and the
+        # amharic language environment.  Conversely, if
+        # amharic-desktop is selected (e.g. by preseeding), then it
+        # automatically also selects tasks "desktop" and "amharic".
+
 	# If an enhancing task is already marked for
 	# install, probably by preseeding, mark the tasks
 	# it enhances for install.
@@ -533,12 +776,30 @@ sub interactive {
 	# chained enhances. This is ugly and could loop forever if
 	# there's a cycle.
 	my $enhances_needswork=1;
+
+        # %tested is the memoization of the below calls to
+        # %&task_test().
 	my %tested;
+
+        # Loop as long as there is work to do.
 	while ($enhances_needswork) {
 		$enhances_needswork=0;
+
+                # Loop over all unselected tasks that enhance one or
+                # more things.
 		foreach my $task (grep { ! $_->{_install} && exists $_->{enhances} &&
 		                         length $_->{enhances} } @tasks) {
+                        # TODO: the computation of %tasknames could be
+                        # done once and for all outside of this nested
+                        # loop, saving some redundant work.
 			my %tasknames = map { $_->{task} => $_ } @tasks;
+
+                        # @deps is the list of tasks enhanced by $task.
+                        # 
+                        # Basically, if all the deps are installed,
+                        # and tests say that $task can be installed,
+                        # then mark it to install.  Otherwise, don't
+                        # install it.
 			my @deps=map { $tasknames{$_} } split ", ", $task->{enhances};
 
 			if (grep { ! defined $_ } @deps) {
@@ -548,6 +809,10 @@ sub interactive {
 			}
 
 			if (@deps) {
+                                # FIXME: isn't $orig_state always
+                                # false, given that the "for" loop
+                                # above keeps only $tasks that do
+                                # not have $_->{_install}?
 				my $orig_state=$task->{_install};
 
 				# Mark enhancing tasks for install if their
@@ -570,7 +835,9 @@ sub interactive {
 				}
 
 				if ($task->{_install} != $orig_state) {
-					$enhances_needswork=1;
+					# We have made progress:
+					# continue another round.
+                                        $enhances_needswork=1;
 				}
 			}
 		}
@@ -598,11 +865,21 @@ sub main {
 	elsif ($options{"task-desc"}) {
 		my $task=name_to_task($options{"task-desc"}, all_tasks());
 		if ($task) {
+                        # The Description looks like this:
+                        #
+                        #   Description: one-line short description
+                        #     Longer description,
+                        #     possibly spanning
+                        #     multiple lines.
+                        #
+                        # $extdesc will contain the long description,
+                        # reformatted to one line.
 			my $extdesc=join(" ", @{$task->{description}}[1..$#{$task->{description}}]);
 			print dgettext("debian-tasks", $extdesc)."\n";
 			exit(0);
 		}
 		else {
+			fprintf STDERR ("Task %s has no description\n", $options{"task-desc"});
 			exit(1);
 		}
 	}
@@ -615,6 +892,7 @@ sub main {
 	if ($options{"list-tasks"}) {
 		map { $_->{_installed} = task_installed($_) } @tasks;
 		@tasks=getdescriptions(@tasks);
+                # TODO: use printf() instead of print for correct column alignment
 		print "".($_->{_installed} ? "i" : "u")." ".$_->{task}."\t".$_->{shortdesc}."\n"
 			foreach order_for_display(grep { $_->{_display} } @tasks);
 		exit(0);
@@ -642,7 +920,7 @@ sub main {
 			if exists $options{'debconf-apt-progress'};
 		push @cmd, "--";
 	}
-	push @cmd, qw{apt-get -q -y -o APT::Install-Recommends=true -o APT::Get::AutomaticRemove=true -o APT::Acquire::Retries=3 install};
+	push @cmd, qw{apt-get -q -y -o APT::Install-Recommends=true -o APT::Get::AutomaticRemove=true -o Acquire::Retries=3 install};
 
 	# And finally, act on selected tasks.
 	if (@tasks_install || @tasks_remove) {

@@ -4,12 +4,12 @@ msgstr ""
 "Project-Id-Version: Debian-installer HR\n"
 "Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
 "POT-Creation-Date: 2018-05-23 01:37+0200\n"
-"PO-Revision-Date: 2018-10-15 18:37+0200\n"
-"Last-Translator: Josip Rodin <joy+ditrans@linux.hr>\n"
+"PO-Revision-Date: 2021-04-23 17:22+0200\n"
+"Last-Translator: Valentin Vidic <vvidic@debian.org>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: multiselect
@@ -18,7 +18,7 @@ msgstr ""
 #. Description
 #: ../templates:1001 ../templates:2001
 msgid "Choose software to install:"
-msgstr "Izaberite programe za instalaciju:"
+msgstr "Odaberite programe za instalaciju:"
 
 #. Type: multiselect
 #. Description
@@ -29,7 +29,7 @@ msgid ""
 "predefined collections of software."
 msgstr ""
 "Trenutno je instaliran samo osnovni sustav. Kako bi prilagodili instalaciju "
-"svojim potrebama, mo¾ete birati meðu sljedeæim predodreðenim skupinama "
+"svojim potrebama, moÅ¾ete odabrati instalaciju sljedeÄ‡ih predodreÄ‘enih skupina "
 "programa."
 
 #. Type: multiselect
@@ -39,16 +39,16 @@ msgid ""
 "You can choose to install one or more of the following predefined "
 "collections of software."
 msgstr ""
-"Mo¾ete izabrati jednu ili vi¹e sljedeæih preodreðenih skupina programa."
+"MoÅ¾ete odabrati jednu ili viÅ¡e sljedeÄ‡ih predodreÄ‘enih skupina programa."
 
 #. Type: multiselect
 #. Description
 #: ../templates:3001
 msgid "This can be preseeded to override the default desktop."
-msgstr "Pretpostavljeno desktop okru¾enje mo¾ete promijeniti putem preeseed postavke."
+msgstr "Pretpostavljeno radno okruÅ¾enje moÅ¾ete promijeniti putem preeseed postavke."
 
 #. Type: title
 #. Description
 #: ../templates:4001
 msgid "Software selection"
-msgstr "Izbor programa"
+msgstr "Odabir programa"

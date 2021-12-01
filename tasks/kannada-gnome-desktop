@@ -1,0 +1,5 @@
+Task: kannada-gnome-desktop
+Enhances: gnome-desktop, kannada-desktop
+Section: l10n
+Key:
+  task-kannada-gnome-desktop

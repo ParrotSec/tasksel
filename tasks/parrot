@@ -7,5 +7,4 @@ Description: Parrot Base System
 Key:
  parrot-core
 Packages: list
- apt-parrot
  parrot-core

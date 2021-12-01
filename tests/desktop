@@ -44,7 +44,7 @@ unlikely_desktop_architecture () {
 
 # Modern desktops take a lot of ram.
 enough_ram () {
-	min_ram=64
+	min_ram=64              # MiB
 	ram=$(grep ^MemTotal: /proc/meminfo | { read x y z; echo $y; }) || true # kb
 	# The 4 is a fuzz factor to allow for kernel ram usage.
 	if [ "$ram" ] && [ "$ram" -ge "$(expr $(expr $min_ram - 4) \* 1024)" ]; then

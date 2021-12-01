@@ -2,16 +2,19 @@ Source: tasksel
 Section: tasks
 Priority: optional
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Uploaders: Christian Perrier <bubulle@debian.org>,
-           Nicolas Braud-Santoni <nicoo@debian.org>
-Standards-Version: 4.1.4
-Build-Depends: po-debconf, debhelper (>= 9), gettext, dpkg-dev (>= 1.9.0)
+Uploaders: nicoo <nicoo@debian.org>
+Standards-Version: 4.5.1
+Build-Depends:
+	debhelper-compat (= 13),
+	dpkg-dev (>= 1.9.0),
+	gettext,
+	po-debconf
 Vcs-Browser: https://salsa.debian.org/installer-team/tasksel
 Vcs-Git: https://salsa.debian.org/installer-team/tasksel.git
+Rules-Requires-Root: no
 
 Package: tasksel
 Section: admin
-Priority: important
 Architecture: all
 Pre-Depends: debconf (>= 1.5.34) | cdebconf (>= 0.106)
 Depends: ${misc:Depends}, liblocale-gettext-perl, apt, tasksel-data, perl-base (>= 5.14.0-1)
@@ -22,7 +25,6 @@ Description: tool for selecting tasks for installation on Debian systems
 
 Package: tasksel-data
 Section: admin
-Priority: important
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: laptop-detect, tasksel
@@ -40,15 +42,16 @@ Depends: ${misc:Depends},
 	xserver-xorg-video-all,
 	xserver-xorg-input-all,
 	desktop-base,
-	parrot-interface,
 Recommends:
 # One of the actual desktop tasks is needed to get a full desktop environment.
 # The order here is significant when installing this task manually;
 # when tasksel installs this task it instead selects one of these based
 # on the tasksel/desktop debconf setting.
-	task-mate-desktop | task-kde-desktop | task-lxqt-desktop | task-cinnamon-desktop | task-gnome-desktop | task-lxde-desktop,
+	task-mate-desktop | task-kde-desktop | task-xfce-desktop| task-gnome-desktop | task-lxde-desktop | task-gnome-flashback-desktop | task-cinnamon-desktop  | task-lxqt-desktop,
 # For use by third-party apps.
 	xdg-utils,
+# Font with wide unicode coverage, prevents “Unicode tofu”
+	fonts-symbola,
 # mdns/zeroconf stuff
 	avahi-daemon,
 	libnss-mdns,
@@ -60,8 +63,6 @@ Recommends:
 	iw,
 # sound
 	alsa-utils,
-# support for U2F devices
-	libu2f-udev,
 # For use by users, to elevate privileges
 	sudo,
 # firefox is the most popular web browser at the moment,
@@ -81,7 +82,9 @@ Depends: ${misc:Depends},
 Recommends:
 # The full gnome desktop environment should be included if possible
 # even if the larger gnome metapackage doesn't fit.
-	gnome, parrot-gnome,
+	gnome,
+# Package management
+	synaptic,
 # GNOME support in LibreOffice
 	libreoffice-gnome,
 # libreoffice is the best word processor / office suite at the moment
@@ -98,6 +101,64 @@ Recommends:
 	hyphen-en-us,
 # we need a working network setup at least
 	network-manager-gnome,
+# We also need the parrot-specific packages for the selected interface (if available)
+    parrot-gnome,
+
+Package: task-gnome-flashback-desktop
+Architecture: all
+Description: GNOME Flashback
+ This task package is used to install the Debian desktop, featuring
+ the GNOME Flashback desktop environment, and with other packages that
+ Debian users expect to have available on the desktop.
+Depends: ${misc:Depends},
+	task-desktop,
+# the basic components required for the session
+	gnome-session-flashback,
+# the display manager
+	gdm3,
+# the control center
+	gnome-control-center,
+# some core GNOME applications
+	eog,
+	evince,
+	file-roller,
+	gedit,
+	gnome-calculator,
+	gnome-screenshot,
+	gnome-terminal,
+	totem,
+# network manager applet
+	network-manager-gnome,
+Recommends:
+# GNOME support in LibreOffice
+	libreoffice-gnome,
+# libreoffice is the best word processor / office suite at the moment
+	libreoffice-writer,
+	libreoffice-calc,
+	libreoffice-impress,
+# make help menu work
+	libreoffice-help-en-us,
+# make thesaurus work
+	mythes-en-us,
+# make spellchecker work
+	hunspell-en-us,
+# make hyphenation work
+	hyphen-en-us,
+# accessibility support
+	gnome-orca,
+# web browser
+	firefox | firefox-esr,
+# mail client
+	evolution,
+# package management
+	gnome-software,
+	synaptic,
+# some non-core GNOME applications
+	alacarte,
+	gnome-disk-utility,
+	gnome-documents,
+	gnome-tweaks,
+	yelp,
 
 Package: task-kde-desktop
 Architecture: all
@@ -106,9 +167,9 @@ Description: KDE Plasma
  the KDE Plasma desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
 Depends: ${misc:Depends},
-	task-desktop, parrot-kde,
+	task-desktop,
 	kde-standard,
-	lightdm-parrot | sddm,
+    parrot-interface-common
 Recommends:
 # accessibility support
 	kdeaccessibility,
@@ -124,9 +185,12 @@ Recommends:
 # temporarily moved from task-desktop due to #525077
 	gimp,
 # libreoffice is the best word processor / office suite at the moment
-	libreoffice,
+	libreoffice-writer,
+	libreoffice-calc,
+	libreoffice-impress,
 # KDE support in LibreOffice
-	libreoffice-kde5,
+	libreoffice-plasma,
+	libreoffice-kf5,
 # make help menu work
 	libreoffice-help-en-us,
 # make thesaurus work
@@ -135,10 +199,12 @@ Recommends:
 	hunspell-en-us,
 # make hyphenation work
 	hyphen-en-us,
-# gui for configuration of the print server
-	system-config-printer,
+# gui for configuration of the print service
+	print-manager,
 # media player
 	dragonplayer,
+# We also need the parrot-specific packages for the selected interface (if available)
+    parrot-kde,
 
 Package: task-lxde-desktop
 Architecture: all
@@ -149,17 +215,19 @@ Description: LXDE
 Depends: ${misc:Depends},
 	task-desktop,
 	lightdm,
-	lxde, parrot-lxde,
+	lxde,
 Recommends:
 	lxtask,
 	lxlauncher,
 	xsane,
 # libreoffice widgets using just gtk, and also accessibility needs the GTK frontend
-	libreoffice-gtk2,
+	libreoffice-gtk3,
 # Package management.
 	synaptic,
 # libreoffice is the best word processor / office suite at the moment
-	libreoffice,
+	libreoffice-writer,
+	libreoffice-calc,
+	libreoffice-impress,
 # make help menu work
 	libreoffice-help-en-us,
 # make thesaurus work
@@ -168,7 +236,7 @@ Recommends:
 	hunspell-en-us,
 # make hyphenation work
 	hyphen-en-us,
-# gui for configuration of the print server
+# gui for configuration of the print service
 	system-config-printer,
 # orca works with lxde, adding accessibility
 	orca,
@@ -187,12 +255,15 @@ Depends: ${misc:Depends},
 Recommends: xsane,
 # orca works with qt, adding accessibility
 	orca,
-# libreoffice widgets using just gtk
+# libreoffice widgets using just gtk and qt
 	libreoffice-gtk3,
+	libreoffice-qt5,
 # Package management.
 	synaptic,
 # libreoffice is the best word processor / office suite at the moment
-	libreoffice,
+	libreoffice-writer,
+	libreoffice-calc,
+	libreoffice-impress,
 # make help menu work
 	libreoffice-help-en-us,
 # make thesaurus work
@@ -201,7 +272,7 @@ Recommends: xsane,
 	hunspell-en-us,
 # make hyphenation work
 	hyphen-en-us,
-# gui for configuration of the print server
+# gui for configuration of the print service
 	system-config-printer,
 
 Package: task-xfce-desktop
@@ -213,14 +284,15 @@ Description: Xfce
 Depends: ${misc:Depends},
 	task-desktop,
 # The basics of xfce, not the whole thing.
-	xfce4, parrot-xfce,
+	xfce4,
 	lightdm,
-	light-locker
+	parrot-interface-common
 Recommends:
+# a screen saver/locker
+	light-locker,
 # well known xfce4 enhancements
 	xfce4-goodies,
 	xfce4-power-manager,
-	xfce4-mixer,
 	xfce4-terminal,
 # xfce text editor
 	mousepad,
@@ -240,7 +312,9 @@ Recommends:
 # package management
 	synaptic,
 # libreoffice is the best word processor / office suite at the moment
-	libreoffice,
+	libreoffice-writer,
+	libreoffice-calc,
+	libreoffice-impress,
 # make help menu work
 	libreoffice-help-en-us,
 # make thesaurus work
@@ -249,12 +323,14 @@ Recommends:
 	hunspell-en-us,
 # make hyphenation work
 	hyphen-en-us,
-# gui for configuration of the print server
+# gui for configuration of the print service
 	system-config-printer,
 # orca works with xfce, adding accessibility
 	orca,
 # libreoffice accessibility needs the GTK frontend
-	libreoffice-gtk2,
+	libreoffice-gtk3,
+# We also need the parrot-specific packages for the selected interface (if available)
+    parrot-xfce,
 
 Package: task-cinnamon-desktop
 Architecture: all
@@ -273,16 +349,19 @@ Description: MATE
  the MATE desktop environment, and with other packages that Debian users
  expect to have available on the desktop.
 Depends: ${misc:Depends},
-	task-desktop, parrot-mate,
+	task-desktop,
 	mate-desktop-environment,
 	lightdm,
+	parrot-interface-common
 Recommends:
 # temporarily moved from task-desktop due to #525077
 	gimp,
 # Package management.
 	synaptic,
 # libreoffice is the best word processor / office suite at the moment
-	libreoffice,
+	libreoffice-writer,
+	libreoffice-calc,
+	libreoffice-impress,
 # make help menu work
 	libreoffice-help-en-us,
 # make thesaurus work
@@ -297,6 +376,8 @@ Recommends:
 	orca,
 # libreoffice accessibility needs the GTK frontend
 	libreoffice-gtk3,
+# We also need the parrot-specific packages for the selected interface (if available)
+    parrot-mate,
 
 Package: task-laptop
 Architecture: all
@@ -312,6 +393,8 @@ Recommends:
 	iw,
 	wireless-tools,
 	wpasupplicant,
+# power saving tools
+    laptop-mode-tools,
 
 Package: task-web-server
 Architecture: all
@@ -321,22 +404,9 @@ Description: web server (nginx + php-fpm)
 Depends: ${misc:Depends},
 	nginx,
 Recommends:
-	php-fpm,
-
-Package: task-print-server
-Architecture: all
-Description: print server
- This task sets up your system to be a print server.
-Depends: ${misc:Depends},
-	cups,
-	cups-client,
-	cups-bsd,
-Recommends:
-	foomatic-db-engine,
-	printer-driver-all,
-	hplip,
-	hp-ppd,
-	openprinting-ppds,
+    php-fpm,
+    php-mysql,
+	analog,
 
 Package: task-ssh-server
 Architecture: all
@@ -380,13 +450,22 @@ Recommends:
 	fcitx-frontend-gtk3,
 	fcitx-config-gtk
 
+Package: task-amharic-gnome-desktop
+Architecture: all
+Description: Amharic GNOME desktop
+ This task localises the GNOME desktop in Amharic.
+Depends: ${misc:Depends}
+Recommends:
+	ibus-m17n,
+# ibus doesn't have a default config for all languages, so force creation
+	gnome-initial-setup
+
 Package: task-amharic-kde-desktop
 Architecture: all
 Description: Amharic KDE Plasma desktop
  This task localises the KDE Plasma desktop in Amharic.
 Depends: ${misc:Depends},
 Recommends:
-	fcitx-frontend-qt4,
 	fcitx-frontend-qt5,
 	kde-config-fcitx
 
@@ -420,8 +499,6 @@ Architecture: all
 Description: Arabic KDE Plasma desktop
  This task localises the KDE Plasma desktop in Arabic.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-ar
 
 Package: task-asturian
 Architecture: all
@@ -446,7 +523,7 @@ Description: Basque environment
  to help Basque speaking people use Debian.
 Depends: ${misc:Depends},
 Recommends:
-	aspell-eu-es
+	aspell-eu
 
 Package: task-basque-desktop
 Architecture: all
@@ -464,8 +541,6 @@ Architecture: all
 Description: Basque KDE Plasma desktop
  This task localises the KDE Plasma desktop in Basque.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-eu
 
 Package: task-belarusian
 Architecture: all
@@ -545,8 +620,6 @@ Architecture: all
 Description: Bosnian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Bosnian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-bs
 
 Package: task-brazilian-portuguese
 Architecture: all
@@ -556,7 +629,7 @@ Description: Brazilian Portuguese environment
  documentation that make it easier for Brazilian Portuguese speakers
  to use Debian.
 Depends: ${misc:Depends},
-	manpages-pt
+	manpages-pt-br
 Recommends:
 # Dictionaries
 	ibrazilian,
@@ -581,8 +654,6 @@ Architecture: all
 Description: Brazilian Portuguese KDE Plasma desktop
  This task localises the KDE Plasma desktop in Brazilian Portuguese.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-ptbr
 
 Package: task-british-desktop
 Architecture: all
@@ -601,8 +672,6 @@ Architecture: all
 Description: British KDE Plasma desktop
  This task localises the KDE Plasma desktop in British.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-engb
 
 Package: task-bulgarian
 Architecture: all
@@ -633,8 +702,6 @@ Architecture: all
 Description: Bulgarian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Bulgarian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-bg
 
 Package: task-catalan
 Architecture: all
@@ -666,8 +733,6 @@ Architecture: all
 Description: Catalan KDE Plasma desktop
  This task localises the KDE Plasma desktop in Catalan.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-ca
 
 Package: task-chinese-s
 Architecture: all
@@ -689,13 +754,9 @@ Depends: ${misc:Depends},
 Recommends:
 # Input method stuff
 	im-config,
-	fcitx,
-	fcitx-sunpinyin,
-	fcitx-googlepinyin,
-	fcitx-table-wubi,
+	fcitx5,
+	fcitx5-chinese-addons,
 # Fonts
-	fonts-arphic-ukai,
-	fonts-arphic-uming,
 	fonts-noto,
 	fonts-noto-cjk,
 # Software help and localization
@@ -707,6 +768,19 @@ Recommends:
 # poppler-data is needed to display
 # Chinese on poppler applications.
 	poppler-data
+Suggests:
+	fonts-arphic-ukai,
+	fonts-arphic-uming
+
+Package: task-chinese-s-gnome-desktop
+Architecture: all
+Description: Simplified Chinese GNOME desktop
+ This task localises the GNOME desktop in Simplified Chinese.
+Depends: ${misc:Depends}
+Recommends:
+	ibus-libpinyin,
+# ibus doesn't have a default config for all languages, so force creation
+	gnome-initial-setup
 
 Package: task-chinese-s-kde-desktop
 Architecture: all
@@ -714,10 +788,8 @@ Description: Simplified Chinese KDE Plasma desktop
  This task localises the KDE Plasma desktop in Simplified Chinese.
 Depends: ${misc:Depends},
 Recommends:
-	kde-l10n-zhcn,
-	fcitx-frontend-qt4,
-	fcitx-frontend-qt5,
-	kde-config-fcitx
+	fcitx5-frontend-qt5,
+	kde-config-fcitx5
 
 Package: task-chinese-t
 Architecture: all
@@ -735,12 +807,11 @@ Description: Traditional Chinese desktop
  This task localises the desktop in Traditional Chinese.
 Depends: ${misc:Depends},
 Recommends:
-	fcitx,
-	fcitx-chewing,
-	fcitx-table,
+# Input method stuff
 	im-config,
-	fonts-arphic-ukai,
-	fonts-arphic-uming,
+	fcitx5,
+	fcitx5-chewing,
+	fcitx5-chinese-addons,
 # seems openjdk needs this to display Chinese.
 	fonts-noto,
 	fonts-noto-cjk,
@@ -750,6 +821,19 @@ Recommends:
 # poppler-data is needed to display
 # Chinese on poppler applications.
 	poppler-data
+Suggests:
+	fonts-arphic-ukai,
+	fonts-arphic-uming
+
+Package: task-chinese-t-gnome-desktop
+Architecture: all
+Description: Traditional Chinese GNOME desktop
+ This task localises the GNOME desktop in Traditional Chinese.
+Depends: ${misc:Depends}
+Recommends:
+	ibus-chewing,
+# ibus doesn't have a default config for all languages, so force creation
+	gnome-initial-setup
 
 Package: task-chinese-t-kde-desktop
 Architecture: all
@@ -757,8 +841,8 @@ Description: Traditional Chinese KDE Plasma desktop
  This task localises the KDE Plasma desktop in Traditional Chinese.
 Depends: ${misc:Depends},
 Recommends:
-	kde-l10n-zhtw,
-	scim-qt-immodule
+	fcitx5-frontend-qt5,
+	kde-config-fcitx5
 
 Package: task-croatian
 Architecture: all
@@ -788,8 +872,6 @@ Architecture: all
 Description: Croatian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Croatian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-hr
 
 Package: task-czech
 Architecture: all
@@ -819,8 +901,6 @@ Architecture: all
 Description: Czech KDE Plasma desktop
  This task localises the KDE Plasma desktop in Czech.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-cs
 
 Package: task-danish
 Architecture: all
@@ -850,8 +930,6 @@ Architecture: all
 Description: Danish KDE Plasma desktop
  This task localises the KDE Plasma desktop in Danish.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-da
 
 Package: task-dutch
 Architecture: all
@@ -860,6 +938,7 @@ Description: Dutch environment
  documentation that makes it easier for Dutch speakers
  to use Debian.
 Depends: ${misc:Depends},
+	manpages-nl,
 Recommends:
 	idutch,
 	wdutch,
@@ -881,8 +960,6 @@ Architecture: all
 Description: Dutch KDE Plasma desktop
  This task localises the KDE Plasma desktop in Dutch.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-nl
 
 Package: task-dzongkha-desktop
 Architecture: all
@@ -936,8 +1013,6 @@ Architecture: all
 Description: Esperanto KDE Plasma desktop
  This task localises the KDE Plasma desktop in Esperanto.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-eo
 
 Package: task-estonian
 Architecture: all
@@ -963,8 +1038,6 @@ Architecture: all
 Description: Estonian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Estonian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-et
 
 Package: task-finnish
 Architecture: all
@@ -975,7 +1048,8 @@ Depends: ${misc:Depends},
 Recommends:
 	tmispell-voikko,
 	voikko-fi,
-	libenchant-voikko
+	libenchant-voikko,
+	libenchant-2-voikko
 
 Package: task-finnish-desktop
 Architecture: all
@@ -993,8 +1067,6 @@ Architecture: all
 Description: Finnish KDE Plasma desktop
  This task localises the KDE Plasma desktop in Finnish.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-fi
 
 Package: task-french
 Architecture: all
@@ -1006,6 +1078,7 @@ Recommends:
 	ifrench-gut,
 	wfrench,
 	aspell-fr,
+        manpages-fr,
 # Other packages to i18n common software
 	util-linux-locales
 
@@ -1026,8 +1099,6 @@ Architecture: all
 Description: French KDE Plasma desktop
  This task localises the KDE Plasma desktop in French.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-fr
 
 Package: task-galician
 Architecture: all
@@ -1048,15 +1119,13 @@ Recommends:
 	libreoffice-l10n-gl,
 	libreoffice-help-gl,
 	firefox-esr-l10n-gl | firefox-l10n-gl,
-	hunspell-gl-es,
+	hunspell-gl
 
 Package: task-galician-kde-desktop
 Architecture: all
 Description: Galician KDE Plasma desktop
  This task localises the KDE Plasma desktop in Galician.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-gl
 
 Package: task-georgian-desktop
 Architecture: all
@@ -1101,8 +1170,6 @@ Architecture: all
 Description: German KDE Plasma desktop
  This task localises the KDE Plasma desktop in German.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-de
 
 Package: task-greek
 Architecture: all
@@ -1132,8 +1199,6 @@ Architecture: all
 Description: Greek KDE Plasma desktop
  This task localises the KDE Plasma desktop in Greek.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-el
 
 Package: task-gujarati
 Architecture: all
@@ -1201,8 +1266,6 @@ Architecture: all
 Description: Hebrew KDE Plasma desktop
  This task localises the KDE Plasma desktop in Hebrew.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-he
 
 Package: task-hindi
 Architecture: all
@@ -1230,8 +1293,6 @@ Architecture: all
 Description: Hindi KDE Plasma desktop
  This task localises the KDE Plasma desktop in Hindi.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-hi
 
 Package: task-hungarian
 Architecture: all
@@ -1269,8 +1330,6 @@ Architecture: all
 Description: Hungarian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Hungarian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-hu
 
 Package: task-icelandic
 Architecture: all
@@ -1295,8 +1354,6 @@ Architecture: all
 Description: Icelandic KDE Plasma desktop
  This task localises the KDE Plasma desktop in Icelandic.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-is
 
 Package: task-indonesian-desktop
 Architecture: all
@@ -1312,8 +1369,6 @@ Architecture: all
 Description: Indonesian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Indonesian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-id
 
 Package: task-irish
 Architecture: all
@@ -1339,8 +1394,6 @@ Architecture: all
 Description: Irish KDE Plasma desktop
  This task localises the KDE Plasma desktop in Irish.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-ga
 
 Package: task-italian
 Architecture: all
@@ -1374,8 +1427,6 @@ Architecture: all
 Description: Italian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Italian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-it
 
 Package: task-japanese
 Architecture: all
@@ -1404,8 +1455,7 @@ Recommends:
 	fonts-vlgothic,
 	fonts-ipafont,
 	uim,
-	uim-anthy,
-	uim-mozc,
+	uim-mozc | uim-anthy,
 	mozc-utils-gui,
 	anthy,
 	libreoffice-l10n-ja,
@@ -1422,15 +1472,14 @@ Recommends:
 # subject instead of iso-2022-jp used Japanese de-facto. I recommend
 # thunderbird as default mailer for Japanese desktop users.
 	thunderbird,
-	thunderbird-l10n-ja
+	thunderbird-l10n-ja,
+	ibus-mozc | ibus-anthy
 
 Package: task-japanese-kde-desktop
 Architecture: all
 Description: Japanese KDE Plasma desktop
  This task localises the KDE Plasma desktop in Japanese.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-ja
 
 Package: task-kannada-desktop
 Architecture: all
@@ -1443,6 +1492,16 @@ Recommends:
 	fcitx,
 	fcitx-m17n,
 	fcitx-config-gtk
+
+Package: task-kannada-gnome-desktop
+Architecture: all
+Description: Kannada GNOME desktop
+ This task localises the GNOME desktop in Kannada.
+Depends: ${misc:Depends}
+Recommends:
+	ibus-m17n,
+# ibus doesn't have a default config for all languages, so force creation
+	gnome-initial-setup
 
 Package: task-kannada-kde-desktop
 Architecture: all
@@ -1477,8 +1536,6 @@ Architecture: all
 Description: Kazakh KDE Plasma desktop
  This task localises the KDE Plasma desktop in Kazakh.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-kk
 
 Package: task-khmer
 Architecture: all
@@ -1505,8 +1562,6 @@ Architecture: all
 Description: Khmer KDE Plasma desktop
  This task localises the KDE Plasma desktop in Khmer.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-km
 
 Package: task-korean
 Architecture: all
@@ -1526,7 +1581,8 @@ Recommends:
 	im-config,
 	ibus-hangul,
 	fonts-nanum,
-	fonts-nanum-coding,
+	fonts-noto,
+	fonts-noto-cjk,
 	firefox-esr-l10n-ko | firefox-l10n-ko,
 	libreoffice-help-ko,
 	libreoffice-l10n-ko,
@@ -1541,6 +1597,8 @@ Description: Korean GNOME desktop
  This task localises the GNOME desktop in Korean.
 Depends: ${misc:Depends},
 Recommends:
+# GNOME doesn't set the working Korean IM by default
+	gnome-initial-setup,
 	ibus-gtk,
 	ibus-gtk3
 
@@ -1549,9 +1607,6 @@ Architecture: all
 Description: Korean KDE Plasma desktop
  This task localises the KDE Plasma desktop in Korean.
 Depends: ${misc:Depends},
-Recommends:
-	ibus-qt4,
-	kde-l10n-ko
 
 Package: task-kurdish
 Architecture: all
@@ -1601,8 +1656,6 @@ Architecture: all
 Description: Latvian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Latvian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-lv
 
 Package: task-lithuanian
 Architecture: all
@@ -1632,8 +1685,6 @@ Architecture: all
 Description: Lithuanian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Lithuanian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-lt
 
 Package: task-macedonian
 Architecture: all
@@ -1641,6 +1692,7 @@ Description: Macedonian environment
  This task installs packages and documentation in Macedonian
  to help Macedonian speaking people use Debian.
 Depends: ${misc:Depends},
+	manpages-mk,
 
 Package: task-macedonian-desktop
 Architecture: all
@@ -1690,7 +1742,10 @@ Depends: ${misc:Depends},
 Recommends:
 	fcitx-frontend-gtk3,
 	fcitx-frontend-gtk2,
-	fcitx-config-gtk
+	fcitx-config-gtk,
+	ibus-m17n,
+# ibus doesn't have a default config for all languages, so force creation
+	gnome-initial-setup
 
 Package: task-malayalam-kde-desktop
 Architecture: all
@@ -1698,7 +1753,6 @@ Description: Malayalam KDE Plasma desktop
  This task localises the KDE Plasma desktop in Malayalam.
 Depends: ${misc:Depends},
 Recommends:
-	fcitx-frontend-qt4,
 	fcitx-frontend-qt5,
 	kde-config-fcitx
 
@@ -1747,8 +1801,8 @@ Description: Northern Sami environment
  to help Northern Sami speaking people use Debian.
 Depends: ${misc:Depends},
 Recommends:
-	hunspell,
-	hunspell-se
+	giella-sme,
+	libenchant-2-voikko
 
 Package: task-northern-sami-desktop
 Architecture: all
@@ -1789,9 +1843,6 @@ Architecture: all
 Description: Norwegian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Norwegian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-nb,
-	kde-l10n-nn
 
 Package: task-persian
 Architecture: all
@@ -1818,8 +1869,6 @@ Architecture: all
 Description: Persian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Persian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-fa
 
 Package: task-polish
 Architecture: all
@@ -1854,8 +1903,6 @@ Architecture: all
 Description: Polish KDE Plasma desktop
  This task localises the KDE Plasma desktop in Polish.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-pl
 
 Package: task-portuguese
 Architecture: all
@@ -1884,8 +1931,6 @@ Architecture: all
 Description: Portuguese KDE Plasma desktop
  This task localises the KDE Plasma desktop in Portuguese.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-pt
 
 Package: task-punjabi
 Architecture: all
@@ -1912,8 +1957,6 @@ Architecture: all
 Description: Punjabi KDE Plasma desktop
  This task localises the KDE Plasma desktop in Punjabi.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-pa
 
 Package: task-romanian
 Architecture: all
@@ -1922,6 +1965,7 @@ Description: Romanian environment
  to help Romanian speaking people use Debian.
 XBC-Maintainer: Eddy Petrişor <eddy.petrisor@gmail.com>
 Depends: ${misc:Depends},
+	manpages-ro,
 Recommends:
 	console-terminus,
 	util-linux-locales,
@@ -1946,8 +1990,6 @@ Architecture: all
 Description: Romanian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Romanian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-ro
 
 Package: task-russian
 Architecture: all
@@ -1981,8 +2023,6 @@ Architecture: all
 Description: Russian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Russian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-ru
 
 Package: task-serbian
 Architecture: all
@@ -2008,8 +2048,6 @@ Architecture: all
 Description: Serbian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Serbian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-sr
 
 Package: task-sinhala-desktop
 Architecture: all
@@ -2017,7 +2055,8 @@ Description: Sinhala desktop
  This task localises the desktop in Sinhala.
 Depends: ${misc:Depends},
 Recommends:
-	fonts-noto-hinted,
+	fonts-noto-core,
+	fonts-noto-ui-core,
 	libreoffice-l10n-si,
 	firefox-esr-l10n-si | firefox-l10n-si,
 
@@ -2053,8 +2092,6 @@ Architecture: all
 Description: Slovak KDE Plasma desktop
  This task localises the KDE Plasma desktop in Slovak.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-sk
 
 Package: task-slovenian
 Architecture: all
@@ -2081,8 +2118,6 @@ Architecture: all
 Description: Slovenian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Slovenian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-sl
 
 Package: task-south-african-english-desktop
 Architecture: all
@@ -2099,7 +2134,7 @@ Description: Spanish environment
  This task installs programs, data files, and
  documentation that make it easier for Spanish speakers to use Debian.
 Depends: ${misc:Depends},
-	manpages-es
+	manpages-es,
 Recommends:
 # Dictionaries
 	ispanish,
@@ -2129,8 +2164,6 @@ Architecture: all
 Description: Spanish KDE Plasma desktop
  This task localises the KDE Plasma desktop in Spanish.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-es
 
 Package: task-swedish
 Architecture: all
@@ -2156,15 +2189,13 @@ Recommends:
 	libreoffice-l10n-sv,
 	libreoffice-help-sv,
 	firefox-esr-l10n-sv-se | firefox-l10n-sv-se,
-	hunspell-sv-se
+	hunspell-sv
 
 Package: task-swedish-kde-desktop
 Architecture: all
 Description: Swedish KDE Plasma desktop
  This task localises the KDE Plasma desktop in Swedish.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-sv
 
 Package: task-tagalog
 Architecture: all
@@ -2237,7 +2268,10 @@ Depends: ${misc:Depends},
 Recommends:
 	fcitx-frontend-gtk2,
 	fcitx-frontend-gtk3,
-	fcitx-config-gtk
+	fcitx-config-gtk,
+	ibus-m17n,
+# ibus doesn't have a default config for all languages, so force creation
+	gnome-initial-setup
 
 Package: task-telugu-kde-desktop
 Architecture: all
@@ -2246,7 +2280,6 @@ Description: Telugu KDE Plasma desktop environment
  This task localises the KDE Plasma desktop environment in Telugu.
 Depends: ${misc:Depends},
 Recommends:
-	fcitx-frontend-qt4,
 	fcitx-frontend-qt5,
 	kde-config-fcitx
 
@@ -2315,8 +2348,6 @@ Architecture: all
 Description: Turkish KDE Plasma desktop
  This task localises the KDE Plasma desktop in Turkish.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-tr
 
 Package: task-ukrainian
 Architecture: all
@@ -2347,8 +2378,6 @@ Architecture: all
 Description: Ukrainian KDE Plasma desktop
  This task localises the KDE Plasma desktop in Ukrainian.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-uk
 
 Package: task-uyghur-desktop
 Architecture: all
@@ -2364,8 +2393,6 @@ Architecture: all
 Description: Uyghur KDE Plasma desktop
  This task localises the KDE Plasma desktop in Uyghur.
 Depends: ${misc:Depends},
-Recommends:
-	kde-l10n-ug
 
 Package: task-vietnamese-desktop
 Architecture: all

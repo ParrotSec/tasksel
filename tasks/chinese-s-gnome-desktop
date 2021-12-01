@@ -1,0 +1,5 @@
+Task: chinese-s-gnome-desktop
+Enhances: gnome-desktop, chinese-s-desktop
+Section: l10n
+Key:
+  task-chinese-s-gnome-desktop

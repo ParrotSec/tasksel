@@ -1,0 +1,2 @@
+# See #413250
+tasksel source: intra-source-package-circular-dependency tasksel tasksel-data

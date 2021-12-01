@@ -1,16 +1,17 @@
 #
 # Spanish translation for tasksel/debian
-# Copyright (C) 2000 Software in the Public Interest, Inc.
-# Javier Fernandez-Sanguino <jfs@debian.org>
+# Copyright (C) 2000-2020 Software in the Public Interest, Inc.
+#
+# Translated by Javier Fernandez-Sanguino <jfs@debian.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: tasksel 2.04\n"
 "Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
 "POT-Creation-Date: 2018-05-23 01:37+0200\n"
-"PO-Revision-Date: 2006-08-12 22:52+0200\n"
+"PO-Revision-Date: 2021-01-31 19:26+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino <jfs@debian.org>\n"
 "Language-Team: Debian Spanish Team <debian-l10n-spanish@lists.debian.org>\n"
-"Language: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8-bit\n"
@@ -49,7 +50,7 @@ msgstr ""
 #. Description
 #: ../templates:3001
 msgid "This can be preseeded to override the default desktop."
-msgstr ""
+msgstr "Esto puede ser preconfigurado para anular el escritorio por omisión."
 
 #. Type: title
 #. Description

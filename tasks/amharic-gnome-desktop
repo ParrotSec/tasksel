@@ -1,0 +1,5 @@
+Task: amharic-gnome-desktop
+Enhances: gnome-desktop, amharic-desktop
+Section: l10n
+Key:
+  task-amharic-gnome-desktop

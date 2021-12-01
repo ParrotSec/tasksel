@@ -27,7 +27,7 @@ check_desktop_wanted() {
 	fi
 }
 
-if db_get "tasksel/desktop"; then
+if db_get "tasksel/desktop" && [ -n "$RET" ]; then
 	if echo "$RET" | grep -q "$DESKTOPNAME"; then
 		check_desktop_wanted
 	fi

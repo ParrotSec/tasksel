@@ -8,20 +8,22 @@
 # or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Developers do not need to manually edit POT or PO files.
 # , fuzzy
-#
+# Damyan Ivanov <dmn@debian.org>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: tasksel\n"
 "Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
 "POT-Creation-Date: 2018-05-23 01:37+0200\n"
-"PO-Revision-Date: 2006-10-31 12:49+0200\n"
-"Last-Translator: Damyan Ivanov <dam@modsoftsys.com>\n"
-"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"PO-Revision-Date: 2020-10-24 11:23+0300\n"
+"Last-Translator: Damyan Ivanov <dmn@debian.org>\n"
+"Language-Team: Bulgarian <dict@ludost.net>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #. Type: multiselect
 #. Description
@@ -39,8 +41,8 @@ msgid ""
 "to your needs, you can choose to install one or more of the following "
 "predefined collections of software."
 msgstr ""
-"В момента са инсталирани само най-жизненоважните програми на Debian. За да "
-"нагласите системата към Вашите нужди, можете да изберете измежду един или "
+"В момента са инсталирани само жизненоважните програми на Дебиан. За да "
+"настроите системата към Вашите нужди, можете да изберете измежду един или "
 "повече от следните предварително зададени набори от софтуер."
 
 #. Type: multiselect
@@ -58,6 +60,8 @@ msgstr ""
 #: ../templates:3001
 msgid "This can be preseeded to override the default desktop."
 msgstr ""
+"Графичната среда по подразбиране може да бъде предварително указана с "
+"preseed."
 
 #. Type: title
 #. Description

@@ -1,3 +1,256 @@
+tasksel (1:3.68+parrot1) lts-updates; urgency=medium
+
+  * Import new Debian release.
+  * integrate the new Parrot metapackages.
+  * Add laptop-mode-tools powersaving support.
+  * Use nginx stack instead of apache2 for web-server.
+  * Don't depend on sddm for kde (we use lightdm).
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Wed, 01 Dec 2021 14:28:50 +0100
+
+tasksel (3.68) unstable; urgency=medium
+
+  * Team upload.
+
+  * Drop libu2f-udev from Recommends for task-desktop; it's an transitional
+    package now, since starting with udev v244, U2F devices are autodetected
+    without needing 3rd party udev rules. Closes: #987770
+
+  [ Updated translations ]
+  * Croatian (hr.po) by Valentin Vidic
+
+ -- Holger Wansing <hwansing@mailbox.org>  Mon, 31 May 2021 21:06:32 +0200
+
+tasksel (3.67) unstable; urgency=medium
+
+  * Team upload.
+
+  * Add forgotten files in ./tasks/ to make recently added *-gnome-desktop
+    packages work.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 18 Apr 2021 12:10:40 +0200
+
+tasksel (3.66) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Shengjing Zhu ]
+  * Switch to fcitx5 for Simplified and Traditional Chinese desktop.
+    Fcitx5 works for Wayland. (Closes: #983704)
+
+  [ Holger Wansing]
+  * GNOME now depends on ibus as input method. For some languages, there are
+    additional packages needed, to make ibus work. Adding them for Amharic,
+    Simplified chinese, Traditional chinese, Japanese, Kannada, Malayalam and
+    Telugu. This requires new task-*-gnome-desktop packages to be added for
+    Amharic, Simplified chinese, Traditional chinese, and Kannada.
+    Thanks to Shengjing Zhu for working out the circumstances.
+    Closes: #941624, #983653.
+  * ibus does not have default configurations for all languages, so force
+    to create one via gnome-initial-setup for all the languages using ibus.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sat, 20 Mar 2021 16:22:17 +0800
+
+tasksel (3.65) unstable; urgency=medium
+
+  * Team upload.
+
+  [ HIGUCHI Daisuke ]
+  * tasksel-japanese-desktop: prefer uim-mozc over uim-anthy (Closes: #982175)
+
+  [ Holger Wansing ]
+  * Re-add manpages-it to task-italian task (package is again available in
+    unstable/testing). Closes: #982043.
+  * Add manpages translations from newly introduced manpages-l10n package
+    (manpages-pt-br, manpages-nl, manpages-mk, manpages-ro, manpages-es)
+    to the respective language tasks (see #982043).
+  * Re-add synaptic to gnome desktop tasks. Closes: #983074
+  * Remove scim-qt-immodule from task-chinese-t-kde-desktop, since it's no
+    longer in the archive.
+
+  [ YOSHINO Yoshihito ]
+  * Let gnome-flashback-desktop task in Japanese pull
+    task-japanese-gnome-desktop. Closes: #983688
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sat, 13 Mar 2021 16:26:46 +0100
+
+tasksel (3.64) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Holger Wansing ]
+  * Remove manpages-it from task-italian task (package has been removed from
+    unstable). Closes: #982035.
+
+  [ Updated debconf translations ]
+  * Spanish (es.po) by Javier Fernandez-Sanguino. Closes: #981478
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 14 Feb 2021 18:03:39 +0100
+
+tasksel (3.63) unstable; urgency=medium
+
+  * Team upload.
+
+  * Re-upload, to allow migration to testing. No source changings.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Wed, 13 Jan 2021 23:12:28 +0100
+
+tasksel (3.62) unstable; urgency=low
+
+  * Team upload.
+
+  [ Dmitry Shachnev ]
+  * Add a task for the Gnome Flashback desktop environment. Closes: #805305
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 20 Dec 2020 18:05:23 +0100
+
+tasksel (3.61) unstable; urgency=low
+
+  * task-french: Re-add dependency on manpages-fr (Closes: #973873)
+  * Switch to debhelper 13.
+    Replace the obsolete d/compat with a Build-Depends on debhelper-compat.
+
+  * Update maintainer name
+  * Amend changelog for v3.60, mention #972076 in the standard way.
+  * d/control: Declare compliance with policy v4.5.1.
+    No change required.
+  * lintian
+    + Override description-too-short
+    + Override debconf-related warnings about tasksel
+    + Do not warn on lintian ↔ lintian-data circular dep
+
+ -- nicoo <nicoo@debian.org>  Wed, 18 Nov 2020 02:40:32 +0100
+
+tasksel (3.60) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Holger Wansing ]
+  * task-sinhala-desktop: replace obsolete metapackage fonts-noto-hinted by
+    fonts-noto-core and fonts-noto-ui-core. Closes: #949766
+  * Drop no-longer existing kde-l10n-* packages from various tasks.
+    Closes: #949694
+
+  [ Changwoo Ryu ]
+  * task-korean-desktop: Remove fonts-nanum-coding, which is now a
+    transitional package.
+
+  [ Bryan Quigley ]
+  * Switch LibreOffice from other desktop tasks to match the LibreOffice apps
+    Gnome brings in.
+  * Moved from transitional -kde integration.
+  * Switched lxde from removed -gtk2 integration to -gtk3.
+  * Added libreoffice-qt5 to LXQt.
+
+  [ Sven Joachim ]
+  * Avoid tempfile deprecation warning. Since debianutils 4.10, tempfile is
+    deprecated in favor of mktemp. (Closes: #972076)
+
+  [ Updated debconf translations ]
+  * Bulgarian (bg.po) by Damyan Ivanov.
+  * Portuguese (pt.po) by Miguel Figueiredo.
+
+  [ Raphaël Hertzog ]
+  * Fix the name of the Acquire::Retries option passed to apt-get (the option
+    is not part of the "APT" group).
+
+ -- Raphaël Hertzog <raphael@offensive-security.com>  Fri, 06 Nov 2020 11:48:08 +0100
+
+tasksel (3.59) unstable; urgency=medium
+
+  [ Didier Raboud ]
+  * Remove task-print-service. CUPS is now the de-facto only print server and
+    is already pulled by the concerned desktop environments.  Closes: #950553
+
+  [ Timo Jyrinki ]
+  * Add libenchant-2-voikko for Finnish.
+  * Add giella-sme and libenchant-2-voikko for Northern Sami, remove
+    hunspell-se (lower quality spell-checking).
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 08 Mar 2020 21:35:08 +0100
+
+tasksel (3.58) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Raphaël Hertzog ]
+  * Makefile improvement: don't hardcode the "tasks" directory, use the
+    $(DESCDIR) variable.
+  * Fix default desktop selection by using the tasksel/desktop debconf setting
+    only if it's non empty.
+
+  [ Boyuan Yang ]
+  * Drop recommendation to qt4-related packages. Closes: #944115
+
+  [ Holger Wansing ]
+  * Use print-manager instead of system-config-printer for KDE installation task.
+    Closes: #945846
+  * Remove xfce4-mixer from xfce-desktop task (has been removed from the
+    archive; successor is xfce4-pulseaudio-plugin). Closes: #946755
+
+ -- Holger Wansing <hwansing@mailbox.org>  Wed, 01 Jan 2020 20:13:37 +0100
+
+tasksel (3.57) unstable; urgency=medium
+
+  * Team upload.
+  * tasksel should be priority=optional. Also, priority is to be declared only
+    once in control file. (Closes: #855151)
+
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 19 Nov 2019 19:46:56 +0100
+
+tasksel (3.56) unstable; urgency=high (RC bugfix)
+
+  [ nicoo ]
+  * task-spanish: Drop dependency on manpages-es (Closes: #942270)
+  * task-xfce-desktop: Use libreoffice-gtk3 instead of -gtk2 (Closes: #939533)
+  * Add task-print-server transitional package (Closes: #932818)
+  * Declare compliance with policy v4.4.1.
+    No change required.
+
+  [ Aron Xu ]
+  * Move fonts-arphic-* to Suggests for task-chinese-{s,t}-desktop.
+    Closes: #942103
+
+ -- nicoo <nicoo@debian.org>  Wed, 16 Oct 2019 13:41:38 +0200
+
+tasksel (3.55) unstable; urgency=medium
+
+  [ Changwoo Ryu ]
+  * Add gnome-initial-setup to task-korean-gnome-desktop.
+    GNOME doesn't set the working Korean IM by default without it.
+  * Add fonts-noto and fonts-noto-cjk to task-korean-desktop.
+
+  [ Victor Ibragimov ]
+  * Updated Tajik translation (tg.po)
+
+ -- nicoo <nicoo@debian.org>  Wed, 28 Aug 2019 14:22:40 +0200
+
+tasksel (3.54) unstable; urgency=low
+
+  [ Guillem Jover ]
+  * Improve print service task and description. (Closes: #696658)
+
+  [ Didier Raboud ]
+  * task-print-service: Drop dependencies on cups-* implied by cups itself
+    Closes: #824645
+
+  [ nicoo ]
+  * task-xfce-desktop: Downgrade dependency on light-locker (Closes: #827562)
+    light-locker creates issues on some platforms (not available on kFreeBSD or
+    Hurd) and creates issues for users who prefer xscreensaver.
+
+  * Comply with policy v4.4.0
+    + Specify Rules-Requires-Root: no
+
+  [ Adam Borowski ]
+  * task-desktop: Recommend fonts-symbola. (Closes: #902321)
+    This font provides a wide coverage of Unicode (incl. symbols, emojis, ...)
+
+  [ Daniel Lewart ]
+  * Remove dependencies on transitional packages. (Closes: #929746)
+
+ -- nicoo <nicoo@debian.org>  Sat, 13 Jul 2019 12:20:31 +0200
+
 tasksel (1:3.53+parrot2) rolling; urgency=medium
 
   * Increase version number to override debian version.

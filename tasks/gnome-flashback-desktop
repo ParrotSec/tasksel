@@ -1,0 +1,8 @@
+Task: gnome-flashback-desktop
+Relevance: 7
+Parent: desktop
+Test-default-desktop: 3 gnome-flashback
+Section: user
+Key:
+  task-gnome-flashback-desktop
+  parrot-interface-common
