@@ -1,0 +1,11 @@
+Task: parrot-tools-pwn
+Relevance: 2
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Exploitation tools.
+ This task provides the Exploitation tools for Parrot Security.
+Key:
+ parrot-tools-pwn
+Packages: list
+ parrot-tools-pwn

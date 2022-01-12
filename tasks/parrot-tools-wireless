@@ -1,0 +1,11 @@
+Task: parrot-tools-wireless
+Relevance: 2
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Wireless Hacking tools.
+ This task provides the Wireless Hacking tools for Parrot Security.
+Key:
+ parrot-tools-wireless
+Packages: list
+ parrot-tools-wireless

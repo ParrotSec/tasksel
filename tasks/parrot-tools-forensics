@@ -1,0 +1,11 @@
+Task: parrot-tools-forensics
+Relevance: 2
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Forensics tools.
+ This task provides the Forensics tools for Parrot Security.
+Key:
+ parrot-tools-forensics
+Packages: list
+ parrot-tools-forensics

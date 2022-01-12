@@ -1,0 +1,11 @@
+Task: parrot-tools-reversing
+Relevance: 2
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Reverse Engineering tools.
+ This task provides the Reverse Engineering tools for Parrot Security.
+Key:
+ parrot-tools-reversing
+Packages: list
+ parrot-tools-reversing

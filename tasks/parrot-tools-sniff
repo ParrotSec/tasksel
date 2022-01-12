@@ -1,0 +1,11 @@
+Task: parrot-tools-sniff
+Relevance: 2
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Sniffing and Injection tools.
+ This task provides the Sniffing and Injection tools for Parrot Security.
+Key:
+ parrot-tools-sniff
+Packages: list
+ parrot-tools-sniff

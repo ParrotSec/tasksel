@@ -7,7 +7,6 @@ Description: Parrot Desktop
  This task provides a variety of useful graphical applications
  suitable for a daily use.
 Key:
- parrot-interface-full
+ parrot-interface
 Packages: list
- parrot-interface-full
- parrot
+ parrot-interface

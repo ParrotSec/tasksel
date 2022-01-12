@@ -1,3 +1,10 @@
+tasksel (1:3.68+parrot2) lts-updates; urgency=medium
+
+  * Update names of parrot metapackages.
+  * Add more granular metapackages selection.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Wed, 12 Jan 2022 14:28:39 +0100
+
 tasksel (1:3.68+parrot1) lts-updates; urgency=medium
 
   * Import new Debian release.

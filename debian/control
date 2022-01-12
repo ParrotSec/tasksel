@@ -102,7 +102,7 @@ Recommends:
 # we need a working network setup at least
 	network-manager-gnome,
 # We also need the parrot-specific packages for the selected interface (if available)
-    parrot-gnome,
+    parrot-desktop-gnome,
 
 Package: task-gnome-flashback-desktop
 Architecture: all
@@ -204,7 +204,7 @@ Recommends:
 # media player
 	dragonplayer,
 # We also need the parrot-specific packages for the selected interface (if available)
-    parrot-kde,
+    parrot-desktop-kde,
 
 Package: task-lxde-desktop
 Architecture: all
@@ -330,7 +330,7 @@ Recommends:
 # libreoffice accessibility needs the GTK frontend
 	libreoffice-gtk3,
 # We also need the parrot-specific packages for the selected interface (if available)
-    parrot-xfce,
+    parrot-desktop-xfce,
 
 Package: task-cinnamon-desktop
 Architecture: all
@@ -377,7 +377,7 @@ Recommends:
 # libreoffice accessibility needs the GTK frontend
 	libreoffice-gtk3,
 # We also need the parrot-specific packages for the selected interface (if available)
-    parrot-mate,
+    parrot-desktop-mate,
 
 Package: task-laptop
 Architecture: all

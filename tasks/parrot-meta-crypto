@@ -1,4 +1,4 @@
-Task: parrot-crypto
+Task: parrot-meta-crypto
 Relevance: 3
 Parent: parrot
 Section: user
@@ -6,6 +6,6 @@ Test-parrot: 3
 Description: Encryption tools
  This task installs the Cryptographic toolkit
 Key:
- parrot-crypto
+ parrot-meta-crypto
 Packages: list
- parrot-crypto
+ parrot-meta-crypto

@@ -6,6 +6,6 @@ Test-parrot: 3
 Description: Parrot Development Tools
  This task installs several packages aimed at software developers.
 Key:
- parrot-devel
+ parrot-meta-devel
 Packages: list
- parrot-devel
+ parrot-meta-devel

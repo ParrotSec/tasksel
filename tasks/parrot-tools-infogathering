@@ -1,0 +1,11 @@
+Task: parrot-tools-infogathering
+Relevance: 2
+Parent: parrot
+Section: user
+Test-parrot: 3
+Description: Information Gathering tools.
+ This task provides the Information Gathering tools for Parrot Security.
+Key:
+ parrot-tools-infogathering
+Packages: list
+ parrot-tools-infogathering

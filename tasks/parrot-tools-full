@@ -1,9 +1,9 @@
-Task: parrot-tools
+Task: parrot-tools-full
 Relevance: 2
 Parent: parrot
 Section: user
 Test-parrot: 3
-Description: Parrot Security Suite
+Description: All Parrot Security Tools
  This task provides the Pentest tools of Parrot Security.
 Key:
  parrot-tools-full
