@@ -1,0 +1,11 @@
+Task: parrot-reversing
+Section: user
+Relevance: 12
+Parent: parrot
+Test-parrot: show-exclude
+Description: Reverse Engineering Tools
+Key:
+ parrot-reversing
+Packages: list
+ parrot-tools-reversing,
+ parrot-meta-devel-extra

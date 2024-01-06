@@ -1,7 +1,7 @@
 Task: kde-desktop
-Relevance: 3
+Relevance: 2
 Parent: desktop
-Test-default-desktop: 3 kde
+Test-parrot: show-exclude
 Section: user
 Key:
   task-kde-desktop

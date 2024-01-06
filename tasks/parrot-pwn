@@ -1,0 +1,13 @@
+Task: parrot-pwn
+Section: user
+Relevance: 6
+Parent: parrot
+Test-parrot: show-exclude
+Description: Exploitation Tools
+ Includes parrot-tools-pwn, parrot-tools-maintain and parrot-tools-postexploit
+Key:
+ parrot-pwn
+Packages: list
+ parrot-tools-pwn,
+ parrot-tools-maintain,
+ parrot-tools-postexploit

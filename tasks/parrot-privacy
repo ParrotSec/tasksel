@@ -1,0 +1,11 @@
+Task: parrot-privacy
+Section: user
+Relevance: 1
+Parent: parrot
+Test-parrot: show-include
+Description: Privacy Suite
+Key:
+ parrot-privacy
+Packages: list
+ parrot-meta-crypto,
+ parrot-meta-privacy

@@ -3,10 +3,9 @@ Section: tasks
 Priority: optional
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Uploaders: nicoo <nicoo@debian.org>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.1
 Build-Depends:
 	debhelper-compat (= 13),
-	dpkg-dev (>= 1.9.0),
 	gettext,
 	po-debconf
 Vcs-Browser: https://salsa.debian.org/installer-team/tasksel
@@ -16,9 +15,9 @@ Rules-Requires-Root: no
 Package: tasksel
 Section: admin
 Architecture: all
-Pre-Depends: debconf (>= 1.5.34) | cdebconf (>= 0.106)
-Depends: ${misc:Depends}, liblocale-gettext-perl, apt, tasksel-data, perl-base (>= 5.14.0-1)
-Conflicts: debconf (<< 1.4.27), base-config (<< 2.32)
+Pre-Depends: debconf | cdebconf
+Depends: ${misc:Depends}, liblocale-gettext-perl, apt, tasksel-data
+Conflicts: base-config (<< 2.32)
 Description: tool for selecting tasks for installation on Debian systems
  This package provides 'tasksel', a simple interface for users who
  want to configure their system to perform a specific task.
@@ -28,7 +27,6 @@ Section: admin
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: laptop-detect, tasksel
-Conflicts: tasksel (<< 2.67)
 Description: official tasks used for installation of Debian systems
  This package contains data about the standard tasks available on a Debian
  system.
@@ -42,19 +40,17 @@ Depends: ${misc:Depends},
 	xserver-xorg-video-all,
 	xserver-xorg-input-all,
 	desktop-base,
+	parrot-interface,
 Recommends:
 # One of the actual desktop tasks is needed to get a full desktop environment.
 # The order here is significant when installing this task manually;
 # when tasksel installs this task it instead selects one of these based
 # on the tasksel/desktop debconf setting.
-	task-mate-desktop | task-kde-desktop | task-xfce-desktop| task-gnome-desktop | task-lxde-desktop | task-gnome-flashback-desktop | task-cinnamon-desktop  | task-lxqt-desktop,
+	task-mate-desktop | task-kde-desktop | task-xfce-desktop | task-gnome-desktop,
 # For use by third-party apps.
 	xdg-utils,
 # Font with wide unicode coverage, prevents “Unicode tofu”
 	fonts-symbola,
-# mdns/zeroconf stuff
-	avahi-daemon,
-	libnss-mdns,
 # desktop machines might not be up 24/7
 	anacron,
 # Make sure that CDs etc can be ejected. May not be installed by d-i.
@@ -68,6 +64,8 @@ Recommends:
 # firefox is the most popular web browser at the moment,
 # although both gnome and kde offer their own too
 	firefox | firefox-esr,
+# print system
+	cups,
 
 Package: task-gnome-desktop
 Architecture: all
@@ -79,30 +77,10 @@ Depends: ${misc:Depends},
 	task-desktop,
 # only depend on a very minimal gnome desktop, to ensure it fits on CD1
 	gnome-core,
-Recommends:
-# The full gnome desktop environment should be included if possible
-# even if the larger gnome metapackage doesn't fit.
-	gnome,
-# Package management
-	synaptic,
-# GNOME support in LibreOffice
-	libreoffice-gnome,
-# libreoffice is the best word processor / office suite at the moment
-	libreoffice-writer,
-	libreoffice-calc,
-	libreoffice-impress,
-# make help menu work
-	libreoffice-help-en-us,
-# make thesaurus work
-	mythes-en-us,
-# make spellchecker work
-	hunspell-en-us,
-# make hyphenation work
-	hyphen-en-us,
+	parrot-desktop-gnome,
+Recommends: parrot-interface-home,
 # we need a working network setup at least
 	network-manager-gnome,
-# We also need the parrot-specific packages for the selected interface (if available)
-    parrot-desktop-gnome,
 
 Package: task-gnome-flashback-desktop
 Architecture: all
@@ -145,7 +123,7 @@ Recommends:
 # make hyphenation work
 	hyphen-en-us,
 # accessibility support
-	gnome-orca,
+	orca,
 # web browser
 	firefox | firefox-esr,
 # mail client
@@ -156,7 +134,6 @@ Recommends:
 # some non-core GNOME applications
 	alacarte,
 	gnome-disk-utility,
-	gnome-documents,
 	gnome-tweaks,
 	yelp,
 
@@ -168,43 +145,10 @@ Description: KDE Plasma
  expect to have available on the desktop.
 Depends: ${misc:Depends},
 	task-desktop,
-	kde-standard,
-    parrot-interface-common
-Recommends:
-# accessibility support
-	kdeaccessibility,
-# orca works with kde, adding accessibility
-	orca,
-# cd/dvd burner
-	k3b,
-	k3b-i18n,
-# desktop network setup
-	plasma-nm,
-# Package management.
-	apper,
-# temporarily moved from task-desktop due to #525077
-	gimp,
-# libreoffice is the best word processor / office suite at the moment
-	libreoffice-writer,
-	libreoffice-calc,
-	libreoffice-impress,
-# KDE support in LibreOffice
-	libreoffice-plasma,
-	libreoffice-kf5,
-# make help menu work
-	libreoffice-help-en-us,
-# make thesaurus work
-	mythes-en-us,
-# make spellchecker work
-	hunspell-en-us,
-# make hyphenation work
-	hyphen-en-us,
+	parrot-desktop-kde
+Recommends: parrot-interface-home,
 # gui for configuration of the print service
 	print-manager,
-# media player
-	dragonplayer,
-# We also need the parrot-specific packages for the selected interface (if available)
-    parrot-desktop-kde,
 
 Package: task-lxde-desktop
 Architecture: all
@@ -249,8 +193,9 @@ Description: LXQt
  expect to have available on the desktop.
 Depends: ${misc:Depends},
          task-desktop,
+# Mention the preferred theme before sddm, otherwise another theme will be used
+         sddm-theme-debian-elarun | sddm-theme,
          sddm,
-         sddm-theme-debian-elarun | sddm-theme-debian-elarun,
          lxqt,
 Recommends: xsane,
 # orca works with qt, adding accessibility
@@ -283,10 +228,7 @@ Description: Xfce
  expect to have available on the desktop.
 Depends: ${misc:Depends},
 	task-desktop,
-# The basics of xfce, not the whole thing.
-	xfce4,
-	lightdm,
-	parrot-interface-common
+	parrot-desktop-xfce,
 Recommends:
 # a screen saver/locker
 	light-locker,
@@ -294,43 +236,13 @@ Recommends:
 	xfce4-goodies,
 	xfce4-power-manager,
 	xfce4-terminal,
-# xfce text editor
-	mousepad,
 # xfce is really improved by using dbus
 	default-dbus-session-bus | dbus-session-bus,
-# support for scanners
-	xsane,
-# media players
-	parole,
-	quodlibet,
 # pdf viewer
 	atril,
-# icon theme
-	tango-icon-theme,
 # network management
 	network-manager-gnome,
-# package management
-	synaptic,
-# libreoffice is the best word processor / office suite at the moment
-	libreoffice-writer,
-	libreoffice-calc,
-	libreoffice-impress,
-# make help menu work
-	libreoffice-help-en-us,
-# make thesaurus work
-	mythes-en-us,
-# make spellchecker work
-	hunspell-en-us,
-# make hyphenation work
-	hyphen-en-us,
-# gui for configuration of the print service
-	system-config-printer,
-# orca works with xfce, adding accessibility
-	orca,
-# libreoffice accessibility needs the GTK frontend
-	libreoffice-gtk3,
-# We also need the parrot-specific packages for the selected interface (if available)
-    parrot-desktop-xfce,
+	parrot-interface-home,
 
 Package: task-cinnamon-desktop
 Architecture: all
@@ -351,33 +263,8 @@ Description: MATE
 Depends: ${misc:Depends},
 	task-desktop,
 	mate-desktop-environment,
-	lightdm,
-	parrot-interface-common
-Recommends:
-# temporarily moved from task-desktop due to #525077
-	gimp,
-# Package management.
-	synaptic,
-# libreoffice is the best word processor / office suite at the moment
-	libreoffice-writer,
-	libreoffice-calc,
-	libreoffice-impress,
-# make help menu work
-	libreoffice-help-en-us,
-# make thesaurus work
-	mythes-en-us,
-# make spellchecker work
-	hunspell-en-us,
-# make hyphenation work
-	hyphen-en-us,
-# we need a working network setup at least
-	network-manager-gnome,
-# orca works with mate, adding accessibility
-	orca,
-# libreoffice accessibility needs the GTK frontend
-	libreoffice-gtk3,
-# We also need the parrot-specific packages for the selected interface (if available)
-    parrot-desktop-mate,
+	parrot-desktop-mate,
+Recommends: parrot-interface-home
 
 Package: task-laptop
 Architecture: all
@@ -386,27 +273,20 @@ Description: laptop
 Depends: ${misc:Depends},
 	anacron,
 Recommends:
-	avahi-autoipd,
 	bluetooth,
 	powertop,
 # wireless networking tools
 	iw,
 	wireless-tools,
 	wpasupplicant,
-# power saving tools
-    laptop-mode-tools,
 
 Package: task-web-server
 Architecture: all
-Description: web server (nginx + php-fpm)
+Description: web server
  This task selects packages useful for a general purpose web server
  system.
 Depends: ${misc:Depends},
 	nginx,
-Recommends:
-    php-fpm,
-    php-mysql,
-	analog,
 
 Package: task-ssh-server
 Architecture: all
@@ -1314,7 +1194,7 @@ Description: Hungarian desktop
  This task localises the desktop in Hungarian.
 Depends: ${misc:Depends}
 Recommends:
-	gsfonts-x11,
+	fonts-urw-base35,
 	fonts-sil-andika,
 	fonts-dejavu,
 	fonts-liberation,
@@ -1466,6 +1346,19 @@ Package: task-japanese-gnome-desktop
 Architecture: all
 Description: Japanese GNOME desktop
  This task localises the GNOME desktop in Japanese.
+Depends: ${misc:Depends},
+Recommends:
+# evolution has a problem for Japanese, for example it uses always UTF-8
+# subject instead of iso-2022-jp used Japanese de-facto. I recommend
+# thunderbird as default mailer for Japanese desktop users.
+	thunderbird,
+	thunderbird-l10n-ja,
+	ibus-mozc | ibus-anthy
+
+Package: task-japanese-gnome-flashback-desktop
+Architecture: all
+Description: Japanese GNOME Flashback desktop
+ This task localises the GNOME Flashback desktop in Japanese.
 Depends: ${misc:Depends},
 Recommends:
 # evolution has a problem for Japanese, for example it uses always UTF-8
@@ -2358,8 +2251,7 @@ XBC-Maintainer: Eugeniy Meshcheryakov <eugen@debian.org>
 Depends: ${misc:Depends},
 Recommends:
 	aspell-uk,
-	konwert,
-	iukrainian
+	konwert
 
 Package: task-ukrainian-desktop
 Architecture: all

@@ -1,0 +1,10 @@
+Task: parrot-forensics
+Section: user
+Relevance: 10
+Parent: parrot
+Test-parrot: show-exclude
+Description: Digital Forensics Tools
+Key:
+ parrot-forensics
+Packages: list
+ parrot-tools-forensics

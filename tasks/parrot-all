@@ -1,0 +1,10 @@
+Task: parrot-all
+Section: user
+Relevance: 14
+Parent: parrot
+Test-parrot: show-exclude
+Description: Install All Tools
+Key:
+ parrot-all
+Packages: list
+ parrot-tools-full

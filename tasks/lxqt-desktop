@@ -1,7 +1,7 @@
 Task: lxqt-desktop
 Relevance: 9
 Parent: desktop
-Test-default-desktop: 3 lxqt
+Test-parrot: hide-exclude
 Section: user
 Key:
   task-lxqt-desktop

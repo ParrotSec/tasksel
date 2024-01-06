@@ -1,8 +1,7 @@
 Task: gnome-desktop
-Relevance: 8
+Relevance: 4
 Parent: desktop
-Test-default-desktop: 3 gnome
+Test-parrot: show-exclude
 Section: user
 Key:
   task-gnome-desktop
-  parrot-interface-common

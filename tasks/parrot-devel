@@ -1,0 +1,11 @@
+Task: parrot-devel
+Section: user
+Relevance: 2
+Parent: parrot
+Test-parrot: show-exclude
+Description: Development Suite
+Key:
+ parrot-devel
+Packages: list
+ parrot-meta-devel,
+ parrot-meta-devel-tools

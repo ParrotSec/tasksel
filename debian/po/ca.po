@@ -8,13 +8,14 @@ msgstr ""
 "Project-Id-Version: tasksel\n"
 "Report-Msgid-Bugs-To: tasksel@packages.debian.org\n"
 "POT-Creation-Date: 2018-05-23 01:37+0200\n"
-"PO-Revision-Date: 2006-10-04 19:58+0200\n"
+"PO-Revision-Date: 2022-12-24 18:23+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Type: multiselect
 #. Description
@@ -50,7 +51,7 @@ msgstr ""
 #. Description
 #: ../templates:3001
 msgid "This can be preseeded to override the default desktop."
-msgstr ""
+msgstr "Això es pot preestablir per canviar l'escriptori per defecte."
 
 #. Type: title
 #. Description

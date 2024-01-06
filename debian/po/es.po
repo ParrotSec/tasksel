@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: Debian Spanish Team <debian-l10n-spanish@lists.debian.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
 #. Type: multiselect
@@ -32,9 +32,9 @@ msgid ""
 "to your needs, you can choose to install one or more of the following "
 "predefined collections of software."
 msgstr ""
-"De momento sÛlo est· instalado el sistema b·sico. Puede escoger la "
-"instalaciÛn de las siguientes colecciones predefinidas de programas para "
-"adaptar m·s la instalaciÛn a sus necesidades."
+"De momento s√≥lo est√° instalado el sistema b√°sico. Puede escoger la "
+"instalaci√≥n de las siguientes colecciones predefinidas de programas para "
+"adaptar m√°s la instalaci√≥n a sus necesidades."
 
 #. Type: multiselect
 #. Description
@@ -43,23 +43,23 @@ msgid ""
 "You can choose to install one or more of the following predefined "
 "collections of software."
 msgstr ""
-"Puede elegir instalar una o m·s de las siguientes colecciones de programas "
+"Puede elegir instalar una o m√°s de las siguientes colecciones de programas "
 "predefinidas."
 
 #. Type: multiselect
 #. Description
 #: ../templates:3001
 msgid "This can be preseeded to override the default desktop."
-msgstr "Esto puede ser preconfigurado para anular el escritorio por omisiÛn."
+msgstr "Esto puede ser preconfigurado para anular el escritorio por omisi√≥n."
 
 #. Type: title
 #. Description
 #: ../templates:4001
 msgid "Software selection"
-msgstr "SelecciÛn de programas"
+msgstr "Selecci√≥n de programas"
 
 #~ msgid "${ORIGCHOICES}"
 #~ msgstr "${CHOICES}"
 
 #~ msgid "${CHOICES}, manual package selection"
-#~ msgstr "${CHOICES}, selecciÛn manual de paquetes"
+#~ msgstr "${CHOICES}, selecci√≥n manual de paquetes"

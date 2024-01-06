@@ -1,3 +1,108 @@
+tasksel (1:3.73+parrot1) lory; urgency=medium
+
+  * Import new Debian release.
+  * Use parrot metapackages.
+  * Use Mate as default desktop.
+  * Implement new Parrot selection menu.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sat, 06 Jan 2024 04:28:30 +0100
+
+tasksel (3.73) unstable; urgency=medium
+
+  [ Roland Clobus ]
+  * task-lxqt-desktop:
+     - Move sddm-theme* before sddm to avoid the installation of many
+       additional packages, including a different window manager which
+       would lead to a confusing prompt during the installation.
+       Closes: #1023472
+     - While doing so, fix the theme alternative, declaring sddm-theme
+       as a fallback for sddm-theme-debian-elarun.
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 25 May 2023 08:27:56 +0200
+
+tasksel (3.72) unstable; urgency=medium
+
+  [ Atila KOÇ ]
+  * Updated Turkish debconf translation. Closes: #1028517
+
+  [ Aurélien COUDERC ]
+  * Cleanup task-kde-desktop:
+    - Drop apper, hardly maintained upstream, superseded by Plasma Discover.
+    - Drop dragonplayer, already pulled transitively by kde-standard.
+    - Drop plasma-nm, already pulled transitively by plasma-desktop.
+    - Drop k3b/k3b-i18n, not necessary on default installs anymore these days.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 26 Feb 2023 19:03:20 +0100
+
+tasksel (3.71) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Holger Wansing ]
+  * Correct changelog entry for 3.70.
+  * Change Recommends on gsfonts-x11 (which is now a dummy / transitional
+    package) to fonts-urw-base35. Closes: #1020351
+
+  [ Debian Janitor ]
+  * Refer to specific version of license GPL-2.
+  * Update standards version to 4.6.1, no changes needed.
+
+  [ Baurzhan Muftakhidinov ]
+  * Updated translations for Kazakh.
+
+  [ d manye ]
+  * Updated Catalan debconf translation.
+
+  [ Samuel Thibault ]
+  * control: Fix gnome-orca dep into orca.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 03 Jan 2023 21:26:23 +0100
+
+tasksel (3.70) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on dpkg-dev.
+    + tasksel: Drop versioned constraint on perl-base in Depends.
+    + tasksel: Drop versioned constraint on cdebconf and debconf in Pre-Depends.
+    + tasksel: Drop versioned constraint on debconf in Conflicts.
+    + tasksel-data: Drop versioned constraint on tasksel in Conflicts.
+
+  [ Andika Triwidada ]
+  * Updated debconf translation for Indonesian. Closes: #1007701
+
+  [ Holger Wansing ]
+  * Convert file encoding for some po files into UTF-8; fixes lintian tag.
+  * Adapt lintian-overrides to recent 'pointed hints' changings.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 17 Jul 2022 15:51:42 +0200
+
+tasksel (3.69+rebuild) unstable; urgency=medium
+
+  * Team upload.
+
+  * Re-upload to allow migration to testing. No source changes.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Fri, 11 Feb 2022 19:25:38 +0100
+
+tasksel (3.69) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Holger Wansing ]
+  * Install CUPS for all *-desktop tasks, now that task-print-service is no
+    longer existing. Closes: #993668
+  * Fix broken relationship of japanese-gnome-desktop task to Gnome
+    Flashback desktop. Closes: #998120
+
+  [ Ievgenii Meshcheriakov ]
+  * Don't recommend iukrainian for task-ukrainian, the package is no longer
+    built.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 30 Jan 2022 14:24:49 +0100
+
 tasksel (1:3.68+parrot2) lts-updates; urgency=medium
 
   * Update names of parrot metapackages.

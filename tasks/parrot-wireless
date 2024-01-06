@@ -1,0 +1,10 @@
+Task: parrot-wireless
+Section: user
+Relevance: 8
+Parent: parrot
+Test-parrot: show-exclude
+Description: Wireless Exploitation Tools
+Key:
+ parrot-wireless
+Packages: list
+ parrot-tools-wireless

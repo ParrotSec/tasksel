@@ -1,7 +1,7 @@
 Task: lxde-desktop
 Relevance: 9
 Parent: desktop
-Test-default-desktop: 3 lxde
+Test-parrot: hide-exclude
 Section: user
 Key:
   task-lxde-desktop

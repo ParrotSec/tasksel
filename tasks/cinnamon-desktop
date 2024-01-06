@@ -1,8 +1,7 @@
 Task: cinnamon-desktop
 Parent: desktop
-Test-default-desktop: 3 cinnamon
+Test-parrot: hide-exclude
 Relevance: 8
 Section: user
 Key:
   task-cinnamon-desktop
-  parrot-interface-common

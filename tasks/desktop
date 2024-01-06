@@ -1,6 +1,6 @@
 Task: desktop
 Relevance: 1
 Section: user
-Test-desktop: 1
+Test-parrot: show-include
 Key:
   task-desktop

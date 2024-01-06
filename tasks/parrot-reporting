@@ -1,0 +1,10 @@
+Task: parrot-reporting
+Section: user
+Relevance: 13
+Parent: parrot
+Test-parrot: show-exclude
+Description: Reporting Tools
+Key:
+ parrot-reporting
+Packages: list
+ parrot-tools-reporting

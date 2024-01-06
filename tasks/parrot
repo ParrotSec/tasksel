@@ -1,10 +1,6 @@
-Task: parrot
-Relevance: 1
+Task: Parrot System
 Section: user
-Test-parrot: 2
-Description: Parrot Base System
- This is a key task to install a Parrot core system.
+Relevance: 2
+Test-parrot: show-include
 Key:
- parrot-core
-Packages: list
- parrot-core
+  parrot-core
