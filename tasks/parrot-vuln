@@ -3,9 +3,7 @@ Section: user
 Relevance: 4
 Parent: parrot
 Test-parrot: show_exclude
-Description: Vulnerability Assessment Tools
- Vulnerability Assessment Tools
-Key:
- parrot-tools-vuln
+Description:
+  Vulnerability Assessment Tools
 Packages: list
- parrot-tools-vuln
+  parrot-tools-vuln

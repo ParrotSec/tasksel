@@ -3,10 +3,8 @@ Section: user
 Relevance: 1
 Parent: parrot
 Test-parrot: show_include
-Description: Privacy Suite
- Privacy and Cryptography suite
-Key:
- parrot-meta-privacy
+Description:
+  Privacy and Cryptography suite
 Packages: list
- parrot-meta-crypto,
- parrot-meta-privacy
+  parrot-meta-crypto,
+  parrot-meta-privacy

@@ -3,9 +3,7 @@ Section: user
 Relevance: 5
 Parent: parrot
 Test-parrot: show_exclude
-Description: Web Analysis Tools
- Web Analysis Tools
-Key:
- parrot-tools-web
+Description:
+  Web Analysis Tools
 Packages: list
- parrot-tools-web
+  parrot-tools-web

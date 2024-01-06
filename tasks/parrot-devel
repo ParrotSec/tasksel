@@ -3,10 +3,8 @@ Section: user
 Relevance: 2
 Parent: parrot
 Test-parrot: show_exclude
-Description: Development Suite
- Development Suite
-Key:
- parrot-meta-devel
+Description:
+  Development Suite
 Packages: list
- parrot-meta-devel,
- parrot-meta-devel-tools
+  parrot-meta-devel,
+  parrot-meta-devel-tools

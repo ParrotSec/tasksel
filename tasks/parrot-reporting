@@ -3,9 +3,7 @@ Section: user
 Relevance: 13
 Parent: parrot
 Test-parrot: show_exclude
-Description: Reporting Tools
- Reporting Tools
-Key:
- parrot-tools-reporting
+Description:
+  Reporting Tools
 Packages: list
- parrot-tools-reporting
+  parrot-tools-reporting

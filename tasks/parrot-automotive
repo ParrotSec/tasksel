@@ -3,9 +3,7 @@ Section: user
 Relevance: 11
 Parent: parrot
 Test-parrot: show_exclude
-Description: Automotive Auditing Tools
- Automotive Auditing Tools
-Key:
- parrot-tools-automotive
+Description:
+  Automotive Auditing Tools
 Packages: list
- parrot-tools-automotive
+  parrot-tools-automotive

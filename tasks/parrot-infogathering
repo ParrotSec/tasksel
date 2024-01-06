@@ -3,9 +3,7 @@ Section: user
 Relevance: 3
 Parent: parrot
 Test-parrot: show_exclude
-Description: Information Gathering Tools
- Information Gathering Tools
-Key:
- parrot-tools-infogathering
+Description:
+  Information Gathering Tools
 Packages: list
- parrot-tools-infogathering
+  parrot-tools-infogathering

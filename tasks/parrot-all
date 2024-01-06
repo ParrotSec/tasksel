@@ -3,9 +3,7 @@ Section: user
 Relevance: 14
 Parent: parrot
 Test-parrot: show_exclude
-Description: Install All Tools
- Install All the Parrot Security Tools
-Key:
- parrot-tools-full
+Description:
+  Install All Tools
 Packages: list
- parrot-tools-full
+  parrot-tools-full

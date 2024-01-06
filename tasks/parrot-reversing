@@ -3,10 +3,8 @@ Section: user
 Relevance: 12
 Parent: parrot
 Test-parrot: show_exclude
-Description: Reverse Engineering Tools
- Reverse Engineering Tools
-Key:
- parrot-tools-reversing
+Description:
+  Reverse Engineering Tools
 Packages: list
- parrot-tools-reversing,
- parrot-meta-devel-extra
+  parrot-tools-reversing,
+  parrot-meta-devel-extra

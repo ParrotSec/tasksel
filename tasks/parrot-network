@@ -3,9 +3,7 @@ Section: user
 Relevance: 9
 Parent: parrot
 Test-parrot: show_exclude
-Description: Network Sniffing and Injection Tools
- Network Sniffing and Injection Tools
-Key:
- parrot-tools-sniff
+Description:
+  Network Sniffing and Injection Tools
 Packages: list
- parrot-tools-sniff
+  parrot-tools-sniff

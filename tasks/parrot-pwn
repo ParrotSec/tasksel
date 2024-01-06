@@ -3,11 +3,9 @@ Section: user
 Relevance: 6
 Parent: parrot
 Test-parrot: show_exclude
-Description: Exploitation Tools
- Includes parrot-tools-pwn, parrot-tools-maintain and parrot-tools-postexploit
-Key:
- parrot-tools-pwn
+Description:
+  Exploitation Tools
 Packages: list
- parrot-tools-pwn,
- parrot-tools-maintain,
- parrot-tools-postexploit
+  parrot-tools-pwn,
+  parrot-tools-maintain,
+  parrot-tools-postexploit

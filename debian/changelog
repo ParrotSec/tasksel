@@ -1,3 +1,21 @@
+tasksel (1:3.73+parrot5) lory-updates; urgency=medium
+
+  * Final adjustments to parrot modules description.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sat, 06 Jan 2024 05:45:56 +0100
+
+tasksel (1:3.73+parrot4) lory-updates; urgency=medium
+
+  * Attempt to fix error in reading task description.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sat, 06 Jan 2024 05:30:24 +0100
+
+tasksel (1:3.73+parrot3) lory-updates; urgency=medium
+
+  * Fix typo
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sat, 06 Jan 2024 05:11:09 +0100
+
 tasksel (1:3.73+parrot2) lory-updates; urgency=medium
 
   * Adjust parrot tasks syntax.

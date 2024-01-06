@@ -3,9 +3,7 @@ Section: user
 Relevance: 8
 Parent: parrot
 Test-parrot: show_exclude
-Description: Wireless Exploitation Tools
- Wireless Exploitation Tools
-Key:
- parrot-tools-wireless
+Description:
+  Wireless Exploitation Tools
 Packages: list
- parrot-tools-wireless
+  parrot-tools-wireless

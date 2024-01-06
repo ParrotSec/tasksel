@@ -1,7 +1,8 @@
-Task: Parrot System
+Task: parrot
 Section: user
 Relevance: 2
 Test-parrot: show_include
-Description: Base Parrot System
-Key:
+Description:
+  Parrot System Modules
+Packages: list
   parrot-core
