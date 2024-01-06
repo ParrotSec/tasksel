@@ -2,10 +2,11 @@ Task: parrot-reversing
 Section: user
 Relevance: 12
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Reverse Engineering Tools
+ Reverse Engineering Tools
 Key:
- parrot-reversing
+ parrot-tools-reversing
 Packages: list
  parrot-tools-reversing,
  parrot-meta-devel-extra

@@ -2,9 +2,10 @@ Task: parrot-reporting
 Section: user
 Relevance: 13
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Reporting Tools
+ Reporting Tools
 Key:
- parrot-reporting
+ parrot-tools-reporting
 Packages: list
  parrot-tools-reporting

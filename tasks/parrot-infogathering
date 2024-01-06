@@ -2,9 +2,10 @@ Task: parrot-infogathering
 Section: user
 Relevance: 3
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Information Gathering Tools
+ Information Gathering Tools
 Key:
- parrot-infogathering
+ parrot-tools-infogathering
 Packages: list
  parrot-tools-infogathering

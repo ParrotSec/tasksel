@@ -1,7 +1,7 @@
 Task: gnome-flashback-desktop
 Relevance: 7
 Parent: desktop
-Test-parrot: hide-exclude
+Test-parrot: hide_exclude
 Section: user
 Key:
   task-gnome-flashback-desktop

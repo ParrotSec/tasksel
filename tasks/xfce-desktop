@@ -1,7 +1,7 @@
 Task: xfce-desktop
 Relevance: 3
 Parent: desktop
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Section: user
 Key:
   task-xfce-desktop

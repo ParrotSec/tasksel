@@ -2,10 +2,11 @@ Task: parrot-privacy
 Section: user
 Relevance: 1
 Parent: parrot
-Test-parrot: show-include
+Test-parrot: show_include
 Description: Privacy Suite
+ Privacy and Cryptography suite
 Key:
- parrot-privacy
+ parrot-meta-privacy
 Packages: list
  parrot-meta-crypto,
  parrot-meta-privacy

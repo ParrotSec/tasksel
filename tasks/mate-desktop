@@ -2,6 +2,6 @@ Task: mate-desktop
 Section: user
 Parent: desktop
 Relevance: 1
-Test-parrot: show-include
+Test-parrot: show_include
 Key:
   task-mate-desktop

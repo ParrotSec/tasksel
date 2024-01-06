@@ -2,9 +2,10 @@ Task: parrot-vuln
 Section: user
 Relevance: 4
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Vulnerability Assessment Tools
+ Vulnerability Assessment Tools
 Key:
- parrot-vuln
+ parrot-tools-vuln
 Packages: list
  parrot-tools-vuln

@@ -1,6 +1,7 @@
 Task: Parrot System
 Section: user
 Relevance: 2
-Test-parrot: show-include
+Test-parrot: show_include
+Description: Base Parrot System
 Key:
   parrot-core

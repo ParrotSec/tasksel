@@ -1,16 +1,16 @@
 #!/bin/sh
 
 case $1 in
-	hide-include|0)
+	hide_include)
 		exit 0 # hide, install
 	;;
-	hide-exclude|1)
+	hide_exclude)
 		exit 1 # hide, do not install
 	;;
-	show-include|2)
+	show_include)
 		exit 2 # show, install
 	;;
-	show-exclude|3)
+	show_exclude)
 		exit 3 # show, do not install
 	;;
 	*)

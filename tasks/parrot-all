@@ -2,9 +2,10 @@ Task: parrot-all
 Section: user
 Relevance: 14
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Install All Tools
+ Install All the Parrot Security Tools
 Key:
- parrot-all
+ parrot-tools-full
 Packages: list
  parrot-tools-full

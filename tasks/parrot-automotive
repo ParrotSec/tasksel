@@ -2,9 +2,10 @@ Task: parrot-automotive
 Section: user
 Relevance: 11
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Automotive Auditing Tools
+ Automotive Auditing Tools
 Key:
- parrot-automotive
+ parrot-tools-automotive
 Packages: list
  parrot-tools-automotive

@@ -1,6 +1,6 @@
 Task: cinnamon-desktop
 Parent: desktop
-Test-parrot: hide-exclude
+Test-parrot: hide_exclude
 Relevance: 8
 Section: user
 Key:

@@ -2,10 +2,11 @@ Task: parrot-devel
 Section: user
 Relevance: 2
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Development Suite
+ Development Suite
 Key:
- parrot-devel
+ parrot-meta-devel
 Packages: list
  parrot-meta-devel,
  parrot-meta-devel-tools

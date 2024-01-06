@@ -2,9 +2,10 @@ Task: parrot-network
 Section: user
 Relevance: 9
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Network Sniffing and Injection Tools
+ Network Sniffing and Injection Tools
 Key:
- parrot-network
+ parrot-tools-sniff
 Packages: list
  parrot-tools-sniff

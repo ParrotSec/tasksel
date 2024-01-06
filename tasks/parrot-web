@@ -2,9 +2,10 @@ Task: parrot-web
 Section: user
 Relevance: 5
 Parent: parrot
-Test-parrot: show-exclude
+Test-parrot: show_exclude
 Description: Web Analysis Tools
+ Web Analysis Tools
 Key:
- parrot-web
+ parrot-tools-web
 Packages: list
  parrot-tools-web
