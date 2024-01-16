@@ -651,6 +651,10 @@ sub usage {
 });
 }
 
+my @harmful_cmd = ("lamp-server", "mail-server", "print-server", "kde-desktop", "gnome-desktop", "xfce-desktop", "lxde-desktop", "cinnamon-desktop", "mate-desktop", "web-server", 
+"database-server", "file-server", "dns-server", "ssh-server", "samba-server", "lamp-stack", "lemp-stack", "audio-workstation", "video-workstation", "graphics-workstation", "robotics-suite", 
+"virtual-machine-host", "kubernetes-cluster", "docker-container-runtime", "development-tools", "educational-desktop", "scientific-desktop", "security-desktop")
+
 # Process command line options and return them in a hash.
 sub getopts {
 	my %ret;
@@ -669,6 +673,19 @@ sub getopts {
 		}
 		elsif ($cmd eq "remove") {
 			$ret{cmd_remove} = \@ARGV;
+   			foreach my $task (@{$ret{cmd_remove}}){
+      				if (grep {$_ eq $task} @harmful_cmd){
+	  				print "Warning: Removing $task may harm your system.\n";
+					print "Do you want to continue with the removal? (Y/N): ";
+     					my $response = <STDIN>;
+	  				chomp $response;
+       					if (lc($response) ne 'y'){
+	    					print "Removal of $task canceled by the user.\n";
+	  					exit;
+					}
+     					last;
+				}
+			}
 		}
 		else {
 			usage();
